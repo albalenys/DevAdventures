@@ -28,6 +28,22 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def edit
+    authorize_user
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    authorize_user
+    project = Project.find(params[:id])
+    if project.update_attributes(project_params)
+      redirect_to projects_path
+    else
+      flash[:error] = "Invalid input: must include both title and url."
+      redirect_to edit_project_path
+    end
+  end
+
   private
 
   def project_params
