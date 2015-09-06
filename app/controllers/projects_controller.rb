@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    authorize_user
     @project = Project.new
   end
 
@@ -18,6 +19,13 @@ class ProjectsController < ApplicationController
       flash[:error] = "Invalid input: must include both title and url."
       redirect_to new_project_path
     end
+  end
+
+  def destroy
+    authorize_user
+    project = Project.find_by(id: params[:id])
+    project.destroy
+    redirect_to projects_path
   end
 
   private
