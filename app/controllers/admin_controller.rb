@@ -3,6 +3,9 @@ class AdminController < ApplicationController
     @admin = Admin.new
   end
 
+  def show
+  end
+
   def login
     admin = Admin.find_by(username: params[:admin][:username])
     if admin && admin.authenticate(params[:admin][:password])
@@ -14,6 +17,8 @@ class AdminController < ApplicationController
     end
   end
 
-  def show
+  def logout
+    session.clear
+    redirect_to root_path
   end
 end
