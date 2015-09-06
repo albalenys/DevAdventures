@@ -1,0 +1,101 @@
+/* ----------- Cell Phones ----------- */
+
+@media screen
+  and (max-device-width: 680px) {
+    html {
+      font-size: 3em;
+    }
+
+    .blog-footer {
+      font-size: 0.8em
+    }
+  }
+
+
+/* ----------- Tablets ----------- */
+
+@media screen
+  and (min-width: 681px)
+  and (max-width: 954px) {
+
+  main {
+    width: 23em;
+  }
+
+  .index_background {
+    background: url("../imgs/railroad_background.jpg") #FFF no-repeat;
+  }
+
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    padding: 1em;
+    margin: auto;
+  }
+
+  .profile {
+    float: right;
+    text-align: none;
+  }
+
+  hr {
+    border-top: #999;
+  }
+}
+
+
+/* ----------- Laptops ----------- */
+
+@media screen
+  and (min-width: 955px)
+  and (min-device-width: 955px) {
+
+  header {
+    position: fixed;
+    background: #FFF;
+  }
+
+  main {
+    margin: 5em auto;
+    width: 40em;
+  }
+
+  nav {
+    position: relative;
+    float: left;
+    margin: 0.3em;
+  }
+
+  aside {
+    text-align: none;
+    padding-top: 0;
+    float: right;
+    margin: 0.3em;
+  }
+
+  .index_background {
+    background: url("../imgs/railroad_background.jpg") #FFF no-repeat;
+  }
+
+  .button {
+    display: inline;
+    margin: 0.2em;
+  }
+
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    padding: 1em;
+    margin: auto;
+  }
+
+  .profile {
+    float: right;
+    text-align: none;
+  }
+
+  hr {
+    border-top: #999;
+  }
+
+}
