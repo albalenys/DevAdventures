@@ -7,7 +7,14 @@
   <% end %>
   <hr>
   <% @projects.each do |project| %>
-    <%= link_to "#{project.title}", project.url %><br>
+    <%= link_to "#{project.title}", project.url %>
+    <% if logged_in? %>
+      <div class="right">
+        <%= link_to "Edit", edit_project_path(project.id), class: "sub-button" %>
+        <%= link_to "Delete", project_path(project.id), method: "DELETE", class: "sub-button" %>
+      </div>
+    <% end %><br>
+
     <% if project.software %>
       <div class="sub">
         Software used: <%= project.software %>

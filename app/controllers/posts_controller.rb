@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     authorize_user
     post = Post.find_by(id: params[:id])
     post.destroy
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   def edit
