@@ -19,6 +19,13 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def destroy
+    authorize_user
+    resource = Resource.find_by(id: params[:id])
+    resource.destroy
+    redirect_to post_path(params[:post_id])
+  end
+
   private
 
   def resource_params

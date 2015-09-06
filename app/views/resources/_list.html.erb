@@ -1,0 +1,21 @@
+<hr>
+<h4 class="center">Further Resources</h4>
+
+<div class="center">
+  <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "sub-button" %>
+</div>
+
+<ul>
+  <% @post.resources.each do |resource| %>
+    <li>
+      <%= link_to "#{resource.title}", resource.url, target: "_blank" %>
+
+      <% if logged_in? %>
+        <div class="right">
+          <%= link_to "Edit", edit_post_resource_path(@post.id, resource.id), class: "sub-button" %>
+          <%= link_to "Delete", post_resource_path(@post.id, resource.id), method: "DELETE", class: "sub-button" %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
