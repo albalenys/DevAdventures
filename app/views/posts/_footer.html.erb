@@ -1,20 +1,20 @@
 <hr>
-  <p>
-    <table class="blog-footer">
-      <tr>
-        <td class="left-blog">
-          <% if @next_post %>
-            <%= link_to "Next", post_path(@post.id + 1), class: "footer-button" %>
-          <% end %>
-        </td>
-        <td class="center-blog">
-          <a class="top-button" href="#top"><%= image_tag("top-icon.png", class: "icon") %></a>
-        </td>
-        <td class="right-blog">
-          <% if @previous_post %>
-            <%= link_to "Previous", post_path(@post.id - 1), class: "footer-button" %>
-          <% end %>
-        </td>
-      </tr>
-    </table>
-  </p>
+<p>
+  <table class="blog-footer">
+    <tr>
+      <td class="left-blog">
+        <% if @next_post %>
+          <%= link_to "Next", post_path(@post.id + 1), class: "footer-button" %>
+        <% end %>
+      </td>
+      <td class="center-blog">
+        <a class="top-button" href="#top"><%= image_tag("top-icon.png", class: "icon") %></a>
+      </td>
+      <td class="right-blog">
+        <% if @previous_post %>
+          <%= link_to "Previous", post_path(@post.id - 1), class: "footer-button" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</p>

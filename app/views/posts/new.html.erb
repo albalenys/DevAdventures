@@ -4,8 +4,8 @@
   <hr>
 
   <%= form_for @post, html: {class: "center"} do |f|%>
-    Title: <%= f.text_field :title %><br>
-    <%= f.text_area :content, html: {class: "create_post"} %><br>
+    <p>Title: <%= f.text_field :title, class: "post-title" %></p>
+    <%= f.text_area :content, class: "post-text" %><br>
     <%= f.submit "Submit" %>
   <% end %>
 </main>

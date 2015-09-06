@@ -1,10 +1,29 @@
 <main id="top">
   <h2 class="center"><%= @post.title %></h2>
+
   <div class="sub">
     Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos
   </div>
+
+  <% if logged_in? %>
+    <div class="center">
+      <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "footer-button" %>
+      <%= link_to "Edit Post", root_path, class: "footer-button" %>
+      <%= link_to "Delete Post", root_path, class: "footer-button" %>
+    </div>
+  <% end %>
   <hr>
-  <p><%= @post.content %></p>
+  <p><%= @post.content.html_safe %></p>
+
+  <% if !@post.resources.empty? %>
+    <hr>
+    <h4 class="center">Further Resources</h4>
+    <ul>
+      <% @post.resources.each do |resource| %>
+        <li><%= link_to "#{resource.title}", resource.url, target: "_blank" %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <%= render "footer" %>
 </main>
