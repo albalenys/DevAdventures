@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   def new
     authorize_user
     @post = Post.new
-    @resource = Resource.new
   end
 
   def create
@@ -33,6 +32,22 @@ class PostsController < ApplicationController
     post = Post.find_by(id: params[:id])
     post.destroy
     redirect_to root_path
+  end
+
+  def edit
+    authorize_user
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    authorize_user
+    post = Post.find(params[:id])
+    if post.update_attributes(post_params)
+      redirect_to post_path(post.id)
+    else
+      flash[:error] = "Invalid input: must include both title and content."
+      redirect_to edit_post_path
+    end
   end
 
   private
