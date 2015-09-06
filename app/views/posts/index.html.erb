@@ -1,11 +1,12 @@
 <main>
+  <% if logged_in? %>
+    <div class="center">
+      <p><%= link_to "Add Blog Post", new_post_path, class: "sub-button" %></p>
+    </div>
+  <% end %>
+
   <% @posts_by_month.each do |monthname, posts| %>
     <h2 class="center"><%= monthname %> 2015</h2>
-    <% if logged_in? %>
-      <div class="center">
-        <%= link_to "Add Blog Post", new_post_path, class: "sub-button" %>
-      </div>
-    <% end %>
     <ul>
       <% posts.each do |post| %>
         <li>

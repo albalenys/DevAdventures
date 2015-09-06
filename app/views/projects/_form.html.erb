@@ -1,6 +1,7 @@
 <%= form_for @project, html: {class: "center"} do |f|%>
   Title: <%= f.text_field :title, class: "form-field" %><br>
   URL: <%= f.text_field :url, class: "form-field" %><br>
+  Software: <%= f.text_field :software, class: "form-field" %><br>
   <p><%= f.text_area :description, class: "form-area" %></p>
   <%= f.submit "Submit" %>
 <% end %>
