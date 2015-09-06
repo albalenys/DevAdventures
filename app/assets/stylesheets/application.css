@@ -296,3 +296,12 @@ a.footer-button {
 a.top-button {
   border: none;
 }
+
+.post-text {
+  width: 100%;
+  height: 25em;
+}
+
+.post-title {
+  width: 70%;
+}

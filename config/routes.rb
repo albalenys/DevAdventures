@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  resources :posts
+
+  resources :posts do
+    resources :resources
+  end
+
   resources :projects
   get '/about' => 'about#index'
   get '/admin' => 'admin#auth'

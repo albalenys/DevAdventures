@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   def new
     authorize_user
     @post = Post.new
+    @resource = Resource.new
   end
 
   def create
