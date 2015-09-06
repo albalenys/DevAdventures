@@ -26,6 +26,23 @@ class ResourcesController < ApplicationController
     redirect_to post_path(params[:post_id])
   end
 
+  def edit
+    authorize_user
+    @resource = Resource.find(params[:id])
+    @post = Post.find(params[:post_id])
+  end
+
+  def update
+    authorize_user
+    resource = Resource.find(params[:id])
+    if resource.update_attributes(resource_params)
+      redirect_to post_path(params[:post_id])
+    else
+      flash[:error] = "Invalid input: must include both title and content."
+      redirect_to edit_post_resource_path
+    end
+  end
+
   private
 
   def resource_params
