@@ -4,7 +4,7 @@
     <tr>
       <td class="left-blog">
         <% if @next_post %>
-          <%= link_to "Next", post_path(@post.id + 1), class: "footer-button" %>
+          <%= link_to "Next", post_path(@post.id + 1), class: "sub-button" %>
         <% end %>
       </td>
       <td class="center-blog">
@@ -12,7 +12,7 @@
       </td>
       <td class="right-blog">
         <% if @previous_post %>
-          <%= link_to "Previous", post_path(@post.id - 1), class: "footer-button" %>
+          <%= link_to "Previous", post_path(@post.id - 1), class: "sub-button" %>
         <% end %>
       </td>
     </tr>

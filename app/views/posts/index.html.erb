@@ -3,8 +3,17 @@
     <h2 class="center"><%= monthname %> 2015</h2>
     <ul>
       <% posts.each do |post| %>
-        <li><%= monthname %> <%= post.created_at.day %>:
-          <%= link_to "#{post.title}", post_path(post.id) %></li>
+        <li>
+          <%= monthname %> <%= post.created_at.day %>:
+          <%= link_to "#{post.title}", post_path(post.id) %>
+
+          <% if logged_in? %>
+            <div class="right">
+              <%= link_to "Edit Post", edit_post_path(post.id), class: "sub-button" %>
+              <%= link_to "Delete Post", post_path(post.id), method: "DELETE", class: "sub-button" %>
+            </div>
+          <% end %>
+        </li>
       <% end %>
     </ul>
     <hr>

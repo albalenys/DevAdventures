@@ -286,7 +286,7 @@ th {
   width: 30%;
 }
 
-a.footer-button {
+a.sub-button {
   color: #000;
   background: #66C2E0;
   padding: 0 0.2em;
@@ -304,4 +304,8 @@ a.top-button {
 
 .post-title {
   width: 70%;
+}
+
+.right {
+  float: right;
 }
