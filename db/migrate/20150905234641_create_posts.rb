@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title, null: false
       t.text :content, null: false
 
+      t.belongs_to :admin, null: false
+
       t.timestamps null: false
     end
   end
