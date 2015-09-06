@@ -5,10 +5,6 @@ class AdminController < ApplicationController
     @admin = Admin.new
   end
 
-  def show
-    authorize_user
-  end
-
   def login
     admin = Admin.find_by(username: params[:admin][:username])
     if admin && admin.authenticate(params[:admin][:password])
