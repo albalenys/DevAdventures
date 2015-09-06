@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @recent_posts = Post.all.limit(2)
+    @recent_posts = Post.all.last(2)
   end
 end
