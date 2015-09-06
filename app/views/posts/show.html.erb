@@ -1,0 +1,8 @@
+<main id="top">
+  <h2 class="center"><%= @post.title %></h2>
+  <div class="sub">
+    Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos
+  </div>
+  <hr>
+  <p><%= @post.content %></p>
+</main>

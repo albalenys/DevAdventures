@@ -4,7 +4,7 @@
     <ul>
       <% posts.each do |post| %>
         <li><%= monthname %> <%= post.created_at.day %>:
-          <%= link_to "#{post.title}", new_post_path %></li>
+          <%= link_to "#{post.title}", post_path(post.id) %></li>
       <% end %>
     </ul>
     <hr>
