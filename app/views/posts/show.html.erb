@@ -9,7 +9,7 @@
     <div class="center">
       <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "footer-button" %>
       <%= link_to "Edit Post", root_path, class: "footer-button" %>
-      <%= link_to "Delete Post", root_path, class: "footer-button" %>
+      <%= link_to "Delete Post", post_path(@post.id), method: "DELETE", class: "footer-button" %>
     </div>
   <% end %>
   <hr>
