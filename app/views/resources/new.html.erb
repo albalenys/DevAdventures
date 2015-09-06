@@ -7,9 +7,6 @@
   <hr>
 
   <%= form_for @resource, url: post_resources_path, method: "POST", html: {class: "center"} do |f|%>
-    <% f.hidden_field :post_id, value: @post.id %>
-    Title: <%= f.text_field :title %><br>
-    URL: <%= f.text_field :url %><br>
-    <%= f.submit "Submit" %>
+    <%= render "form" %>
   <% end %>
 </main>
