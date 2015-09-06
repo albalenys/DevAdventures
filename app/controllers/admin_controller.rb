@@ -1,9 +1,12 @@
 class AdminController < ApplicationController
+  include ApplicationHelper
+
   def auth
     @admin = Admin.new
   end
 
   def show
+    authorize_user
   end
 
   def login
@@ -12,7 +15,7 @@ class AdminController < ApplicationController
       session[:admin_id] = admin.id
       redirect_to root_path
     else
-      flash[:error] = "You are not authorized to have admin access."
+      flash[:error] = "You do not have authorized admin access."
       redirect_to admin_path
     end
   end
