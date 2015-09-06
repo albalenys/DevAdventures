@@ -9,7 +9,9 @@
   <% @projects.each do |project| %>
     <%= link_to "#{project.title}", project.url %><br>
     <% if project.software %>
-      Software used: <%= project.software %>
+      <div class="sub">
+        Software used: <%= project.software %>
+      </div>
     <% end %>
     <p><%= project.description %></p>
     <hr>

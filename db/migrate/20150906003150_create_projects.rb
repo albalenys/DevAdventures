@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title, null: false
       t.string :url, null: false
       t.text :description
-      t.text :software
+      t.string :software
 
       t.belongs_to :admin, null: false
 

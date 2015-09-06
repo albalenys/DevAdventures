@@ -39,7 +39,7 @@ a, a:visited {
 
 nav {
   margin: auto;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 header a{
@@ -226,7 +226,6 @@ xmp {
 }
 
 .sub {
-  text-align: center;
   color: #999;
   font-size: 0.9em;
 }
