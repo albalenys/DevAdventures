@@ -1,5 +1,10 @@
 <main>
   <h2 class="center">Projects</h2>
+  <% if logged_in? %>
+    <div class="center">
+      <%= link_to "Add Project", new_post_path, class: "sub-button" %>
+    </div>
+  <% end %>
   <hr>
   <h3><a href="cheat-sheet.html">Ruby Cheat Sheet</a></h3>
   <p>Short Ruby cheatsheet that quickly explains numbers, strings, arrays and hashes.<br>
