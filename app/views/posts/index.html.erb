@@ -1,6 +1,12 @@
 <main>
-  <% @posts.each do |post| %>
-    <h2 class="center"><%= post.created_at %></h2>
-    <%= post.title %>
+  <% @posts_by_month.each do |monthname, posts| %>
+    <h2 class="center"><%= monthname %> 2015</h2>
+    <ul>
+      <% posts.each do |post| %>
+        <li><%= monthname %> <%= post.created_at.day %>:
+          <%= link_to "#{post.title}", post_path(post.id) %></li>
+      <% end %>
+    </ul>
+    <hr>
   <% end %>
 </main>

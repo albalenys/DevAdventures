@@ -1,6 +1,8 @@
 <main>
   <h2 class="center">Create Blog Post</h2>
+  <%= flash[:error] %>
   <hr>
+
   <%= form_for @post, html: {class: "center"} do |f|%>
     Title: <%= f.text_field :title %><br>
     <%= f.text_area :content, html: {class: "create_post"} %><br>

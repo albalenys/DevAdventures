@@ -3,8 +3,7 @@ module ApplicationHelper
     session[:admin_id]
   end
 
-  def current_username
-    admin = Admin.find_by(id: session[:admin_id])
-    admin.username
+  def authorize_user
+    redirect_to root_path if !logged_in?
   end
 end
