@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :posts
   resources :projects
-  get 'about' => 'about#index'
+  get '/about' => 'about#index'
+  get '/admin' => 'admin#auth'
+  post '/admin' => 'admin#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

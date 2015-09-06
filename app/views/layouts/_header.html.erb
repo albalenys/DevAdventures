@@ -7,6 +7,10 @@
   </nav>
 
   <aside>
+    <% if logged_in? %>
+      Hello, <%= session[:admin].username %>.
+    <% end %>
+
     <a href="https://twitter.com/albalenys_" target="_blank" title="Follow me on Twitter!"><%= image_tag("twitter-icon.svg", alt: "Twitter", class: "icon") %></a>
     <a href="https://plus.google.com/u/0/+AbbyDeLosSantos/" target="_blank" title="Check me out on Google+!"><%= image_tag("googleplus-icon.png", alt: "Google+", class: "icon") %></a>
     <a href="https://github.com/albalenys" target="_blank" title="Follow me on GitHub!"><%= image_tag("github-icon.png", alt: "Github", class: "icon") %></a>
