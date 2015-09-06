@@ -6,6 +6,8 @@ class CreateProjects < ActiveRecord::Migration
       t.text :software, null: false
       t.string :url, null: false
 
+      t.belongs_to :admin, null: false
+
       t.timestamps null: false
     end
   end
