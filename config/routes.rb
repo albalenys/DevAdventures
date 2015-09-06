@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'
   delete '/admin' => 'admin#logout'
-  get '/admin/:id' => 'admin#show', as: :show_admin
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

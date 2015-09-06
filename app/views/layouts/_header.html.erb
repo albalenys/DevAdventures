@@ -5,7 +5,7 @@
     <%= link_to "Projects", projects_path, class: "button" %>
     <%= link_to "About", about_path, class: "button" %>
     <% if logged_in? %>
-      <%= link_to "Admin", show_admin_path(session[:admin_id]), class: "button" %>
+      <%= link_to "Log Out", admin_path, method: 'delete', class: "button" %>
     <% end %>
   </nav>
 
