@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   include ApplicationHelper
 
   def index
-    @posts = Post.all
+    @posts_by_month = Post.sort_by_month
   end
 
   def show
