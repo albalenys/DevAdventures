@@ -1,15 +1,17 @@
 <main>
-  <h2 class="center">Projects</h2>
+  <h1 class="center">Projects</h1>
   <% if logged_in? %>
     <div class="center">
       <%= link_to "Add Project", new_project_path, class: "sub-button" %>
     </div>
   <% end %>
+  <hr>
   <% @projects.each do |project| %>
     <%= link_to "#{project.title}", project.url %><br>
-    <div class="sub">
+    <% if project.software %>
       Software used: <%= project.software %>
-    </div>
+    <% end %>
     <p><%= project.description %></p>
+    <hr>
   <% end %>
 </main>
