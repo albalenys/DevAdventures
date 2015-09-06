@@ -16,7 +16,7 @@
 
 @media screen
   and (min-width: 681px)
-  and (max-width: 954px) {
+  and (max-width: 950px) {
 
   main {
     width: 23em;
@@ -47,7 +47,7 @@
 /* ----------- Laptops ----------- */
 
 @media screen
-  and (min-width: 955px)
+  and (min-width: 951px)
   and (min-device-width: 955px) {
 
   header {
@@ -74,7 +74,7 @@
   }
 
   .index_background {
-    background: url("../imgs/railroad_background.jpg") #FFF no-repeat;
+    background: url("railroad_background.jpg") #FFF no-repeat;
   }
 
   .button {
