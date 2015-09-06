@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title, null: false
       t.text :description, null: false
       t.text :software, null: false
+      t.string :url, null: false
 
       t.timestamps null: false
     end
