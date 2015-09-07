@@ -19,14 +19,4 @@ RSpec.describe Admin, type: :model do
     admin2 = FactoryGirl.build(:admin, username: "abby")
     admin2.should_not be_valid
   end
-
-  it "should have many posts" do
-    admin = Admin.reflect_on_association(:posts)
-    admin.macro.should == :has_many
-  end
-
-  it "should have many projects" do
-    admin = Admin.reflect_on_association(:projects)
-    admin.macro.should == :has_many
-  end
 end
