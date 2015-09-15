@@ -58,6 +58,15 @@ header a{
   box-shadow: 0 0 0 0 #66C2E0 inset;
 }
 
+.search-icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.search-bar {
+  width: 80%;
+}
+
 a.button:hover {
   box-shadow: 0 -100px 0 0px #66C2E0 inset;
   color: #000;
@@ -184,6 +193,11 @@ h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 2.5em;
   margin: 0.1;
+}
+
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  color: #999;
 }
 
 .profile {

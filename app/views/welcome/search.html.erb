@@ -1,0 +1,27 @@
+<main>
+  <h2 class="center">Searching for "<%= @query %>"...</h2>
+
+  <% if @posts.empty? && @projects.empty? %>
+    <p class="center">No posts match your search.<br>
+      Your query might be too specific.</p>
+  <% end %>
+
+  <% if !@posts.empty? %>
+    <h3>Blog Posts</h3>
+    <% @posts.each do |post| %>
+      <ul>
+        <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
+      </ul>
+    <% end %>
+  <% end %>
+
+  <% if @projects != " " %>
+    <h3>Projects</h3>
+    <% @projects.each do |project| %>
+      <ul>
+        <li><%= timestamp(project) %>: <%= link_to project.title, project_path(project) %></li>
+      </ul>
+    <% end %>
+  <% end %>
+  <hr>
+</main>

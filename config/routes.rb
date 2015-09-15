@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admins
   root 'welcome#index'
+  get '/search' => 'welcome#search'
 
   resources :posts do
-    resources :resources
+    resources :resources, except: [:show]
   end
 
-  resources :projects
+  resources :projects, except: [:show]
   get '/about' => 'about#index'
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'

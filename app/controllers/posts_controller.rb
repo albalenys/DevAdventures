@@ -30,9 +30,6 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def edit
-  end
-
   def update
     if @post.update_attributes(post_params)
       redirect_to post_path(@post.id)
