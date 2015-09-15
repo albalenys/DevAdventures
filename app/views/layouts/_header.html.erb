@@ -16,12 +16,10 @@
     <a href="https://www.linkedin.com/in/albalenys" target="_blank" title="Check me out on Linkedin!"><%= image_tag("linkedin-icon.svg", alt: "Linkedin", class: "icon") %></a>
 
     <div class="center search">
-      <%= form_for :post do |f| %>
+      <%= form_tag search_path, method: "get" do %>
         <%= image_tag "search-icon", class: "search-icon" %>
-        <%= f.text_field :title, class: "search-bar" %>
+        <%= text_field :search, params[:search], class: "search-bar", placeholder: "search" %>
       <% end %>
     </div>
-
   </aside>
-
 </header>

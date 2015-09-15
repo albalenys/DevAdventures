@@ -8,4 +8,8 @@ class Post < ActiveRecord::Base
   def self.sort_by_month
     self.all.group_by { |post| post.created_at.strftime("%B") }
   end
+
+  def self.search(query)
+    where("title like ?", "%#{query}%")
+  end
 end

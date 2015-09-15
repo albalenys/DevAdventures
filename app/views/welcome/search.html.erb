@@ -1,0 +1,13 @@
+<main>
+  <h3 class="center">Searching for "<%= @query %>"...</h3>
+
+  <% if @posts.empty? %>
+    <p class="center">No posts match your search.<br>
+      Your query might be too specific.</p>
+  <% end %>
+
+  <% @posts.each do |post| %>
+    <%= post.title %>
+  <% end %>
+  <hr>
+</main>

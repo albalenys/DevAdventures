@@ -22,9 +22,6 @@ class ResourcesController < ApplicationController
     redirect_to post_path(params[:post_id])
   end
 
-  def edit
-  end
-
   def update
     if @resource.update_attributes(resource_params)
       redirect_to post_path(params[:post_id])

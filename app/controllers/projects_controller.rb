@@ -25,9 +25,6 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
-  def edit
-  end
-
   def update
     if @project.update_attributes(project_params)
       redirect_to projects_path
