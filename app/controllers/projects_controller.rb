@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    project.destroy
+    @project.destroy
     redirect_to projects_path
   end
 
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if project.update_attributes(project_params)
+    if @project.update_attributes(project_params)
       redirect_to projects_path
     else
       flash[:error] = "Invalid input: must include both title and url."
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:title, :url, :software, :description)
   end
 
-  def project_find
-    project = Project.find(params[:id])
+  def find_project
+    @project = Project.find(params[:id])
   end
 end

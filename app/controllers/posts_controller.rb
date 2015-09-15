@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post.destroy
+    @post.destroy
     redirect_to posts_path
   end
 
@@ -34,8 +34,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    if post.update_attributes(post_params)
-      redirect_to post_path(post.id)
+    if @post.update_attributes(post_params)
+      redirect_to post_path(@post.id)
     else
       flash[:error] = "Invalid input: must include both title and content."
       redirect_to edit_post_path

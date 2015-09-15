@@ -1,16 +1,14 @@
 class ResourcesController < ApplicationController
-  include ApplicationHelper
+  before_filter :authorize_user
+  before_filter :find_resource, except: [:new, :create]
+  before_filter :find_resource_post, except: [:destroy, :update]
 
   def new
-    authorize_user
     @resource = Resource.new
-    @post = Post.find(params[:post_id])
   end
 
   def create
-    authorize_user
-    post = Post.find(params[:post_id])
-    resource = post.resources.new(resource_params)
+    resource = @post.resources.new(resource_params)
     if resource.save
       redirect_to post_path(params[:post_id])
     else
@@ -20,22 +18,15 @@ class ResourcesController < ApplicationController
   end
 
   def destroy
-    authorize_user
-    resource = Resource.find_by(id: params[:id])
-    resource.destroy
+    @resource.destroy
     redirect_to post_path(params[:post_id])
   end
 
   def edit
-    authorize_user
-    @resource = Resource.find(params[:id])
-    @post = Post.find(params[:post_id])
   end
 
   def update
-    authorize_user
-    resource = Resource.find(params[:id])
-    if resource.update_attributes(resource_params)
+    if @resource.update_attributes(resource_params)
       redirect_to post_path(params[:post_id])
     else
       flash[:error] = "Invalid input: must include both title and content."
@@ -47,5 +38,13 @@ class ResourcesController < ApplicationController
 
   def resource_params
     params.require(:resource).permit(:title, :url)
+  end
+
+  def find_resource
+    @resource = Resource.find(params[:id])
+  end
+
+  def find_resource_post
+    @post = Post.find(params[:post_id])
   end
 end
