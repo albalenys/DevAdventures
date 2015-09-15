@@ -1,6 +1,4 @@
 class AdminController < ApplicationController
-  include ApplicationHelper
-
   def auth
     @admin = Admin.new
   end
