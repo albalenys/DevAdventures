@@ -4,7 +4,7 @@
   <hr>
   <%= form_for @admin, url: {action: "login"}, html: {class: "center"} do |f| %>
     Username: <%= f.text_field :username %><br>
-    Password: <%= f.text_field :password %><br>
+    Password: <%= f.password_field :password %><br>
     <%= f.submit "Submit" %>
   <% end %>
 </main>
