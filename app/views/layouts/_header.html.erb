@@ -14,5 +14,14 @@
     <a href="https://plus.google.com/u/0/+AbbyDeLosSantos/" target="_blank" title="Check me out on Google+!"><%= image_tag("googleplus-icon.png", alt: "Google+", class: "icon") %></a>
     <a href="https://github.com/albalenys" target="_blank" title="Follow me on GitHub!"><%= image_tag("github-icon.png", alt: "Github", class: "icon") %></a>
     <a href="https://www.linkedin.com/in/albalenys" target="_blank" title="Check me out on Linkedin!"><%= image_tag("linkedin-icon.svg", alt: "Linkedin", class: "icon") %></a>
+
+    <div class="center search">
+      <%= form_for :post do |f| %>
+        <%= image_tag "search-icon", class: "search-icon" %>
+        <%= f.text_field :title, class: "search-bar" %>
+      <% end %>
+    </div>
+
   </aside>
+
 </header>
