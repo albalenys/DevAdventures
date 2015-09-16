@@ -55,6 +55,11 @@
     background: #FFF;
   }
 
+  header a {
+    display: inline;
+    margin: 0.2em;
+  }
+
   main {
     margin: 5em auto;
     width: 40em;
@@ -75,11 +80,6 @@
 
   .index_background {
     background: url("railroad_background.jpg") #FFF no-repeat;
-  }
-
-  .button {
-    display: inline;
-    margin: 0.2em;
   }
 
   .index_text {
