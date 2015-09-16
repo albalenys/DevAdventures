@@ -10,10 +10,10 @@
   </nav>
 
   <aside class="center">
-    <a href="https://twitter.com/albalenys_" target="_blank" title="Follow me on Twitter!"><%= image_tag("twitter-icon.svg", alt: "Twitter", class: "icon") %></a>
-    <a href="https://plus.google.com/u/0/+AbbyDeLosSantos/" target="_blank" title="Check me out on Google+!"><%= image_tag("googleplus-icon.png", alt: "Google+", class: "icon") %></a>
-    <a href="https://github.com/albalenys" target="_blank" title="Follow me on GitHub!"><%= image_tag("github-icon.png", alt: "Github", class: "icon") %></a>
-    <a href="https://www.linkedin.com/in/albalenys" target="_blank" title="Check me out on Linkedin!"><%= image_tag("linkedin-icon.svg", alt: "Linkedin", class: "icon") %></a>
+    <%= link_to image_tag("twitter-icon.svg", alt: "Twitter", class: "icon"), "https://twitter.com/albalenys_", target: "_blank", title: "Follow me on Twitter!" %>
+    <%= link_to image_tag("googleplus-icon.png", alt: "Google+", class: "icon"), "https://plus.google.com/u/0/+AbbyDeLosSantos/", target: "_blank", title: "Check me out on Google+!" %>
+    <%= link_to image_tag("github-icon.png", alt: "Github", class: "icon"), "https://github.com/albalenys", target: "_blank", title: "Follow me on GitHub!" %>
+    <%= link_to image_tag("linkedin-icon.svg", alt: "Linkedin", class: "icon"), "https://www.linkedin.com/in/albalenys", target: "_blank", title: "Check me out on Linkedin!" %>
 
     <div class="center">
       <%= form_tag search_path, method: "get" do %>
