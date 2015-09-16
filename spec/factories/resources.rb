@@ -4,5 +4,4 @@ FactoryGirl.define do
     url Faker::Internet.url
     post
   end
-
 end
