@@ -4,8 +4,8 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    @query = params[:search][0]
-    @posts = Post.search(params[:search][0]).order("created_at DESC")
-    @projects = Project.search(params[:search][0]).order("created_at DESC")
+    @query = params[:q][:title_cont]
+    @projects = @q.result(distinct: true)
+    @posts = @post.result(distinct: true)
   end
 end
