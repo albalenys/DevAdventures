@@ -16,9 +16,10 @@
     <%= link_to image_tag("linkedin-icon.svg", alt: "Linkedin", class: "icon"), "https://www.linkedin.com/in/albalenys", target: "_blank", title: "Check me out on Linkedin!" %>
 
     <div class="center">
-      <%= form_tag search_path, method: "get" do %>
+      <%= search_form_for @q, url: search_path, method: "get" do |f| %>
         <%= image_tag "search-icon", class: "search-icon" %>
-        <%= text_field :search, params[:search], class: "search-bar", placeholder: "search" %>
+        <%= f.search_field :title_cont, class: "search-bar", placeholder: "search" %>
+        <%= f.submit %>
       <% end %>
     </div>
   </aside>

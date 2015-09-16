@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Ransack::Helpers::FormHelper
   def logged_in?
     session[:admin_id]
   end
