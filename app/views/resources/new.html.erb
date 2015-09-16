@@ -1,12 +1,10 @@
-<main>
-  <h1 class="center">Add Resource</h1>
-  <div class="sub">
-    To blog post "<%= @post.title %>"
-  </div>
-  <%= flash[:error] %>
-  <hr>
+<h1 class="center">Add Resource</h1>
+<div class="sub">
+  To blog post "<%= @post.title %>"
+</div>
+<%= flash[:error] %>
+<hr>
 
-  <%= form_for @resource, url: post_resources_path, method: "POST", html: {class: "center"} do |f|%>
-    <%= render "form" %>
-  <% end %>
-</main>
+<%= form_for @resource, url: post_resources_path, method: "POST", html: {class: "center"} do |f|%>
+  <%= render "form" %>
+<% end %>
