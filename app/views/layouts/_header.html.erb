@@ -19,7 +19,6 @@
       <%= search_form_for @q, url: search_path, method: "get" do |f| %>
         <%= image_tag "search-icon", class: "search-icon" %>
         <%= f.search_field :title_cont, class: "search-bar", placeholder: "search" %>
-        <%= f.submit %>
       <% end %>
     </div>
   </aside>

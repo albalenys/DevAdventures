@@ -18,10 +18,6 @@
   and (min-width: 971px)
   and (max-width: 1415px) {
 
-  main {
-    width: 23em;
-  }
-
   nav {
     position: relative;
     float: left;
@@ -73,11 +69,6 @@
   header a {
     display: inline;
     margin: 0.2em;
-  }
-
-  main {
-    margin: 5em auto;
-    width: 60%;
   }
 
   nav {
