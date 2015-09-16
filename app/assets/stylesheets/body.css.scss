@@ -1,0 +1,66 @@
+main {
+  position: absolute;
+  margin: 1em auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 16em;
+}
+
+.subtitle {
+  color: #66C2E0;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.profile {
+  border-radius: 13em;
+  height: 13em;
+  width: 10em;
+}
+
+table {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-size: 1em;
+  padding: 2em 0;
+}
+
+tfoot {
+  text-align: right;
+}
+
+.blog-list td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+code {
+  font-family: monospace;
+  color: #999;
+}
+
+xmp {
+  padding: 1em;
+  border-left: solid #66C2E0 0.4em;
+  margin: 0 2em;
+  white-space: pre-line;
+}
+
+.bordered_table {
+  margin: auto;
+  font-size: 0.9em;
+
+  td {
+    padding: 1em;
+    text-align: center;
+    border: solid #000 1px;
+  }
+}
+
+th {
+  color: #999 1em;
+}
+
+
+

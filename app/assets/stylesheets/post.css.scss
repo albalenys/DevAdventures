@@ -1,0 +1,32 @@
+.blog-footer {
+  width: 100%;
+
+  td {
+    width: 5em;
+  }
+}
+
+.right-blog {
+  text-align: right;
+  width: 40%;
+}
+
+.center-blog {
+  text-align: center;
+  width: 30%;
+}
+
+.left-blog {
+  width: 30%;
+}
+
+.sub-button {
+  color: #000 !important;
+  background: #66C2E0;
+  padding: 0 0.2em;
+  border-radius: 0.1em;
+}
+
+a.top-button {
+  border: none;
+}

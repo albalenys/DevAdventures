@@ -1,27 +1,23 @@
-<main>
-  <% if logged_in? %>
-    <div class="center">
-      <p><%= link_to "Add Blog Post", new_post_path, class: "sub-button" %></p>
-    </div>
-  <% end %>
+<% if logged_in? %>
+  <p class="center"><%= link_to "Add Blog Post", new_post_path, class: "sub-button" %></p>
+<% end %>
 
-  <% @posts_by_month.each do |monthname, posts| %>
-    <h2 class="center"><%= monthname %> 2015</h2>
-    <ul>
-      <% posts.each do |post| %>
-        <li>
-          <%= monthname %> <%= post.created_at.day %>:
-          <%= link_to "#{post.title}", post_path(post.id) %>
+<% @posts_by_month.each do |monthname, posts| %>
+  <h2 class="center"><%= monthname %> 2015</h2>
+  <ul>
+    <% posts.each do |post| %>
+      <li>
+        <%= monthname %> <%= post.created_at.day %>:
+        <%= link_to "#{post.title}", post_path(post.id) %>
 
-          <% if logged_in? %>
-            <div class="right">
-              <%= link_to "Edit Post", edit_post_path(post.id), class: "sub-button" %>
-              <%= link_to "Delete Post", post_path(post.id), method: "DELETE", class: "sub-button" %>
-            </div>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-    <hr>
-  <% end %>
-</main>
+        <% if logged_in? %>
+          <div class="right">
+            <%= link_to "Edit Post", edit_post_path(post.id), class: "sub-button" %>
+            <%= link_to "Delete Post", post_path(post.id), method: "DELETE", class: "sub-button" %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+<% end %>
