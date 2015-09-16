@@ -16,7 +16,7 @@
 
 @media screen
   and (min-width: 971px)
-  and (max-width: 1500px) {
+  and (max-width: 1415px) {
 
   main {
     width: 23em;
@@ -51,20 +51,19 @@
   }
 
   .index_background {
-    background: #CCC4BC;
+    background: url("railroad_background.jpg") #000 no-repeat;
   }
 
   .search-bar {
     width: 20em;
   }
-
 }
 
 
 /* ----------- Laptops ----------- */
 
 @media screen
-  and (min-width: 1501px)
+  and (min-width: 1416px)
   and (min-device-width: 1501px) {
 
   header {
@@ -115,5 +114,4 @@
   hr {
     border-top: #999;
   }
-
 }
