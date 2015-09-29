@@ -49,7 +49,7 @@
   }
 
   .index_background {
-    background: url("railroad_background.jpg") #000 no-repeat;
+    background: url("background.jpg") #000 no-repeat;
   }
 
   .search-bar {
@@ -61,7 +61,7 @@
 /* ----------- Laptops ----------- */
 
 @media screen
-  and (min-width: 1400px) {
+  and (min-width: 1000px) {
 
   .index_background {
     background-size: cover;
