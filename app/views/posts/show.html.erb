@@ -13,7 +13,13 @@
 <hr>
 <p><%= @post.content.html_safe %></p>
 
-<% if !@post.resources.empty? %>
+<% if logged_in? %>
+  <div class="center">
+    <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "sub-button" %>
+  </div>
+<% end %>
+
+<% unless @post.resources.empty? %>
   <%= render "resources/list" %>
 <% end %>
 
