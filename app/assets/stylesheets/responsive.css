@@ -1,7 +1,7 @@
 /* ----------- Cell Phones ----------- */
 
 @media screen
-  and (max-device-width: 970px) {
+  and (max-device-width: 700px) {
     html {
       font-size: 3em;
     }
@@ -15,19 +15,21 @@
 /* ----------- Tablets ----------- */
 
 @media screen
-  and (min-width: 971px)
-  and (max-width: 1415px) {
+  and (min-width: 701px) {
 
   nav {
-    position: relative;
-    float: left;
     margin: 0.3em;
+    float: left;
   }
 
   header a {
     display: inline;
     margin: 0.2em;
     width: 50%;
+  }
+
+  .socialmedia {
+    float: right;
   }
 
   .index_text {
@@ -59,49 +61,9 @@
 /* ----------- Laptops ----------- */
 
 @media screen
-  and (min-width: 1416px)
-  and (min-device-width: 1501px) {
-
-  header {
-    position: fixed;
-  }
-
-  header a {
-    display: inline;
-    margin: 0.2em;
-  }
-
-  nav {
-    position: relative;
-    float: left;
-    margin: 0.3em;
-  }
-
-  aside {
-    text-align: none;
-    padding-top: 0;
-    float: right;
-    margin: 0.3em;
-  }
+  and (min-width: 1400px) {
 
   .index_background {
-    background: url("railroad_background.jpg") #000 no-repeat;
     background-size: cover;
-  }
-
-  .index_text {
-    width: 22em;
-    background: #FFF;
-    padding: 1em;
-    margin: auto;
-  }
-
-  .profile {
-    float: right;
-    text-align: none;
-  }
-
-  hr {
-    border-top: #999;
   }
 }
