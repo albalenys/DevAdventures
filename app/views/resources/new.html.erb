@@ -6,5 +6,5 @@
 <hr>
 
 <%= form_for @resource, url: post_resources_path, method: "POST", html: {class: "center"} do |f|%>
-  <%= render "form" %>
+  <%= render "form", f: f %>
 <% end %>
