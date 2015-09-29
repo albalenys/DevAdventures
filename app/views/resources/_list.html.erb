@@ -1,12 +1,6 @@
 <hr>
 <h4 class="center">Further Resources</h4>
 
-<% if logged_in? %>
-  <div class="center">
-    <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "sub-button" %>
-  </div>
-<% end %>
-
 <ul>
   <% @post.resources.each do |resource| %>
     <li>
