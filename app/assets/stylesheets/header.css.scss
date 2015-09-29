@@ -2,8 +2,6 @@
 
 header {
   width: 100%;
-  top: 0;
-  left: 0;
 
   a {
     border-style: none;
@@ -34,6 +32,17 @@ nav {
   }
 }
 
+.socialmedia {
+  .search-icon {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .search-bar {
+    width: 70%;
+  }
+}
+
 .icon {
   width: 2.3em;
   height: 2.3em;
@@ -53,15 +62,6 @@ nav {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
-}
-
-.search-icon {
-  width: 1.2em;
-  height: 1.2em;
-}
-
-.search-bar {
-  width: 70%;
 }
 
 @-webkit-keyframes wobble {

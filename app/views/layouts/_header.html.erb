@@ -9,7 +9,7 @@
     <% end %>
   </nav>
 
-  <aside class="center">
+  <div class="center socialmedia">
     <%= link_to image_tag("twitter-icon.svg", alt: "Twitter", class: "icon"), "https://twitter.com/albalenys_", target: "_blank", title: "Follow me on Twitter!" %>
     <%= link_to image_tag("googleplus-icon.png", alt: "Google+", class: "icon"), "https://plus.google.com/u/0/+AbbyDeLosSantos/", target: "_blank", title: "Check me out on Google+!" %>
     <%= link_to image_tag("github-icon.png", alt: "Github", class: "icon"), "https://github.com/albalenys", target: "_blank", title: "Follow me on GitHub!" %>
@@ -21,5 +21,5 @@
         <%= f.search_field :title_cont, class: "search-bar", placeholder: "search" %>
       <% end %>
     </div>
-  </aside>
+  </div>
 </header>

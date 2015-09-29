@@ -1,15 +1,12 @@
-<body class="index_background">
-  <main>
-    <h1 class="center">Developing Adventures</h1>
-    <div class="subtitle">from a Beginner Developer</div>
+<h1 class="center">Developing Adventures</h1>
+<div class="subtitle">from a Beginner Developer</div>
 
-    <div class="index_text">
-      <h3>Recent Work</h3>
-      <% @recent_posts.each do |post|%>
-        <%= post.created_at.strftime("%B, %d, %Y") %><br>
-        <ul>
-          <li><%= link_to "#{post.title}", post_path(post.id) %></li>
-        </ul>
-      <% end %>
-    </div>
-  </main>
+<div class="index_text">
+  <h3>Recent Work</h3>
+  <% @recent_posts.each do |post|%>
+    <%= post.created_at.strftime("%B, %d, %Y") %><br>
+    <ul>
+      <li><%= link_to "#{post.title}", post_path(post.id) %></li>
+    </ul>
+  <% end %>
+</div>
