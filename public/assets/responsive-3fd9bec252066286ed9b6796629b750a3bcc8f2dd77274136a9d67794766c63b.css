@@ -1,0 +1,70 @@
+/* ----------- Cell Phones ----------- */
+
+
+@media screen
+  and (max-device-width: 700px) {
+    html {
+      font-size: 3em;
+    }
+
+    .blog-footer {
+      font-size: 0.8em
+    }
+  }
+
+
+/* ----------- Tablets ----------- */
+
+@media screen
+  and (min-width: 701px) {
+
+  nav {
+    margin: 0.3em;
+    float: left;
+  }
+
+  header a {
+    display: inline;
+    margin: 0.2em;
+    width: 50%;
+  }
+
+  .socialmedia {
+    float: right;
+  }
+
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    padding: 1em;
+    margin: auto;
+  }
+
+  .profile {
+    float: right;
+    text-align: none;
+  }
+
+  hr {
+    border-top: #999;
+  }
+
+  .index_background {
+    background: url("background.jpg") #000 no-repeat;
+  }
+
+  .search-bar {
+    width: 20em;
+  }
+}
+
+
+/* ----------- Laptops ----------- */
+
+@media screen
+  and (min-width: 1000px) {
+
+  .index_background {
+    background-size: cover;
+  }
+}
