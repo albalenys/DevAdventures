@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @recent_posts = Post.all.last(2)
+    @recent_posts = Post.all.order(created_at: :desc).last(2)
   end
 
   def search

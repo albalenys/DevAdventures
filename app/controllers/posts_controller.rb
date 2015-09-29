@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :find_post, except: [:index, :new, :create]
 
   def index
-    @posts_by_month = Post.sort_by_month
+    @posts_by_month = Post.order(created_at: :desc).sort_by_month
   end
 
   def show

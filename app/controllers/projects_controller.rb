@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :find_project, except: [:index, :new, :create]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order(created_at: :desc)
   end
 
   def new
