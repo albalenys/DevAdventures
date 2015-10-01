@@ -1,10 +1,11 @@
 main {
-  position: absolute;
-  margin: 3em auto 0;
+  position: relative;
+  margin: 22em auto 0;
   width: 60%;
-  left: 0;
-  right: 0;
-  z-index: -1;
+  height: 100%;
+}
+
+body {
   height: 100%;
 }
 
