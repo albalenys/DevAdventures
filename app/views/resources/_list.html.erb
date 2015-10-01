@@ -8,8 +8,8 @@
 
       <% if logged_in? %>
         <div class="right">
-          <%= link_to "Edit", edit_post_resource_path(@post.id, resource.id), class: "sub-button" %>
-          <%= link_to "Delete", post_resource_path(@post.id, resource.id), method: "DELETE", class: "sub-button" %>
+          <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_resource_path(@post, resource) %>
+          <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_resource_path(@post, resource), method: "DELETE" %>
         </div>
       <% end %>
     </li>
