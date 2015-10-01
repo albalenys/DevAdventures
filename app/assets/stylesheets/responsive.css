@@ -35,8 +35,10 @@
   .index_text {
     width: 22em;
     background: #FFF;
+    border-radius: 0.4em;
     padding: 1em;
     margin: auto;
+    opacity: 0.9;
   }
 
   main {
