@@ -3,7 +3,8 @@ class ProjectsController < ApplicationController
   before_filter :find_project, except: [:index, :new, :create]
 
   def index
-    @projects = Project.all.order(created_at: :desc)
+    projects = Project.all.order(created_at: :desc)
+    @projects = projects.paginate(:page => params[:page], :per_page => 5)
   end
 
   def new

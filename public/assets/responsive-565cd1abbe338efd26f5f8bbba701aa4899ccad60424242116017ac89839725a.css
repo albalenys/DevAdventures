@@ -2,7 +2,7 @@
 
 
 @media screen
-  and (max-device-width: 700px) {
+  and (max-device-width: 800px) {
     html {
       font-size: 3em;
     }
@@ -16,7 +16,7 @@
 /* ----------- Tablets ----------- */
 
 @media screen
-  and (min-width: 701px) {
+  and (min-width: 801px) {
 
   nav {
     margin: 0.3em;
@@ -36,8 +36,14 @@
   .index_text {
     width: 22em;
     background: #FFF;
+    border-radius: 0.4em;
     padding: 1em;
     margin: auto;
+    opacity: 0.9;
+  }
+
+  main {
+    margin: 7em auto 0;
   }
 
   .profile {
