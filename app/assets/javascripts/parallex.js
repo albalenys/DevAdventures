@@ -27,10 +27,6 @@ $(document).ready(function(){
       $("header").css("background-color", "transparent");
     }
 
-    if(height > 1340 && height < 2000){
-      $("header").css("background-color", "#FF9966");
-    }
-
     if(height > 80) {
       $("#welcome").addClass("blur")
       $(".blur").css("-webkit-filter", blur_effect);
