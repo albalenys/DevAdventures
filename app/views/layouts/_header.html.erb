@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Blog", posts_path %>
+    <%= link_to "Home", "#welcome" %>
+    <%= link_to "Blog", "#blog-index" %>
     <%= link_to "Projects", projects_path %>
     <%= link_to "About", about_path %>
     <% if logged_in? %>
@@ -21,5 +21,6 @@
         <%= f.search_field :title_cont, class: "search-bar", placeholder: "search" %>
       <% end %>
     </div>
+
   </div>
 </header>

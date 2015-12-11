@@ -8,11 +8,9 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body class= <%= "index_background" if current_page?(root_path) %> >
+<body>
   <%= render "layouts/header" %>
-  <main>
     <%= yield %>
-  </main>
   <%= render "layouts/footer" %>
 </body>
 </html>

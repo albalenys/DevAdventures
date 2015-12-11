@@ -1,8 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    all_work = Post.all + Project.all
-    @recent_work = all_work.sort_by{ |work| work.created_at }.reverse.first(2)
-    #unable to use active record, no associations between posts and projects.
+    @posts_by_month = Post.order(created_at: :desc).sort_by_month
   end
 
   def search

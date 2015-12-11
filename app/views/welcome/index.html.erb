@@ -1,12 +1,9 @@
-<h1 class="center">Developing Adventures</h1>
-<div class="subtitle">from a Beginner Developer</div>
+<div id="welcome">
+  <h1 class="center">Developing Adventures</h1>
+  <div class="subtitle">from a Beginner Developer</div>
+  Lets's test this block.
+</div>
 
-<div class="index_text">
-  <h3>Recent Work</h3>
-  <% @recent_work.each do |work|%>
-    <%= work.created_at.strftime("%B, %d, %Y") %><br>
-    <ul>
-      <li><small><%= work.class %></small>: <%= link_to "#{work.title}", post_path(work) %></li>
-    </ul>
-  <% end %>
+<div id="blog-index">
+  <%= render 'posts/index' %>
 </div>
