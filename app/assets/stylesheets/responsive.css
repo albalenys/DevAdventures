@@ -54,7 +54,7 @@
     border-top: #999;
   }
 
-  .index_background {
+  #welcome {
     background: url("background.jpg") #000 no-repeat;
   }
 
@@ -69,7 +69,7 @@
 @media screen
   and (min-width: 1000px) {
 
-  .index_background {
+  #welcome {
     background-size: cover;
   }
 }
