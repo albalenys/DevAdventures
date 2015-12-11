@@ -6,11 +6,15 @@ html, body {
 #welcome, #blogs, #projects, #about {
   width: 100%;
   min-height: 100%;
-  margin-bottom: 10em;
 }
 
 #welcome {
   background: url("background.jpg") #000 no-repeat;
+}
+
+#projects {
+  background: #000;
+  color: #FFF;
 }
 
 html {
