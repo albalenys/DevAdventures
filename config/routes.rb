@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get '/search' => 'welcome#search'
+  root 'shared#index'
+  get '/search' => 'shared#search'
 
   resources :posts do
-    resources :resources, except: [:show]
+    resources :resources, except: [:index, :show]
   end
 
-  resources :projects, except: [:show]
+  resources :projects, except: [:index, :show]
   get '/about' => 'about#index'
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'

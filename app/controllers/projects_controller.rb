@@ -1,11 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authorize_user, except: [:index]
-  before_filter :find_project, except: [:index, :new, :create]
-
-  def index
-    projects = Project.all.order(created_at: :desc)
-    @projects = projects.paginate(:page => params[:page], :per_page => 4)
-  end
+  before_filter :find_project, except: [:new, :create]
 
   def new
     @project = Project.new

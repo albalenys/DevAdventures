@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class SharedController < ApplicationController
   def index
     projects = Project.all.order(created_at: :desc)
     @projects = projects.paginate(:page => params[:page], :per_page => 4)
