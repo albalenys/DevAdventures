@@ -1,9 +1,6 @@
 html, body {
+  margin: 0;
   height: 100%;
-}
-
-.welcome-container, .about-container {
-  min-height: 100%;
 }
 
 #welcome, #blogs, #projects, #about {
@@ -13,7 +10,6 @@ html, body {
 
 #welcome {
   background: url("background.jpg") #000 no-repeat;
-  border: 1px solid #FFF;
 }
 
 html {
