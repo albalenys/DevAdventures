@@ -1,4 +1,4 @@
-// URL Reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
+// Reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
 
 $(document).ready(function(){
   $('a[href*=#]').click(function() {
@@ -25,6 +25,10 @@ $(document).ready(function(){
     }
     else {
       $("header").css("background-color", "transparent");
+    }
+
+    if(height > 1340 && height < 2000){
+      $("header").css("background-color", "#FF9966");
     }
 
     if(height > 80) {
