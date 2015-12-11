@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get '/search' => 'welcome#search'
 
   resources :posts do
-    resources :resources, except: [:show]
+    resources :resources, except: [:index, :show]
   end
 
-  resources :projects, except: [:show]
+  resources :projects, except: [:index, :show]
   get '/about' => 'about#index'
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'

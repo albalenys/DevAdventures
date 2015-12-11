@@ -1,10 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authorize_user, except: [:index, :show]
-  before_filter :find_post, except: [:index, :new, :create]
-
-  def index
-    @posts_by_month = Post.order(created_at: :desc).sort_by_month
-  end
+  before_filter :authorize_user, except: [:show]
+  before_filter :find_post, except: [:new, :create]
 
   def show
     @next_post = Post.find_by(id: @post.id + 1)
