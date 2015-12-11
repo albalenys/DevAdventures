@@ -1,4 +1,4 @@
-// URL Reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
+// Reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
 
 $(document).ready(function(){
   $('a[href*=#]').click(function() {
