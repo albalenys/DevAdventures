@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get '/search' => 'welcome#search'
+  root 'shared#index'
+  get '/search' => 'shared#search'
 
   resources :posts do
     resources :resources, except: [:index, :show]
