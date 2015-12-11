@@ -15,4 +15,14 @@ $(document).ready(function(){
       }
     }
   });
+
+  $(window).scroll(function (event) {
+    var height = $(window).scrollTop();
+    if(height  > 680) {
+      $("header").css("background-color", "#FFF");
+    }
+    else {
+      $("header").css("background-color", "transparent");
+    }
+  });
 });

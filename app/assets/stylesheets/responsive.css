@@ -41,8 +41,16 @@
     opacity: 0.9;
   }
 
-  main {
-    margin: 7em auto 0;
+  .small-container {
+    width: 60%;
+    margin: auto;
+    padding-top: 6em;
+  }
+
+  .large-container {
+    margin: auto;
+    padding-top: 1em;
+    width: 60%;
   }
 
   .profile {
@@ -68,6 +76,10 @@
 
 @media screen
   and (min-width: 1000px) {
+
+  header {
+    background-color: transparent;
+  }
 
   #welcome {
     background-size: cover;
