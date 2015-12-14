@@ -1,9 +1,12 @@
+<h1 class="center">Blog Posts</h1>
+
 <% if logged_in? %>
   <p class="center"><%= link_to "Add Blog Post", new_post_path, class: "sub-button" %></p>
 <% end %>
 
+<hr>
 <% @posts_by_month.each do |monthname, posts| %>
-  <h2 class="center"><%= monthname %> 2015</h2>
+  <h4 class="center"><%= monthname %> 2015</h4>
   <ul>
     <% posts.each do |post| %>
       <li>
