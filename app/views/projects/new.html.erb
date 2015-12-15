@@ -1,7 +1,9 @@
-<h1 class="center">Add Project</h1>
-<%= flash[:error] %>
-<hr>
+<div class="small-container">
+  <h1 class="center">Add Project</h1>
+  <%= flash[:error] %>
+  <hr>
 
-<%= form_for @project, html: {class: "center"} do |f|%>
-  <%= render "form" %>
-<% end %>
+  <%= form_for @project, html: {class: "center"} do |f|%>
+    <%= render "form" %>
+  <% end %>
+</div>

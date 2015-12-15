@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   def create
     project = Project.new(project_params.merge(admin_id: session[:admin_id]))
     if project.save
-      redirect_to projects_path
+      redirect_to "/#projects"
     else
       flash[:error] = "Invalid input: must include both title and url."
       redirect_to new_project_path
@@ -17,12 +17,12 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to projects_path
+    redirect_to "/#projects"
   end
 
   def update
     if @project.update_attributes(project_params)
-      redirect_to projects_path
+      redirect_to "/#projects"
     else
       flash[:error] = "Invalid input: must include both title and url."
       redirect_to edit_project_path

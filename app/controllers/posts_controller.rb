@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     post = Post.new(post_params.merge(admin_id: session[:admin_id]))
     if post.save
-      redirect_to root_path
+      redirect_to "/#blogs"
     else
       flash[:error] = "Invalid input: must include both title and content."
       redirect_to new_post_path
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to "/#blogs"
   end
 
   def update
