@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   has_many :resources
 
   def self.sort_by_month
-    self.all.group_by { |post| post.created_at.strftime("%B") }
+    self.all.group_by { |post| post.created_at.beginning_of_month }
   end
 
   def self.search(query)
