@@ -5,12 +5,12 @@
 <% end %>
 
 <hr>
-<% @posts_by_month.each do |monthname, posts| %>
-  <h4 class="center"><%= monthname %> 2015</h4>
+<% @posts_by_month.each do |month_year, posts| %>
+  <h4 class="center"><%= month_year.strftime("%B %Y") %></h4>
   <ul>
     <% posts.each do |post| %>
       <li>
-        <%= monthname %> <%= post.created_at.day %>:
+        <%= month_year.strftime("%B") %> <%= post.created_at.day %>:
         <%= link_to "#{post.title}", post_path(post) %>
 
         <% if logged_in? %>
