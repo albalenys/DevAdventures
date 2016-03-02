@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'
   delete '/admin' => 'admin#logout'
+  get '/admin/private' => 'admin#private'
 end

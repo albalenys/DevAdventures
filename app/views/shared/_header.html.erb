@@ -5,6 +5,7 @@
     <%= link_to "Projects", "/#projects" %>
     <%= link_to "About", "/#about" %>
     <% if logged_in? %>
+      <%= link_to "Private", admin_private_path %>
       <%= link_to "Log Out", admin_path, method: 'delete' %>
     <% end %>
   </nav>
