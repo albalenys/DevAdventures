@@ -8,8 +8,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @next_post = @post.next_post("up")
-    @previous_post = @post.next_post("down")
+    unless @post.private
+      @next_post = @post.next_post("up")
+      @previous_post = @post.next_post("down")
+    end
     authorize_user if @post.private
   end
 
