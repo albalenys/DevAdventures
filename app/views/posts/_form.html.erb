@@ -1,4 +1,5 @@
 <%= form_for @post, html: {class: "center"} do |f|%>
+  <p>Private: <%= f.check_box :private %></p>
   <p>Title: <%= f.text_field :title, class: "form-field" %></p>
   <%= f.text_area :content, class: "form-area" %><br>
   <%= f.submit "Submit" %>

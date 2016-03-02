@@ -1,10 +1,18 @@
 class PostsController < ApplicationController
   before_filter :authorize_user, except: [:show]
-  before_filter :find_post, except: [:new, :create]
+  before_filter :find_post, except: [:new, :create, :private]
+
+  def private
+    private_posts = Post.where(private: true)
+    @posts_by_month = private_posts.order(created_at: :desc).sort_by_month
+  end
 
   def show
-    @next_post = Post.find_by(id: @post.id + 1)
-    @previous_post = Post.find_by(id: @post.id - 1)
+    unless @post.private
+      @next_post = @post.next_post("up")
+      @previous_post = @post.next_post("down")
+    end
+    authorize_user if @post.private
   end
 
   def new
@@ -38,7 +46,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :private)
   end
 
   def find_post

@@ -21,6 +21,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :development do

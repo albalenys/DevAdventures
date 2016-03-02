@@ -1,4 +1,10 @@
-<div class="large-container">
+<div class="page-container">
+  <% if @post.private %>
+    <div class="center private">
+      <p>PRIVATE POST</p>
+    </div>
+  <% end %>
+
   <h1 id="top" class="center"><%= @post.title %></h1>
 
   <div class="center sub">
@@ -24,5 +30,11 @@
     <%= render "resources/list" %>
   <% end %>
 
-  <%= render "footer" %>
+  <% if @post.private %>
+    <div class="center private">
+      <p>PRIVATE POST</p>
+    </div>
+  <% else %>
+    <%= render "footer" %>
+  <% end %>
 </div>

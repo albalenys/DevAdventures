@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+
   def auth
     @admin = Admin.new
   end
