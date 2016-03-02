@@ -1,3 +1,5 @@
+require 'pry'
+
 class PostsController < ApplicationController
   before_filter :authorize_user, except: [:show]
   before_filter :find_post, except: [:new, :create]
@@ -13,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(post_params.merge(admin_id: session[:admin_id]))
+    binding.pry
     if post.save
       redirect_to "/#blogs"
     else
@@ -38,7 +41,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :private)
   end
 
   def find_post
