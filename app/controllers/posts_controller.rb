@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def show
     @next_post = Post.find_by(id: @post.id + 1)
     @previous_post = Post.find_by(id: @post.id - 1)
+    authorize_user if @post.private
   end
 
   def new
