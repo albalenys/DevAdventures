@@ -1,8 +1,11 @@
-require 'pry'
-
 class PostsController < ApplicationController
   before_filter :authorize_user, except: [:show]
-  before_filter :find_post, except: [:new, :create]
+  before_filter :find_post, except: [:new, :create, :private]
+
+  def private
+    posts = Post.where(private: true)
+    @posts_by_month = posts.order(created_at: :desc).sort_by_month
+  end
 
   def show
     @next_post = Post.find_by(id: @post.id + 1)

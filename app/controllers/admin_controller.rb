@@ -1,10 +1,4 @@
 class AdminController < ApplicationController
-  before_filter :authorize_user, only: [:private]
-
-  def private
-    posts = Post.where(private: true)
-    @posts_by_month = posts.order(created_at: :desc).sort_by_month
-  end
 
   def auth
     @admin = Admin.new

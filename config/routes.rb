@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'shared#index'
   get '/search' => 'shared#search'
 
+  get '/posts/private' => 'posts#private'
   resources :posts do
     resources :resources, except: [:index, :show]
   end
@@ -11,5 +12,4 @@ Rails.application.routes.draw do
   get '/admin' => 'admin#auth'
   post '/admin' => 'admin#login'
   delete '/admin' => 'admin#logout'
-  get '/admin/private' => 'admin#private'
 end
