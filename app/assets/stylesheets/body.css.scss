@@ -1,12 +1,13 @@
 .small-container, .large-container, .page-container {
   width: 60%;
   margin: auto;
-  padding-top: 18em;
   min-height: 100%;
 }
 
 .large-container {
-  padding-bottom: 8em;
+  position: relative;
+  top: 5em;
+  padding-bottom: 6em;
 }
 
 .page-container {
