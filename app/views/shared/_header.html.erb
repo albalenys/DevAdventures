@@ -18,7 +18,7 @@
     <%= link_to image_tag("email-icon.png", alt: "Email", class: "icon"), "mailto:www.AlbalenysD@gmail.com", target: "_blank", title: "Send me an email!" %>
 
     <div class="center">
-      <%= search_form_for @q, url: search_path, method: "get" do |f| %>
+      <%= search_form_for @project_query, url: search_path, method: "get" do |f| %>
         <%= image_tag "search-icon", class: "search-icon" %>
         <%= f.search_field :title_cont, class: "search-bar", placeholder: "search" %>
       <% end %>

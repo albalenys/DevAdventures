@@ -8,7 +8,7 @@ class SharedController < ApplicationController
 
   def search
     @query = params[:q][:title_cont]
-    @projects = @q.result(distinct: true)
-    @posts = @post.result(distinct: true)
+    @projects = @project_query.result(distinct: true)
+    @posts = @post_query.result(distinct: true)
   end
 end
