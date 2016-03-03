@@ -1,26 +1,37 @@
-<h2 class="center">Searching for "<%= @query %>"...</h2>
+<div class="page-container">
+  <h2 class="center">Searching for "<%= @query %>"...</h2>
 
-<hr>
-<% if @posts.empty? && @projects.empty? %>
-  <p class="center">No posts match your search.<br>
-    Your query might be too specific.</p>
-<% end %>
-
-<% if !@posts.empty? %>
-  <h3>Blog Posts</h3>
-  <% @posts.each do |post| %>
-    <ul>
-      <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
-    </ul>
+  <hr>
+  <% if @posts.empty? && @projects.empty? %>
+    <p class="center">
+      No posts match your search.<br>
+      Your query might be too specific.
+    </p>
   <% end %>
-<hr>
-<% end %>
 
-<% if !@projects.empty? %>
-  <h3>Projects</h3>
-  <% @projects.each do |project| %>
-    <ul>
-      <li><%= timestamp(project) %>: <%= link_to project.title, project_path(project) %></li>
-    </ul>
+  <% unless @posts.empty? %>
+    <h3>Blog Posts</h3>
+    <% @posts.each do |post| %>
+      <ul>
+        <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
+      </ul>
+    <% end %>
+  <hr>
   <% end %>
-<% end %>
+
+  <% unless @projects.empty? %>
+    <h3>Projects</h3>
+    <% @projects.each do |project| %>
+      <ul>
+        <li>
+          <% if project.url == "" %>
+            <%= project.title %>
+          <% else %>
+            <%= link_to "#{project.title}", project.url, target: "_blank" %>
+          <% end %>
+          (<%= link_to "Github Source", project.github, target: "_blank" %>)
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
+</div>

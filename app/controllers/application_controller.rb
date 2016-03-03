@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_query
-    @q = Project.ransack(params[:q])
-    @post = Post.ransack(params[:q])
+    @project_query = Project.ransack(params[:q])
+    @post_query = Post.ransack(params[:q])
   end
 end
