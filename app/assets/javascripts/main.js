@@ -1,6 +1,8 @@
 // Parallex reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
 
 $(document).ready(function(){
+  hljs.initHighlightingOnLoad();
+
   $("a[href*='#']").click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
