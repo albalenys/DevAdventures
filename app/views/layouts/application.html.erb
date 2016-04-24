@@ -15,7 +15,7 @@
   <%= csrf_meta_tags %>
 
   <!-- Rss Feed -->
-  <link rel="alternate" type="application/rss+xml" title="DevAdventures" href="https://www.albalenys.com/feed?format=rss">
+  <%= auto_discovery_link_tag(:rss, {action: "feed"}, {title: "DevAdventures"}) %>
 
   <!-- Google Analytics -->
   <script>
