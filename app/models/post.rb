@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
       return nil if post_index == 0
       index = post_index - 1
     end
-    public_posts[index]
+    Post.public_posts[index]
   end
 
   def self.private_posts
