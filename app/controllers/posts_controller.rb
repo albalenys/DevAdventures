@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   end
 
   def feed
-    @posts = Post.where(private: false)
+    @posts = Post.where(private: false).limit(50)
     respond_to do |format|
       format.rss { render layout: false }
     end
