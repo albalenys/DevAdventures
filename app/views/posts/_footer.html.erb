@@ -7,9 +7,6 @@
           <%= link_to "Next", post_path(@next_post), class: "sub-button" %>
         <% end %>
       </td>
-      <td class="center-blog">
-        <a class="top-button" href="#top"><%= image_tag("top-icon.png", class: "icon") %></a>
-      </td>
       <td class="right-blog">
         <% if @previous_post %>
           <%= link_to "Previous", post_path(@previous_post), class: "sub-button" %>
