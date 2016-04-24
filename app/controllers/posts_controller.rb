@@ -40,12 +40,11 @@ class PostsController < ApplicationController
   end
 
   def private
-    private_posts = Post.where(private: true)
-    @posts_by_month = private_posts.order(created_at: :desc).sort_by_month
+    @posts_by_month = Post.private_posts.order(created_at: :desc).sort_by_month
   end
 
   def feed
-    @posts = Post.where(private: false)
+    @posts = Post.public_posts.limit(50)
     respond_to do |format|
       format.rss { render layout: false }
     end
