@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authorize_user, except: [:show]
+  before_filter :authorize_user, except: [:show, :feed]
   before_filter :find_post, except: [:new, :create, :private]
 
   def show
