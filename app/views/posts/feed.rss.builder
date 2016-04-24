@@ -18,7 +18,7 @@ xml.rss :version => "2.0" do
         xml.link "http://www.albalenys.com/posts/#{post.id}"
         xml.guid post.id
 
-        text = post.text
+        text = post.content
 
     # For future when images are added to posts.
       # if post.image.exists?
