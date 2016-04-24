@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'shared#index'
-  get '/search' => 'shared#search'
-  get '/feed' => 'posts#feed'
+  get '/search', to: 'shared#search'
+  get 'feed.rss', to: 'posts#rss'
 
   get '/posts/private' => 'posts#private'
   resources :posts do
@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :projects, except: [:index, :show]
-  get '/about' => 'about#index'
-  get '/admin' => 'admin#auth'
-  post '/admin' => 'admin#login'
-  delete '/admin' => 'admin#logout'
+  get '/about', to: 'about#index'
+  get '/admin', to: 'admin#auth'
+  post '/admin', to: 'admin#login'
+  delete '/admin', to: 'admin#logout'
 end

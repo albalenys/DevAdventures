@@ -23,4 +23,12 @@ class Post < ActiveRecord::Base
     end
     public_posts[index]
   end
+
+  def self.private_posts
+    Post.where(private: true)
+  end
+
+  def self.public_posts
+    Post.where(private: false)
+  end
 end
