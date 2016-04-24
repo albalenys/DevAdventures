@@ -14,6 +14,7 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'ransack'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
+gem 'heroku'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

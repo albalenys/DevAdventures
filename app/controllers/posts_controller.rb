@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authorize_user, except: [:show, :feed]
-  before_filter :find_post, except: [:new, :create, :private]
+  before_filter :find_post, except: [:new, :create, :private. :feed]
 
   def show
     if @post.private
