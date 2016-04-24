@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'shared#index'
   get '/search' => 'shared#search'
+  get '/feed' => 'posts#feed'
 
   get '/posts/private' => 'posts#private'
   resources :posts do

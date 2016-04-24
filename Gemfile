@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails', "~> 4.0"
   gem 'capybara'
   gem 'sqlite3'
+  gem 'faker'
 end
 
 group :development do
