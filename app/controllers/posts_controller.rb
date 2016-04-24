@@ -45,9 +45,9 @@ class PostsController < ApplicationController
   end
 
   def feed
-    @posts = Post.all
+    @posts = Post.where(private: false)
     respond_to do |format|
-      format.rss { render :layout => false }
+      format.rss { render layout: false }
     end
   end
 
