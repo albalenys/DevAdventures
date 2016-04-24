@@ -20,14 +20,14 @@ xml.rss :version => "2.0" do
 
         text = post.text
 
-    # Optional: Insert image tags.
-        if post.image.exists?
-          image_url = post.image.url(:large)
-          image_caption = post.image_caption
-          image_align = ""
-          image_tag = "<p><img src='" + image_url +  "' alt='" + image_caption + "' title='" + image_caption + "' align='" + image_align  + "' /></p>"
-          text = text.sub('{image}', image_tag)
-        end
+    # For future when images are added to posts.
+      # if post.image.exists?
+      #   image_url = post.image.url(:large)
+      #   image_caption = post.image_caption
+      #   image_align = ""
+      #   image_tag = "<p><img src='" + image_url +  "' alt='" + image_caption + "' title='" + image_caption + "' align='" + image_align  + "' /></p>"
+      #   text = text.sub('{image}', image_tag)
+      # end
 
         xml.description "<p>" + text + "</p>"
       end
