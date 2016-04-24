@@ -14,12 +14,12 @@ class Post < ActiveRecord::Base
   end
 
   def next_post(direction)
-    public_posts = Post.where(private: false)
+    post_index = Post.public_posts.index(self)
     if direction == "up"
-      index = public_posts.index(self) + 1
+      index = post_index + 1
     else
-      return nil if public_posts.index(self) == 0
-      index = public_posts.index(self) - 1
+      return nil if post_index == 0
+      index = post_index - 1
     end
     public_posts[index]
   end
