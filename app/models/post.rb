@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :admin
   has_many :resources
+  has_many :tags, as: :taggable
 
   def self.sort_by_month
     self.all.group_by { |post| post.created_at.beginning_of_month }
