@@ -1,5 +1,3 @@
-require "pry"
-
 class PostsController < ApplicationController
   before_filter :authorize_user, except: [:show, :feed]
   before_filter :find_post, except: [:new, :create, :private, :feed]
@@ -25,7 +23,6 @@ class PostsController < ApplicationController
         tag = Tag.find_or_create_by(name: tag_name)
         post.tags << tag
       end
-      binding.pry
       redirect_to "/#blogs"
     else
       flash[:error] = "Invalid input: must include both title and content."
