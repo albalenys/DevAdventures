@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#auth'
   post '/admin', to: 'admin#login'
   delete '/admin', to: 'admin#logout'
+
+  resources :tags, except: [:index]
 end

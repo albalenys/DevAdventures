@@ -11,9 +11,9 @@
     Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
 
     <% unless @post.tags.empty? %>
-      Categories:
+      <span class="subtitle">Categories</span>:
       <% @post.tags.each do |tag| %>
-        <%= tag.name %><% unless @post.tags.last == tag %>, <% end %>
+        <%= link_to tag.name, tag_path(tag) %><% unless @post.tags.last == tag %>, <% end %>
       <% end %>
     <% end %>
 
@@ -38,11 +38,5 @@
     <%= render "resources/list" %>
   <% end %>
 
-  <% if @post.private %>
-    <div class="center private">
-      <p>PRIVATE POST</p>
-    </div>
-  <% else %>
-    <%= render "footer" %>
-  <% end %>
+  <%= render "footer" %>
 </div>

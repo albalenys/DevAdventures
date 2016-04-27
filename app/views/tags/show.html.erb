@@ -1,0 +1,9 @@
+<div class="page-container">
+	<h1 class="center">Blog Category <%= @tag.name %></h1>
+
+	<% @posts.each do |post| %>
+    <ul>
+      <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
+    </ul>
+	<% end %>
+</div>
