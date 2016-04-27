@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426163345) do
+ActiveRecord::Schema.define(version: 20160427035013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160426163345) do
     t.boolean  "private",    default: false
   end
 
+  add_index "posts", ["admin_id"], name: "index_posts_on_admin_id", using: :btree
   add_index "posts", ["private"], name: "index_posts_on_private", using: :btree
 
   create_table "projects", force: :cascade do |t|
@@ -45,6 +46,8 @@ ActiveRecord::Schema.define(version: 20160426163345) do
     t.string   "github"
   end
 
+  add_index "projects", ["admin_id"], name: "index_projects_on_admin_id", using: :btree
+
   create_table "resources", force: :cascade do |t|
     t.string   "title",      null: false
     t.string   "url",        null: false
@@ -53,14 +56,23 @@ ActiveRecord::Schema.define(version: 20160426163345) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string   "name",          null: false
+  add_index "resources", ["post_id"], name: "index_resources_on_post_id", using: :btree
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
     t.integer  "taggable_id"
     t.string   "taggable_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
-  add_index "tags", ["taggable_type", "taggable_id"], name: "index_tags_on_taggable_type_and_taggable_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+  add_index "taggings", ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

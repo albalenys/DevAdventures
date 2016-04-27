@@ -8,15 +8,23 @@
   <h1 id="top" class="center"><%= @post.title %></h1>
 
   <div class="center sub">
-    Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos
+    Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
+
+    <% unless @post.tags.empty? %>
+      <span class="subtitle">Categories</span>:
+      <% @post.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag) %><% unless @post.tags.last == tag %>, <% end %>
+      <% end %>
+    <% end %>
+
+    <p>
+      <% if logged_in? %>
+        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post) %>
+        <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), method: "DELETE" %>
+      <% end %>
+    </p>
   </div>
 
-  <% if logged_in? %>
-    <div class="center">
-      <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post) %>
-      <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), method: "DELETE" %>
-    </div>
-  <% end %>
   <hr>
   <p><%= @post.content.html_safe %></p>
 
@@ -30,11 +38,5 @@
     <%= render "resources/list" %>
   <% end %>
 
-  <% if @post.private %>
-    <div class="center private">
-      <p>PRIVATE POST</p>
-    </div>
-  <% else %>
-    <%= render "footer" %>
-  <% end %>
+  <%= render "footer" %>
 </div>
