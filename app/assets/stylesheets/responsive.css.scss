@@ -62,10 +62,6 @@
     border-top: #999;
   }
 
-  #welcome {
-    background: url("https://unsplash.it/2000/2000/?random") #000 no-repeat;
-  }
-
   .search-bar {
     width: 20em;
   }
@@ -76,10 +72,6 @@
 
 @media screen
   and (min-width: 1000px) {
-
-  header {
-    background-color: transparent;
-  }
 
   #welcome {
     background-size: cover;
