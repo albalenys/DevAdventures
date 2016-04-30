@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   $(window).scroll(function (event) {
     var height = $(window).scrollTop();
-    var blur_effect = "blur(" + height/50 + "px)"
+    var blur_effect = "blur(" + height/50 + "px)";
 
     if(height  > 680) {
       $("header").css("background-color", "#FFF");
@@ -46,6 +46,6 @@ $(document).ready(function(){
 });
 
 var randBackground = function() {
-  var randInt = Math.floor((Math.random() * 2) + 1);
-  $("#welcome").addClass("bg-img-" + randInt)
+  var randInt = Math.floor((Math.random() * 3) + 1);
+  $("#welcome").addClass("bg-img-" + randInt);
 }
