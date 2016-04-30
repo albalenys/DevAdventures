@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
   hljs.initHighlightingOnLoad();
+  randBackground();
 
   $("a[href*='#']").click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -30,7 +31,7 @@ $(document).ready(function(){
     }
 
     if(height > 80) {
-      $("#welcome").addClass("blur")
+      $("#welcome").addClass("blur");
       $(".blur").css("-webkit-filter", blur_effect);
       $(".blur").css("-moz-filter", blur_effect);
       $(".blur").css("-o-filter", blur_effect);
@@ -38,8 +39,13 @@ $(document).ready(function(){
       $(".blur").css("filter", blur_effect);
     }
     else {
-      $("#welcome").removeClass("blur")
+      $("#welcome").removeClass("blur");
       $("#welcome").removeAttr("style");
     }
   });
 });
+
+var randBackground = function() {
+  var randInt = Math.floor((Math.random() * 2) + 1);
+  $("#welcome").addClass("bg-img-" + randInt)
+}
