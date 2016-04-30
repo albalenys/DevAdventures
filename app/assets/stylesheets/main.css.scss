@@ -20,9 +20,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  border-bottom: 0.1em dashed #66C2E0;
   font-weight: bold;
-  color: #FF9966;
 }
 
 hr {
@@ -76,4 +74,8 @@ h3 {
 
 .blur {
   transition: all 0.25s ease-out;
+}
+
+.remove-border {
+  border: none !important;
 }
