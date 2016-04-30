@@ -3,6 +3,7 @@
 $(document).ready(function(){
   hljs.initHighlightingOnLoad();
   randBackground();
+  renderRandColors();
 
   $("a[href*='#']").click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -48,4 +49,28 @@ $(document).ready(function(){
 var randBackground = function() {
   var randInt = Math.floor((Math.random() * 3) + 1);
   $("#welcome").addClass("bg-img-" + randInt);
+}
+
+var renderRandColors = function() {
+  var randInt = function() {
+    return Math.floor((Math.random() * 4) + 1);
+  }
+  var firstInt = randInt();
+  var secondInt = randInt();
+
+  while (firstInt == secondInt) {
+    secondInt = rantInt();
+  }
+
+  var randPrimaryColor = "primary-color-" + firstInt;
+  var randSubColor = "sub-color-" + secondInt;
+
+  $(".subtitle").addClass(randPrimaryColor + " font");
+  $("a, a:visited").addClass(randPrimaryColor + " line");
+  $("pre").addClass(randPrimaryColor + " border");
+  $(".sub-button").addClass(randPrimaryColor + " background")
+  $("header a").addClass(randPrimaryColor);
+  $("header a, footer a").addClass("remove-border");
+
+  $("a, a:visited").addClass(randSubColor);
 }

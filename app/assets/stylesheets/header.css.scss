@@ -10,10 +10,6 @@ header {
   background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 33%,rgba(255,255,255,0) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 33%,rgba(255,255,255,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=0 );
-
-  a {
-    border-style: none;
-  }
 }
 
 nav {
@@ -21,19 +17,15 @@ nav {
 
   a, a:visited {
     font-family: 'Open Sans Condensed', sans-serif;;
-    color: #FFF;
     background: #000;
     padding: 0 0.2em;
     margin: 0.2em;
     border-radius: 0.1em;
     display: block;
     text-align: center;
-    box-shadow: 0 0 0 0 #66C2E0 inset;
   }
 
   a:hover {
-    box-shadow: 0 -100px 0 0px #66C2E0 inset;
-    color: #000;
     transition: all ease 1s;
       -webkit-transition: all ease 1s;
       -moz-transition: all ease 1s;

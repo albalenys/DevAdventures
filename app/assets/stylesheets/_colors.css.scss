@@ -1,0 +1,139 @@
+$light-blue: #66C2E0;
+.primary-color-1 {
+	&.line {
+  	border-bottom: 0.1em dashed $light-blue;
+	}
+
+	&.font {
+		color: $light-blue;
+	}
+
+	&.border {
+		border-left: solid $light-blue 0.6em;
+	}
+
+	&.background {
+		background: $light-blue;
+	}
+}
+
+nav a.primary-color-1, nav a.primary-color-1:visited {
+	box-shadow: 0 0 0 0 $light-blue inset;
+	color: #FFF;
+}
+
+nav a.primary-color-1:hover {
+	box-shadow: 0 -100px 0 0px $light-blue inset;
+	color: #000;
+}
+
+
+$red-orange: #ff6666;
+.primary-color-2 {
+	&.line {
+  	border-bottom: 0.1em dashed $red-orange;
+	}
+
+	&.font {
+		color: $red-orange;
+	}
+
+	&.border {
+		border-left: solid $red-orange 0.6em;
+	}
+
+	&.background {
+		background: $red-orange;
+	}
+}
+
+nav a.primary-color-2, nav a.primary-color-2:visited {
+	box-shadow: 0 0 0 0 $red-orange inset;
+	color: #FFF;
+}
+
+nav a.primary-color-2:hover {
+	box-shadow: 0 -100px 0 0px $red-orange inset;
+	color: #000;
+}
+
+
+$teal-green: #00cc99;
+.primary-color-3 {
+	&.line {
+  	border-bottom: 0.1em dashed $teal-green;
+	}
+
+	&.font {
+		color: $teal-green;
+	}
+
+	&.border {
+		border-left: solid $teal-green 0.6em;
+	}
+
+	&.background {
+		background: $teal-green;
+	}
+}
+
+nav a.primary-color-3, nav a.primary-color-3:visited {
+	box-shadow: 0 0 0 0 $teal-green inset;
+	color: #FFF;
+}
+
+nav a.primary-color-3:hover {
+	box-shadow: 0 -100px 0 0px $teal-green inset;
+	color: #000;
+}
+
+
+$purple: #bb99ff;
+.primary-color-4 {
+	&.line {
+  	border-bottom: 0.1em dashed $purple;
+	}
+
+	&.font {
+		color: $purple;
+	}
+
+	&.border {
+		border-left: solid $purple 0.6em;
+	}
+
+	&.background {
+		background: $purple;
+	}
+}
+
+nav a.primary-color-4, nav a.primary-color-4:visited {
+	box-shadow: 0 0 0 0 $purple inset;
+	color: #FFF;
+}
+
+nav a.primary-color-4:hover {
+	box-shadow: 0 -100px 0 0px $purple inset;
+	color: #000;
+}
+
+
+$light-blue: #66C2E0;
+.sub-color-1 {
+	color: $light-blue;
+}
+
+$orange: #FF9966;
+.sub-color-2 {
+	color: $orange;
+}
+
+$green: #00cc99;
+.sub-color-3 {
+	color: $green;
+}
+
+$purple: #bb99ff;
+.sub-color-4 {
+	color: $purple;
+}
