@@ -11,7 +11,7 @@
     Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
 
     <% unless @post.tags.empty? %>
-      <span class="subtitle">Categories</span>:
+      <strong>Categories</strong>:
       <% @post.tags.each do |tag| %>
         <%= link_to tag.name, tag_path(tag) %><% unless @post.tags.last == tag %>, <% end %>
       <% end %>
