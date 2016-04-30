@@ -59,7 +59,7 @@ var renderRandColors = function() {
   var secondInt = randInt();
 
   while (firstInt == secondInt) {
-    secondInt = rantInt();
+    secondInt = randInt();
   }
 
   var randPrimaryColor = "primary-color-" + firstInt;
