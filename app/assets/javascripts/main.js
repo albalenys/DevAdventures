@@ -65,7 +65,7 @@ var renderRandColors = function() {
   var randPrimaryColor = "primary-color-" + firstInt;
   var randSubColor = "sub-color-" + secondInt;
 
-  $(".subtitle").addClass(randPrimaryColor + " font");
+  $(".subtitle, .post-title").addClass(randPrimaryColor + " font");
   $("a, a:visited").addClass(randPrimaryColor + " line");
   $("pre").addClass(randPrimaryColor + " border");
   $(".sub-button").addClass(randPrimaryColor + " background")
