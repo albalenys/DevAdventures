@@ -9,19 +9,19 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
-gem 'puma'
 gem 'sinatra-flash'
 gem 'bootstrap-wysihtml5-rails'
 gem 'ransack'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
 gem 'pry'
+gem 'sqlite3'
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'capybara'
-  gem 'sqlite3'
   gem 'faker'
 end
 
