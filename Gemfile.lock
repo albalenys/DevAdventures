@@ -84,12 +84,12 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    mysql2 (0.5.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     passenger (5.3.4)
       rack
       rake (>= 0.8.1)
-    pg (0.18.4)
     polyamorous (1.3.0)
       activerecord (>= 3.0)
     pry (0.10.3)
@@ -210,8 +210,8 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.0)
   jquery-rails
+  mysql2
   passenger (>= 5.0.25)
-  pg
   pry
   rails (= 4.2.4)
   rails_12factor
