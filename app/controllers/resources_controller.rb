@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
-  before_filter :authorize_user
-  before_filter :find_resource, except: [:new, :create]
-  before_filter :find_resource_post, except: [:destroy, :update]
+  before_action :authorize_user
+  before_action :find_resource, except: [:new, :create]
+  before_action :find_resource_post, except: [:destroy, :update]
 
   def new
     @resource = Resource.new
