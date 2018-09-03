@@ -2,12 +2,14 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
-  host: 127.0.0.1
-  port: 3306
 
 development:
   <<: *default
   database: alba_development
+  host: localhost
+  port: 3306
+  username: root
+  password:
 
 test:
   <<: *default
