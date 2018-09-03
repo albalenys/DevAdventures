@@ -15,7 +15,6 @@ gem 'ransack'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
 gem 'pry'
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 gem 'mysql2', '~> 0.5.2'
 
 group :development, :test do
