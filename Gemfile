@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.3'
 
-gem 'rails', '4.2.4'
+gem 'rails', '5.2.0'
 # gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'closure-compiler', '~> 1.1', '>= 1.1.14'
@@ -16,7 +16,7 @@ gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
 gem 'pry'
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
-gem 'mysql2'
+gem 'mysql2', '~> 0.5.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
