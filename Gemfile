@@ -15,7 +15,8 @@ gem 'ransack'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
 gem 'pry'
-gem 'mysql2', '~> 0.5.2'
+gem 'therubyracer', platform: :ruby
+gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
