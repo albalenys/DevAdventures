@@ -1,9 +1,8 @@
 // Parallex reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
 
 $(document).ready(function(){
-  hljs.initHighlightingOnLoad();
-  randBackground();
-  renderRandColors();
+  renderRandomBg();
+  renderRandomColors();
 
   $("a[href*='#']").click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -20,57 +19,42 @@ $(document).ready(function(){
     }
   });
 
-  $(window).scroll(function (event) {
-    var height = $(window).scrollTop();
-    var blur_effect = "blur(" + height/50 + "px)";
+  $(window).scroll(function() {
+    // Dynamically change blur effect (on welcome section) according to scroll position.
+    let height = $(window).scrollTop();
+    let blurEffect = `blur(${height/50}px)`;
 
-    if(height  > 680) {
-      $("header").css("background-color", "#FFF");
-    }
-    else {
-      $("header").css("background-color", "transparent");
-    }
-
-    if(height > 80) {
-      $("#welcome").addClass("blur");
-      $(".blur").css("-webkit-filter", blur_effect);
-      $(".blur").css("-moz-filter", blur_effect);
-      $(".blur").css("-o-filter", blur_effect);
-      $(".blur").css("-ms-filter", blur_effect);
-      $(".blur").css("filter", blur_effect);
-    }
-    else {
-      $("#welcome").removeClass("blur");
-      $("#welcome").removeAttr("style");
-    }
+    $(".blurScroll").css("-webkit-filter", blurEffect);
+    $(".blurScroll").css("-moz-filter", blurEffect);
+    $(".blurScroll").css("-o-filter", blurEffect);
+    $(".blurScroll").css("-ms-filter", blurEffect);
+    $(".blurScroll").css("filter", blurEffect);
   });
 });
 
-var randBackground = function() {
-  var randInt = Math.floor((Math.random() * 3) + 1);
-  $("#welcome").addClass("bg-img-" + randInt);
+var renderRandomBg = function() {
+  let randInt = Math.floor((Math.random() * 3) + 1);
+  $("#welcome").addClass(`bg-img-${randInt}`);
 }
 
-var renderRandColors = function() {
-  var randInt = function() {
+var renderRandomColors = function() {
+  let randInt = function() { 
     return Math.floor((Math.random() * 4) + 1);
   }
-  var firstInt = randInt();
-  var secondInt = randInt();
+  let firstRandInt = randInt();
+  let secondRandInt = randInt();
 
-  while (firstInt == secondInt) {
-    secondInt = randInt();
+  while (firstRandInt == secondRandInt) {
+    secondRandInt = randInt();
   }
 
-  var randPrimaryColor = "primary-color-" + firstInt;
-  var randSubColor = "sub-color-" + secondInt;
+  let randPrimaryColor = "primary-color-" + firstRandInt;
+  let randSubColor = "sub-color-" + secondRandInt;
 
-  $(".subtitle, .post-title").addClass(randPrimaryColor + " font");
-  $("a, a:visited").addClass(randPrimaryColor + " line");
-  $("pre").addClass(randPrimaryColor + " border");
-  $(".sub-button").addClass(randPrimaryColor + " background")
+  $(".subtitle, .post-title").addClass(`${randPrimaryColor} font`);
+  $("a, a:visited").addClass(`${randPrimaryColor} line`);
+  $("pre").addClass(`${randPrimaryColor} border`);
+  $(".sub-button").addClass(`${randPrimaryColor} background`);
   $("header a").addClass(randPrimaryColor);
-  $("header a, footer a").addClass("remove-border");
-
   $("a, a:visited").addClass(randSubColor);
 }

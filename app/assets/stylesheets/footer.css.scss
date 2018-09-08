@@ -8,5 +8,6 @@ footer {
 
   a {
     font-weight: normal;
+    border: none !important /* override added border in js script */;
   }
 }
