@@ -4,9 +4,10 @@ footer {
   width: 100%;
   color: #FFF;
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
 
   a {
     font-weight: normal;
+    border: none !important /* override added border in js script */;
   }
 }
