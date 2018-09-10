@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-  font-family: "Raleway", Verdana, sans-serif;
+  font-family: 'Raleway', Verdana, sans-serif;
   font-size: 1.1em;
 }
 
@@ -98,4 +98,21 @@ h3 {
 
 .remove-border {
   border: none !important;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type=text] {
+  border: #999 solid 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 40%;
+  font-family: 'Raleway', Verdana, sans-serif;
+  font-size: 0.3em;
+
+  &:focus {
+    outline: none;
+  }
 }

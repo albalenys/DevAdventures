@@ -1,11 +1,19 @@
-<div class="post-container">
+<div class="large-container">
   <% if @post.private %>
     <div class="center private">
       <p>PRIVATE POST</p>
     </div>
   <% end %>
 
-  <h1 id="top" class="post-title center"><%= @post.title %></h1>
+  <h1 id="top" class="center">
+    <% if logged_in? %>
+      <span id="post-title">
+        <%= link_to @post.title, posts_edit_title_path(params[:id], format: :js), remote: true %>
+      </span>
+    <% else %>
+      <span id="post-title"><%= @post.title %></span>
+    <% end %>
+  </h1>
 
   <div class="center sub">
     Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
@@ -28,11 +36,11 @@
   <hr>
   <p><%= @post.content.html_safe %></p>
 
-  <% if logged_in? %>
-    <div class="center">
+  <div class="center">
+    <% if logged_in? %>
       <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "sub-button" %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
   <% unless @post.resources.empty? %>
     <%= render "resources/list" %>

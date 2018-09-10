@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/search', to: 'shared#search'
   get '/feed', to: 'posts#feed'
 
-  get '/posts/private' => 'posts#private'
+  get '/posts/private', to: 'posts#private'
+  get '/posts/edit_title/:id', to: 'posts#edit_title', as: 'posts_edit_title', defaults: { format: 'js' }
   resources :posts do
     resources :resources, except: [:index, :show]
   end

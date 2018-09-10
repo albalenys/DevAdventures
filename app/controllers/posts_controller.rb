@@ -44,6 +44,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit_title
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def private
     @posts_by_month = Post.private_posts.order(created_at: :desc).sort_by_month
   end
