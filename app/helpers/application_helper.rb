@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   include Ransack::Helpers::FormHelper
   def logged_in?
@@ -5,6 +7,6 @@ module ApplicationHelper
   end
 
   def timestamp(obj)
-    obj.created_at.strftime("%b. %d %Y")
+    obj.created_at.strftime('%b. %d %Y')
   end
 end

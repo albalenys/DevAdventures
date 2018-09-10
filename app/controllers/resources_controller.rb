@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class ResourcesController < ApplicationController
   before_action :authorize_user
-  before_action :find_resource, except: [:new, :create]
-  before_action :find_resource_post, except: [:destroy, :update]
+  before_action :find_resource, except: %i[new create]
+  before_action :find_resource_post, except: %i[destroy update]
 
   def new
     @resource = Resource.new
@@ -15,7 +17,7 @@ class ResourcesController < ApplicationController
     if resource.save
       redirect_to post_path(params[:post_id])
     else
-      flash[:error] = "Invalid input: must include both title and url."
+      flash[:error] = 'Invalid input: must include both title and url.'
       redirect_to new_post_resource_path
     end
   end
@@ -29,7 +31,7 @@ class ResourcesController < ApplicationController
     if @resource.update_attributes(resource_params)
       redirect_to post_path(params[:post_id])
     else
-      flash[:error] = "Invalid input: must include both title and content."
+      flash[:error] = 'Invalid input: must include both title and content.'
       redirect_to edit_post_resource_path
     end
   end

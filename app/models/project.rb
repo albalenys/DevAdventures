@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Project < ActiveRecord::Base
   validates :title, presence: true
 
@@ -6,6 +8,6 @@ class Project < ActiveRecord::Base
   has_many :tags, through: :taggings
 
   def self.search(query)
-    where("title like ?", "%#{query}%")
+    where('title like ?', "%#{query}%")
   end
 end
