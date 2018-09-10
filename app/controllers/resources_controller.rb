@@ -5,6 +5,10 @@ class ResourcesController < ApplicationController
 
   def new
     @resource = Resource.new
+    @status = "new"
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -32,8 +36,9 @@ class ResourcesController < ApplicationController
   end
 
   def edit
+    @status = "edit"
     respond_to do |format|
-      format.js
+      format.js { render edit_or_create }
     end
   end
 
