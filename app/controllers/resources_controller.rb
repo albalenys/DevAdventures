@@ -5,6 +5,9 @@ class ResourcesController < ApplicationController
 
   def new
     @resource = Resource.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -28,6 +31,12 @@ class ResourcesController < ApplicationController
     else
       flash[:error] = "Invalid input: must include both title and content."
       redirect_to edit_post_resource_path
+    end
+  end
+
+  def edit
+    respond_to do |format|
+      format.js
     end
   end
 
