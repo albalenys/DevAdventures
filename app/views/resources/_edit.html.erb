@@ -1,0 +1,5 @@
+<span class="center"><%= flash[:error] %></span>
+
+<%= form_for @resource, url: post_resource_path, method: "PUT" do |f|%>
+  <%= render "form", f: f %>
+<% end %>

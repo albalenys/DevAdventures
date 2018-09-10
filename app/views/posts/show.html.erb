@@ -5,15 +5,15 @@
     </div>
   <% end %>
 
-  <h1 id="top" class="center">
-    <% if logged_in? %>
-      <span id="post-title">
+  <div id="top" class="center">
+    <h1 id="post-title">
+      <% if logged_in? %>
         <%= link_to @post.title, posts_edit_title_path(params[:id], format: :js), remote: true %>
-      </span>
-    <% else %>
-      <span id="post-title"><%= @post.title %></span>
-    <% end %>
-  </h1>
+      <% else %>
+        <%= @post.title %>
+      <% end %>
+    </h1>
+  </div>
 
   <div class="center sub">
     Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
@@ -36,6 +36,7 @@
   <hr>
   <p><%= @post.content.html_safe %></p>
 
+  <hr>
   <div class="center">
     <% if logged_in? %>
       <%= link_to "Add Resource", new_post_resource_path(params[:id]), class: "sub-button" %>

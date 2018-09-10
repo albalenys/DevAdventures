@@ -31,6 +31,12 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def edit
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def resource_params
