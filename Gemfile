@@ -3,6 +3,7 @@ ruby '2.5.1'
 
 gem 'rails', '5.2.0'
 # gem 'pg'
+gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'closure-compiler', '~> 1.1', '>= 1.1.14'
 gem 'jquery-rails'
@@ -14,19 +15,17 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'ransack'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.6'
-gem 'pry'
-gem 'therubyracer', platform: :ruby
-gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails', "~> 4.0"
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
   gem 'faker'
+  gem 'pry'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.5'
   gem 'spring'
 end
 
