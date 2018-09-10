@@ -1,7 +1,9 @@
+<%= flash[:error] %>
+
 <%= form_for @post, html: {class: "center"} do |f|%>
+  <p>Title: <%= f.text_field :title %></p>
   Private: <%= f.check_box :private %><br>
   <p>Tags: <%= text_field_tag :tags %></p>
-  <p>Title: <%= f.text_field :title %></p>
   <%= f.text_area :content, class: "form-area" %><br>
   <%= f.submit "Submit" %>
 <% end %>

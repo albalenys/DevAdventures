@@ -1,4 +1,4 @@
-<div class="large-container">
+<div id="blogs-container" class="large-container">
   <% if @post.private %>
     <div class="center private">
       <p>PRIVATE POST</p>
@@ -7,16 +7,12 @@
 
   <div id="top" class="center">
     <h1 id="post-title">
-      <% if logged_in? %>
-        <%= link_to @post.title, posts_edit_title_path(params[:id], format: :js), remote: true %>
-      <% else %>
-        <%= @post.title %>
-      <% end %>
+      <%= @post.title %>
     </h1>
   </div>
 
   <div class="center sub">
-    Published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
+    published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
     by Abby De Los Santos<br>
 
     <% unless @post.tags.empty? %>
@@ -28,7 +24,7 @@
 
     <p>
       <% if logged_in? %>
-        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border" %>
+        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
         <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), class: "remove-border", method: "DELETE" %>
       <% end %>
     </p>

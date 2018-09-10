@@ -13,6 +13,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    respond_to do |format|
+      format.js { render "form.js.erb" }
+    end
   end
 
   def create
@@ -44,9 +47,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit_title
+  def edit
     respond_to do |format|
-      format.js
+      format.js { render "form.js.erb" }
     end
   end
 
