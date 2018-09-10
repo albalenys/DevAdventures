@@ -1,4 +1,8 @@
-<% f.hidden_field :post_id, value: @post.id %>
-  <%= f.text_field :title, placeholder: "Title", class: "form-field" %>
-  <%= f.text_field :url, placeholder: "URL", class: "form-field" %>
-<%= f.submit "+" %>
+<span class="center"><%= flash[:error] %></span>
+
+<%= form_for [@post, @resource] do |f|%>
+  <% f.hidden_field :post_id, value: @post.id %>
+    <%= f.text_field :title, placeholder: "Title" %>
+    <%= f.text_field :url, placeholder: "URL" %>
+  <%= f.submit "+" %>
+<% end %>

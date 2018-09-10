@@ -38,7 +38,7 @@ class ResourcesController < ApplicationController
   def edit
     @status = "edit"
     respond_to do |format|
-      format.js { render edit_or_create }
+      format.js
     end
   end
 
