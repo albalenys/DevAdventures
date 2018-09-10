@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Admin has necessary log in info to add and maintain posts/projects.
 class Admin < ActiveRecord::Base
   has_secure_password
 
