@@ -2,32 +2,35 @@
 
 <% if logged_in? %>
   <div class="center">
-    <%= link_to "Add Project", new_project_path, class: "sub-button" %>
+    <%= link_to "Add Project", new_project_path, class: "sub-button", remote: true %>
   </div>
 <% end %>
 
 <hr>
-<% @projects.each do |project| %>
-  <% if project.url == "" %>
-    <%= project.title %>
-  <% else %>
-    <%= link_to "#{project.title}", project.url, target: "_blank" %>
-  <% end %>
-  (<%= link_to "Github Source", project.github, target: "_blank" %>)
-  <% if logged_in? %>
-    <div class="right">
-      <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project) %>
-      <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), method: "DELETE" %>
-    </div>
-  <% end %><br>
+<div id="project-list">
+  <% @projects.each do |project| %>
+    <% if project.url == "" %>
+      <%= project.title %>
+    <% else %>
+      <%= link_to "#{project.title}", project.url, target: "_blank" %>
+    <% end %>
+    (<%= link_to "Github Source", project.github, target: "_blank" %>)
+    <% if logged_in? %>
+      <div class="right">
+        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
+        <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
+      </div>
+    <% end %>
+    <br>
 
-  <% if project.software %>
-    <div class="sub">
-      Software used: <%= project.software %>
-    </div>
+    <% if project.software %>
+      <div class="sub">
+        Software used: <%= project.software %>
+      </div>
+    <% end %>
+    <p><%= project.description %></p>
+    <hr>
   <% end %>
-  <p><%= project.description %></p>
-  <hr>
-<% end %>
+</div>
 
 <%= will_paginate @projects %>

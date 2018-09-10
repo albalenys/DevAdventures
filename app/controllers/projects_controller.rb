@@ -3,6 +3,9 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    respond_to do |format|
+      format.js { render 'form.js.erb' }
+    end
   end
 
   def create
@@ -26,6 +29,12 @@ class ProjectsController < ApplicationController
     else
       flash[:error] = "Invalid input: must include both title and url."
       redirect_to edit_project_path
+    end
+  end
+
+  def edit
+    respond_to do |format|
+      format.js { render 'form.js.erb' }
     end
   end
 
