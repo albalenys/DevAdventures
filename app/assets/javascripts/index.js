@@ -30,11 +30,18 @@ $(document).ready(function() {
       $(".blurScroll").css("-ms-filter", blurEffect);
       $(".blurScroll").css("filter", blurEffect);
     });
+
+    $("#welcome h1").click(function() {
+      renderRandomBg();
+    });
   }
 });
 
 let renderRandomBg = function() {
   let randInt = Math.floor((Math.random() * 3) + 1);
+  $("#welcome").attr("class", function(i, c) {
+    return c.replace(/(^|\s)bg-img-\S+/g, '');
+  });
   $("#welcome").addClass(`bg-img-${randInt}`);
 }
 

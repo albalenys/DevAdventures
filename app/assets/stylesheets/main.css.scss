@@ -22,6 +22,7 @@ html {
   h1 {
     font-size: 3.4em;
     margin-bottom: 3em;
+    cursor: pointer;
   }
 
   .subtitle {
@@ -74,14 +75,15 @@ h3 {
   float: right;
 }
 
-.form-area {
-  width: 100%;
-  height: 25em;
+.sub-icon {
+  width: 1em;
+  height: 1em;
 }
 
-.sub-icon {
-  width: 0.7em;
-  height: 0.7em;
+.sub-button {
+  color: #000 !important;
+  padding: 0.1em 0.5em;
+  border-radius: 0.1em;
 }
 
 .blurScroll {
@@ -92,15 +94,20 @@ h3 {
   border: none !important;
 }
 
-input[type=text] {
+input[type=text], textarea {
   border: #999 solid 1px;
   border-radius: 5px;
   padding: 0.5em;
   width: 40%;
   font-family: 'Raleway', Verdana, sans-serif;
-  font-size: 0.3em;
+  font-size: 0.8em;
 
   &:focus {
     outline: none;
   }
+}
+
+textarea {
+  width: 100%;
+  height: 25em;
 }
