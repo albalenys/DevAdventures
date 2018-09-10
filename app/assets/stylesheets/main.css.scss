@@ -15,22 +15,18 @@ html {
 
 #welcome {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-size: 3.4em;
-    margin-bottom: 2em;
-    filter: blur(0.8px);
-    -webkit-filter: blur(0.8px);
-    -moz-filter: blur(0.8px);
-    -o-filter: blur(0.8px);
-    -ms-filter: blur(0.8px);
+    margin-bottom: 3em;
   }
-}
 
-.subtitle {
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 1em;
+  .subtitle {
+    font-size: 2em;
+  }
 }
 
 #projects {
@@ -83,10 +79,6 @@ h3 {
   height: 25em;
 }
 
-.form-field {
-  width: 70%;
-}
-
 .sub-icon {
   width: 0.7em;
   height: 0.7em;
@@ -98,10 +90,6 @@ h3 {
 
 .remove-border {
   border: none !important;
-}
-
-.hidden {
-  display: none;
 }
 
 input[type=text] {
