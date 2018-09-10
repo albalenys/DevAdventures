@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Represents blog posts. Can be private or public.
 class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :content, presence: true
@@ -22,7 +23,7 @@ class Post < ActiveRecord::Base
     if direction == 'up'
       index = post_index + 1
     else
-      return nil if post_index == 0
+      return nil if post_index.zero?
 
       index = post_index - 1
     end

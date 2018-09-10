@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Represents coding projects in porfolio.
 class Project < ActiveRecord::Base
   validates :title, presence: true
 
