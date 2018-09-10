@@ -33,7 +33,6 @@ $(document).ready(function() {
 
     $("#welcome h1").click(function() {
       renderRandomBg();
-      renderRandomColors();
     });
   }
 });
