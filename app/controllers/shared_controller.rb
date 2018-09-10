@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SharedController < ApplicationController
   def index
     ordered_projects = Project.all.order(created_at: :desc)

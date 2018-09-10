@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ProjectsController < ApplicationController
-  before_action :find_project, except: [:new, :create]
+  before_action :find_project, except: %i[new create]
 
   def new
     @project = Project.new
@@ -11,23 +13,23 @@ class ProjectsController < ApplicationController
   def create
     project = Project.new(project_params.merge(admin_id: session[:admin_id]))
     if project.save
-      redirect_to "/#projects"
+      redirect_to '/#projects'
     else
-      flash[:error] = "Invalid input: must include both title and url."
+      flash[:error] = 'Invalid input: must include both title and url.'
       redirect_to new_project_path
     end
   end
 
   def destroy
     @project.destroy
-    redirect_to "/#projects"
+    redirect_to '/#projects'
   end
 
   def update
     if @project.update_attributes(project_params)
-      redirect_to "/#projects"
+      redirect_to '/#projects'
     else
-      flash[:error] = "Invalid input: must include both title and url."
+      flash[:error] = 'Invalid input: must include both title and url.'
       redirect_to edit_project_path
     end
   end

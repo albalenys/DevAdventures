@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :content, presence: true
@@ -8,19 +10,20 @@ class Post < ActiveRecord::Base
   has_many :tags, through: :taggings
 
   def self.sort_by_month
-    self.all.group_by { |post| post.created_at.beginning_of_month }
+    all.group_by { |post| post.created_at.beginning_of_month }
   end
 
   def self.search(query)
-    where("title like ?", "%#{query}%")
+    where('title like ?', "%#{query}%")
   end
 
   def next_post(direction)
     post_index = Post.public_posts.index(self)
-    if direction == "up"
+    if direction == 'up'
       index = post_index + 1
     else
       return nil if post_index == 0
+
       index = post_index - 1
     end
     Post.public_posts[index]
