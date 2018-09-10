@@ -16,7 +16,8 @@
   </div>
 
   <div class="center sub">
-    Published <%= @post.created_at.strftime("%B, %d, %Y") %> by Abby De Los Santos<br>
+    Published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
+    by Abby De Los Santos<br>
 
     <% unless @post.tags.empty? %>
       <strong>Categories</strong>:

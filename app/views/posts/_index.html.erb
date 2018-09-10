@@ -1,7 +1,9 @@
 <h1 class="center">Blog Posts</h1>
 
 <% if logged_in? %>
-  <p class="center"><%= link_to "Add Blog Post", new_post_path, class: "sub-button" %></p>
+  <p class="center">
+    <%= link_to "Add Blog Post", new_post_path, class: "sub-button" %>
+    </p>
 <% end %>
 
 <hr>
@@ -15,8 +17,7 @@
 
         <% if logged_in? %>
           <div class="right">
-            <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(post) %>
-            <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(post), method: "DELETE" %>
+            <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(post), class: "remove-border" %>
           </div>
         <% end %>
       </li>

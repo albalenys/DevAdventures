@@ -1,8 +1,10 @@
+<p><%= flash[:error] %></p>
+
 <%= form_for @project, html: {class: "center"} do |f|%>
-  Title: <%= f.text_field :title, class: "form-field" %><br>
-  URL: <%= f.text_field :url, class: "form-field" %><br>
-  Github Link: <%= f.text_field :github, class: "form-field" %><br>
-  Software: <%= f.text_field :software, class: "form-field" %><br>
+  Title: <%= f.text_field :title %><br>
+  URL: <%= f.text_field :url %><br>
+  Github Link: <%= f.text_field :github %><br>
+  Software: <%= f.text_field :software %><br>
   <p><%= f.text_area :description, class: "form-area" %></p>
   <%= f.submit "Submit" %>
 <% end %>
