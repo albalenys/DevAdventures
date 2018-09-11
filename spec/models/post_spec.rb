@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+RSpec.describe Post do
   it 'has a valid factory' do
     FactoryBot.create(:post).should be_valid
   end
