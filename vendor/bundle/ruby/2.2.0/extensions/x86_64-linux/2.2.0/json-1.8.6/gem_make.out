@@ -1,0 +1,13 @@
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/json-1.8.6/ext/json
+/usr/share/rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20180903-16734-1yl2ona.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

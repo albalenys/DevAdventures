@@ -1,0 +1,79 @@
+/* ----------- Cell Phones ----------- */
+@media screen and (max-device-width: 800px) {
+  /* line 6, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  html {
+    font-size: 3em;
+  }
+
+  /* line 10, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .blog-footer {
+    font-size: 0.8em;
+  }
+}
+/* ----------- Tablets ----------- */
+@media screen and (min-width: 801px) {
+  /* line 21, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  nav {
+    margin: 0.3em;
+    float: left;
+  }
+
+  /* line 26, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  header a {
+    display: inline;
+    margin: 0.2em;
+    width: 50%;
+  }
+
+  /* line 32, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .socialmedia {
+    float: right;
+  }
+
+  /* line 36, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    border-radius: 0.4em;
+    padding: 1em;
+    margin: auto;
+    opacity: 0.9;
+  }
+
+  /* line 45, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .small-container {
+    width: 60%;
+    margin: auto;
+    padding-top: 6em;
+  }
+
+  /* line 51, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .large-container {
+    margin: auto;
+    padding-top: 2em;
+    width: 60%;
+  }
+
+  /* line 57, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .profile {
+    float: right;
+    text-align: none;
+  }
+
+  /* line 62, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  hr {
+    border-top: #999;
+  }
+
+  /* line 66, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .search-bar {
+    width: 20em;
+  }
+}
+/* ----------- Laptops ----------- */
+@media screen and (min-width: 1000px) {
+  /* line 77, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  #welcome {
+    background-size: cover;
+  }
+}

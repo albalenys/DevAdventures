@@ -1,0 +1,15 @@
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/usr/share/rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20180903-16734-1s6f3p0.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20180903-16734-qjf4jo

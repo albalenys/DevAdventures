@@ -1,0 +1,19 @@
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.12/ext/mri
+/usr/share/rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20180903-16734-13u9vil.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180903-16734-mxrwp9
