@@ -1,0 +1,20 @@
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/src/helper-scripts/download_binaries
+/usr/share/rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20180903-28845-upf3py.rb extconf.rb
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.3.4/rubyext-ruby-2.2.3-x86_64-linux.tar.gz into /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/download_cache
+*** Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.3.4/rubyext-ruby-2.2.3-x86_64-linux.tar.gz: The requested URL returned error: 404 
+Attempting to download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.3.4/rubyext-ruby-2.2.3-x86_64-linux.tar.gz into /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/download_cache
+*** Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.3.4/rubyext-ruby-2.2.3-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.3.4/nginx-1.14.0-x86_64-linux.tar.gz into /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/download_cache
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.3.4/agent-x86_64-linux.tar.gz into /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/download_cache
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/src/helper-scripts/download_binaries
+make "DESTDIR=" clean
+true
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/src/helper-scripts/download_binaries
+make "DESTDIR="
+true
+
+current directory: /var/www/albalenys/code/vendor/bundle/ruby/2.2.0/gems/passenger-5.3.4/src/helper-scripts/download_binaries
+make "DESTDIR=" install
+true

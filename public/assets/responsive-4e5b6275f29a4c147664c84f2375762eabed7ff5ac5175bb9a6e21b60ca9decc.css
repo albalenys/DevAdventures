@@ -1,0 +1,46 @@
+/* ----------- Cell Phones ----------- */
+@media screen and (max-device-width: 800px) {
+  /* line 6, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  html {
+    font-size: 3em;
+  }
+}
+/* ----------- Tablets ----------- */
+@media screen and (min-width: 801px) {
+  /* line 17, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    border-radius: 0.4em;
+    padding: 1em;
+    margin: auto;
+    opacity: 0.9;
+  }
+
+  /* line 26, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .small-container {
+    width: 60%;
+    margin: auto;
+    padding-top: 6em;
+  }
+
+  /* line 32, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .large-container {
+    margin: auto;
+    padding-top: 2em;
+    width: 60%;
+  }
+
+  /* line 38, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  .profile {
+    float: right;
+    text-align: none;
+  }
+}
+/* ----------- Laptops ----------- */
+@media screen and (min-width: 1000px) {
+  /* line 50, /var/www/albalenys/code/app/assets/stylesheets/responsive.css.scss */
+  #welcome {
+    background-size: cover;
+  }
+}
