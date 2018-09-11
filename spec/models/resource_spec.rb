@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Resource, type: :model do
+RSpec.describe Resource do
   it 'has a valid factory' do
     FactoryBot.create(:resource).should be_valid
   end

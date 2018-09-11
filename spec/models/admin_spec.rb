@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Admin, type: :model do
+RSpec.describe Admin do
   it 'has a valid factory' do
     FactoryBot.create(:admin).should be_valid
   end

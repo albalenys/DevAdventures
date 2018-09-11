@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Project, type: :model do
+RSpec.describe Project do
   it 'has a valid factory' do
     FactoryBot.create(:project).should be_valid
   end
