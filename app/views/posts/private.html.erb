@@ -5,8 +5,8 @@
     <%= link_to "Add Blog Post", new_post_path, class: "sub-button" %>
   </p>
 
-  <hr>
   <% @posts_by_month.each do |month_year, posts| %>
+    <hr>
     <h4 class="center"><%= month_year.strftime("%B %Y") %></h4>
     <ul>
       <% posts.each do |post| %>
@@ -23,5 +23,4 @@
       <% end %>
     </ul>
   <% end %>
-  <hr>
 </div>
