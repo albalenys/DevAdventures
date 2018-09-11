@@ -12,7 +12,6 @@ gem 'jquery-rails'
 gem 'ransack'
 gem 'rubocop', '~> 0.59.0', require: false
 gem 'sass-rails', '~> 5.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sinatra-flash' # used to generate error messages
 gem 'sqlite3'
 gem 'will_paginate', '~> 3.0.6'
