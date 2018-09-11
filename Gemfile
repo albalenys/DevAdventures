@@ -5,7 +5,6 @@ ruby '2.5.1'
 
 gem 'rails', '5.2.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap-wysihtml5-rails'
 gem 'closure-compiler', '~> 1.1', '>= 1.1.14'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'

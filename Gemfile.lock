@@ -48,8 +48,6 @@ GEM
     ast (2.4.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootstrap-wysihtml5-rails (0.3.3.8)
-      railties (>= 3.0)
     builder (3.2.3)
     capybara (3.7.1)
       addressable
@@ -225,7 +223,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-wysihtml5-rails
   capybara
   closure-compiler (~> 1.1, >= 1.1.14)
   factory_girl_rails (~> 4.0)
