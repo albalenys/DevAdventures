@@ -17,10 +17,10 @@ gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'capybara'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_bot_rails', '~> 4.0'
   gem 'faker'
   gem 'pry'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do

@@ -3,8 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe ResourcesController, type: :controller do
-  let(:post) { FactoryGirl.create :post }
-  let(:admin) { FactoryGirl.create :admin }
+  let(:post) { FactoryBot.create :post }
+  let(:admin) { FactoryBot.create :admin }
 
   describe 'GET #new' do
     it 'should redirect if not logged in as admin' do
