@@ -6,9 +6,9 @@
   </div>
 <% end %>
 
-<hr>
 <div id="project-list">
   <% @projects.each do |project| %>
+    <hr>
     <% if project.url == "" %>
       <%= project.title %>
     <% else %>
@@ -29,7 +29,6 @@
       </div>
     <% end %>
     <p><%= project.description %></p>
-    <hr>
   <% end %>
 </div>
 

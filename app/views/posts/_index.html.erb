@@ -7,8 +7,8 @@
       </p>
   <% end %>
 
-  <hr>
   <% @posts_by_month.each do |month_year, posts| %>
+    <hr>
     <h4 class="center"><%= month_year.strftime("%B %Y") %></h4>
     <ul>
       <% posts.each do |post| %>
@@ -24,6 +24,5 @@
         </li>
       <% end %>
     </ul>
-    <hr>
   <% end %>
 </div>
