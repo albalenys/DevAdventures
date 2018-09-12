@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 class PostsController < ApplicationController
   before_action :authorize_user, except: %i[show feed]
@@ -42,6 +43,10 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
+      params[:tags].split(',').each do |tag_name|
+        tag = Tag.find_or_create_by(name: tag_name)
+        @post.tags << tag
+      end
       redirect_to post_path(@post.id)
     else
       flash[:error] = 'Invalid input: must include both title and content.'
