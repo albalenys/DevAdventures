@@ -1,4 +1,4 @@
-.small-container, .large-container, .page-container {
+.small-container, .large-container {
   width: 60%;
   margin: auto;
   min-height: 100%;
@@ -8,10 +8,6 @@
   position: relative;
   top: 5em;
   padding-bottom: 6em;
-}
-
-.page-container {
-  padding: 8em;
 }
 
 .profile {
@@ -37,7 +33,8 @@ tfoot {
 
 code {
   font-family: monospace;
-  color: #999;
+  background: #eee;
+  padding: 1px;
 }
 
 pre {
