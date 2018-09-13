@@ -32,7 +32,7 @@ class ResourcesController < ApplicationController
       redirect_to post_path(params[:post_id])
     else
       flash[:error] = 'Invalid input: must include both title and content.'
-      redirect_to edit_post_resource_path
+      redirect_to post_path(params[:post_id])
     end
   end
 

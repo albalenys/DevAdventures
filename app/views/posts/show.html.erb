@@ -15,13 +15,6 @@
     published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
     by Abby De Los Santos<br>
 
-    <% unless @post.tags.empty? %>
-      <strong>Categories</strong>:
-      <% @post.tags.each do |tag| %>
-        <%= link_to tag.name, tag_path(tag) %><% unless @post.tags.last == tag %>, <% end %>
-      <% end %>
-    <% end %>
-
     <p>
       <% if logged_in? %>
         <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
@@ -33,6 +26,8 @@
   <hr>
   <p><%= @post.content.html_safe %></p>
   <hr>
+
+  <%= render "tags/list" %>
 
   <%= render "resources/list" %>
 

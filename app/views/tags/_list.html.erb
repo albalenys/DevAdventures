@@ -1,0 +1,19 @@
+<% unless @post.tags.empty? %>
+  <strong>Categories</strong>:
+  <% if logged_in? %>
+    <ul>
+      <% @post.tags.each do |tag| %>
+        <li id=<%= "tag-#{tag.id}" %>>
+          <%= link_to tag.name, tag_path(tag) %>
+          <div class="right">
+            <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_tag_path(@post, tag), class: "remove-border", format: :js, remote: true %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <% @post.tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %><% unless @post.tags.last == tag %>, <% end %>
+    <% end %>
+  <% end %>
+<% end %>
