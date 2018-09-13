@@ -10,7 +10,7 @@
     <% if logged_in? %>
       <p class="center">
         <%= link_to "Add Blog Post", new_post_path, class: "sub-button", remote: true %>
-        </p>
+      </p>
     <% end %>
 
     <% @posts_by_month.each do |month_year, posts| %>

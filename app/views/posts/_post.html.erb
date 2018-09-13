@@ -5,11 +5,9 @@
     </div>
   <% end %>
 
-  <div id="top" class="center">
-    <h1 id="post-title">
-      <%= @post.title %>
-    </h1>
-  </div>
+  <h1 id="post-title" class="center">
+    <%= @post.title %>
+  </h1>
 
   <div class="center sub">
     published <%= @post.created_at.strftime("%B, %d, %Y") %><br>

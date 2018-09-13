@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   before_action :authorize_user, except: %i[show feed]
-  before_action :find_post, except: %i[new create private feed]
+  before_action :find_post, except: %i[new create private_index feed]
 
   def show
     if @post.private
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def private
+  def private_index
     @posts_by_month = Post.private_posts.order(created_at: :desc).sort_by_month
     @private = true;
     render '_index'
