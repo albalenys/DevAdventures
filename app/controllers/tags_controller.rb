@@ -3,7 +3,7 @@ require 'pry'
 
 class TagsController < ApplicationController
   before_action :find_tag, except: %i[new create]
-  before_action :find_tag_post, except: %i[show destroy update]
+  before_action :find_tag_post, except: %i[show destroy]
 
 
   def show
@@ -25,16 +25,8 @@ class TagsController < ApplicationController
     redirect_to post_path(params[:post_id])
   end
 
-  def edit
-    respond_to do |format|
-      format.js
-    end
-  end
-
-  def update
-    unless @tag.update_attributes(tag_params)
-      flash[:error] = 'Invalid input.'
-    end
+  def destroy
+    @tag.destroy
     redirect_to post_path(params[:post_id])
   end
 

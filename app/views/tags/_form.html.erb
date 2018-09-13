@@ -1,4 +1,6 @@
-<span class="center"><%= flash[:error] %></span>
+<span class="center">
+  <%= flash[:error] %>
+</span>
 
 <%= form_for [@post, @tag] do |f|%>
   <% f.hidden_field :post_id, value: @post.id %>

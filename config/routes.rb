@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/posts/edit_title/:id', to: 'posts#edit_title', as: 'posts_edit_title'
   resources :posts do
     resources :resources, except: %i[index show]
-    resources :tags, except: %i[:index]
+    resources :tags, except: %i[:index edit update]
   end
 
   resources :projects, except: %i[index show]
@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   post '/admin', to: 'admin#login'
   delete '/admin', to: 'admin#logout'
 
-  resources :tags, except: [:index]
+  resources :tags, only: [:show]
 end
