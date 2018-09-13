@@ -26,8 +26,7 @@ class ResourcesController < ApplicationController
   end
 
   def update
-    if @resource.update_attributes(resource_params)
-    else
+    unless @resource.update_attributes(resource_params)
       flash[:error] = 'Invalid input: must include both title and content.'
     end
     redirect_to post_path(params[:post_id])

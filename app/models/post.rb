@@ -1,4 +1,4 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 # Represents blog posts. Can be private or public.
 class Post < ActiveRecord::Base
@@ -36,13 +36,5 @@ class Post < ActiveRecord::Base
 
   def self.public_posts
     Post.where(private: false)
-  end
-
-  def stringify_tags
-    string = ''
-    self.tags.each do |tag|
-      string << "#{tag.name},"
-    end
-    return string
   end
 end
