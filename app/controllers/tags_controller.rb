@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 class TagsController < ApplicationController
   before_action :find_tag, except: %i[new create]
@@ -9,6 +10,21 @@ class TagsController < ApplicationController
     @posts = @tag.posts.public_posts
   end
 
+  def new
+    @tag = Tag.new
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def create
+    tag = Tag.find_or_create_by(name: params[:tag][:name])
+    unless @post.tags << tag
+      flash[:error] = 'Invalid input: must include both title and url.'
+    end
+    redirect_to post_path(params[:post_id])
+  end
+
   def edit
     respond_to do |format|
       format.js
@@ -16,12 +32,10 @@ class TagsController < ApplicationController
   end
 
   def update
-    if @tag.update_attributes(tag_params)
-      redirect_to post_path(params[:post_id])
-    else
+    unless @tag.update_attributes(tag_params)
       flash[:error] = 'Invalid input.'
-      redirect_to post_path(params[:post_id])
     end
+    redirect_to post_path(params[:post_id])
   end
 
   private
