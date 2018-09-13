@@ -1,0 +1,11 @@
+<div id="tag-form">
+  <span class="center">
+    <%= flash[:error] %>
+  </span>
+
+  <%= form_for [@post, @tag], remote: true do |f|%>
+    <% f.hidden_field :post_id, value: @post.id %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.submit "+" %>
+  <% end %>
+</div>

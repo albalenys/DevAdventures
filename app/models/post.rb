@@ -24,7 +24,7 @@ class Post < ActiveRecord::Base
       index = post_index + 1
     else
       return nil if post_index.zero?
-
+      
       index = post_index - 1
     end
     Post.public_posts[index]

@@ -1,9 +1,12 @@
+<h1 class="center">
+	<%= @post.id ? "Edit" : "New" %> Post
+</h1>
+
 <%= flash[:error] %>
 
-<%= form_for @post, html: {class: "center"} do |f|%>
-  Title: <%= f.text_field :title %><br>
-  Tags: <%= text_field_tag :tags %><br>
-  Private: <%= f.check_box :private %>
-  <%= f.text_area :content %><br>
-  <%= f.submit "Submit", class: "sub-button" %>
+<%= form_for @post, html: {class: "center"} do |post_form|%>
+  Title: <%= post_form.text_field :title %><br>
+  Private: <%= post_form.check_box :private %><br>
+  <%= post_form.text_area :content %><br>
+  <%= post_form.submit "Submit", class: "sub-button" %>
 <% end %>
