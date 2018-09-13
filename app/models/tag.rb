@@ -1,4 +1,4 @@
-# frozen_string_literal: tag
+# frozen_string_literal: true
 
 # Tags or categories for better search function in blog posts/projects.
 class Tag < ActiveRecord::Base
