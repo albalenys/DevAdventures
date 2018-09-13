@@ -23,12 +23,6 @@
     <% end %>
     <br>
 
-    <% if project.software %>
-      <div class="sub">
-        Software used: <%= project.software %>
-      </div>
-    <% end %>
-
     <%= render "tags/project_tags", :taggable => project %>
 
     <p>
