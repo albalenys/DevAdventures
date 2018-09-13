@@ -1,9 +1,18 @@
 <div class="large-container">
-	<h1 class="center">Blog Category <%= @tag.name %></h1>
+  <h1 class="center" id="post-title">
+    <%= @tag.name %> Tag
+  </h1>
+  <hr>
 
-	<% @posts.each do |post| %>
-    <ul>
-      <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
-    </ul>
-	<% end %>
+  <% unless @posts_by_month.empty? %>
+    <p>
+      <%= render "posts/index" %>
+    </p>
+  <% end %>
+
+  <% unless @projects.empty? %>
+    <p>
+      <%= render "projects/index" %>
+    </p>
+  <% end %>
 </div>

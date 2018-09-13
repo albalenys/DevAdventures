@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   get '/posts/private', to: 'posts#private'
   resources :posts do
     resources :resources, except: %i[index show]
-    resources :tags, except: %i[:index edit update]
+    resources :tags, except: %i[index edit update]
   end
 
-  resources :projects, except: %i[index show]
+  resources :projects, except: %i[index show] do
+    resources :tags, except: %i[index edit update]
+  end
   
   get '/about', to: 'about#index'
   get '/admin', to: 'admin#auth'
