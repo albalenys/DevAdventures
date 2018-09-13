@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     post = Post.new(post_params.merge(admin_id: session[:admin_id]))
 
     if post.save
-      params[:tags].split(',').each do |tag_name|
+      params[:stringify_tags].split(',').each do |tag_name|
         tag = Tag.find_or_create_by(name: tag_name)
         post.tags << tag
       end
@@ -43,9 +43,11 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      params[:tags].split(',').each do |tag_name|
+      params[:stringify_tags].split(',').each do |tag_name|
         tag = Tag.find_or_create_by(name: tag_name)
-        @post.tags << tag
+        unless @post.tags.exists?(name: tag_name)
+          @post.tags << tag
+        end
       end
       redirect_to post_path(@post.id)
     else

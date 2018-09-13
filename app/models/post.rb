@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 # Represents blog posts. Can be private or public.
 class Post < ActiveRecord::Base
@@ -24,7 +24,7 @@ class Post < ActiveRecord::Base
       index = post_index + 1
     else
       return nil if post_index.zero?
-
+      
       index = post_index - 1
     end
     Post.public_posts[index]
@@ -36,5 +36,13 @@ class Post < ActiveRecord::Base
 
   def self.public_posts
     Post.where(private: false)
+  end
+
+  def stringify_tags
+    string = ''
+    self.tags.each do |tag|
+      string << "#{tag.name},"
+    end
+    return string
   end
 end
