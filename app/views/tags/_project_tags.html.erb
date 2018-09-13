@@ -1,0 +1,21 @@
+<div class="center">
+  <% if logged_in? %>
+    <%= link_to "Add Tag", new_project_tag_path(taggable), class: "sub-button", remote: true %>
+  <% end %>
+</div>
+
+<% unless taggable.tags.empty? %>
+  <strong>Tags</strong>:
+<% end %>
+
+<% if logged_in? %>
+  <ul id="tag-list">
+    <% taggable.tags.each do |tag| %>
+      <%= render "tags/tag", :tag => tag, :taggable => taggable %>
+    <% end %>
+  </ul>
+<% else %>
+  <% taggable.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %><% unless taggable.tags.last == tag %>, <% end %>
+  <% end %>
+<% end %>

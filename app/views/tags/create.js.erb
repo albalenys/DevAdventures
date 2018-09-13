@@ -1,2 +1,2 @@
 $("#tag-form").remove();
-$("#tag-list").append("<%= escape_javascript render partial: 'tag', object: @tag %>");
+$("#tag-list").append("<%= escape_javascript render 'tag', tag: @tag, taggable: @taggable %>");

@@ -1,6 +1,6 @@
 <li id=<%= "tag-#{tag.id}" %>>
   <%= link_to tag.name, tag_path(tag) %>
   <div class="right">
-    <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_tag_path(@post, tag), class: "remove-border", method: "DELETE", format: :js, remote: true %>
+    <%= link_to image_tag("delete-icon.png", class: "sub-icon"), @post ? post_tag_path(@post, tag) : project_tag_path(taggable, tag), class: "remove-border", method: "DELETE", format: :js, remote: true %>
   </div>
 </li>

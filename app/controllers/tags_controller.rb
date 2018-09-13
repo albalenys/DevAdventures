@@ -2,7 +2,7 @@
 
 class TagsController < ApplicationController
   before_action :find_tag, except: %i[new create]
-  before_action :find_tag_post, except: %i[show destroy]
+  before_action :find_tag_post_or_project, except: %i[show destroy]
 
 
   def show
@@ -16,11 +16,15 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.find_or_create_by(name: params[:tag][:name])
-    if @post.tags << @tag
+    if @taggable.tags << @tag
       respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and url.'
-      redirect_to post_path(params[:post_id])
+      if params[:post_id]
+        redirect_to post_path(params[:post_id])
+      else
+        redirect_to project_path(params[:project_id])
+      end
     end
   end
 
@@ -39,7 +43,11 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
   end
 
-  def find_tag_post
-    @post = Post.find(params[:post_id])
+  def find_tag_post_or_project
+    if params[:post_id]
+      @taggable = Post.find(params[:post_id])
+    else
+      @taggable = Project.find(params[:project_id])
+    end
   end
 end

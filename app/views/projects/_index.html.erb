@@ -28,7 +28,12 @@
         Software used: <%= project.software %>
       </div>
     <% end %>
-    <p><%= project.description %></p>
+
+    <%= render "tags/project_tags", :taggable => project %>
+
+    <p>
+      <%= project.description %>
+    </p>
   <% end %>
 </div>
 
