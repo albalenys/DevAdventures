@@ -11,12 +11,13 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    resource = @post.resources.new(resource_params)
-    if resource.save
+    @resource = @post.resources.new(resource_params)
+    if @resource.save
+      respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and url.'
+      redirect_to post_path(params[:post_id])
     end
-    redirect_to post_path(params[:post_id])
   end
 
   def destroy
