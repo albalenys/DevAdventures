@@ -15,11 +15,13 @@ class TagsController < ApplicationController
   end
 
   def create
-    tag = Tag.find_or_create_by(name: params[:tag][:name])
-    unless @post.tags << tag
+    @tag = Tag.find_or_create_by(name: params[:tag][:name])
+    if @post.tags << @tag
+      respond_to :js
+    else
       flash[:error] = 'Invalid input: must include both title and url.'
+      redirect_to post_path(params[:post_id])
     end
-    redirect_to post_path(params[:post_id])
   end
 
   def destroy
