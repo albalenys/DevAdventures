@@ -6,7 +6,9 @@ class TagsController < ApplicationController
 
 
   def show
-    @posts = @tag.posts.public_posts
+    @posts_by_month = @tag.posts.public_posts.order(created_at: :desc).sort_by_month
+    ordered_projects = @tag.projects.all.order(created_at: :desc)
+    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
   end
 
   def new
@@ -20,11 +22,7 @@ class TagsController < ApplicationController
       respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and url.'
-      if params[:post_id]
-        redirect_to post_path(params[:post_id])
-      else
-        redirect_to project_path(params[:project_id])
-      end
+      redirect_from_error
     end
   end
 
@@ -35,10 +33,6 @@ class TagsController < ApplicationController
 
   private
 
-  def tag_params
-    params.require(:tag).permit(:name)
-  end
-
   def find_tag
     @tag = Tag.find(params[:id])
   end
@@ -48,6 +42,14 @@ class TagsController < ApplicationController
       @taggable = Post.find(params[:post_id])
     else
       @taggable = Project.find(params[:project_id])
+    end
+  end
+
+  def redirect_from_error
+    if params[:post_id]
+      redirect_to post_path(params[:post_id])
+    else
+      redirect_to project_path(params[:project_id])
     end
   end
 end
