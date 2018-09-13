@@ -7,39 +7,33 @@ class ResourcesController < ApplicationController
 
   def new
     @resource = Resource.new
-    respond_to do |format|
-      format.js
-    end
+    respond_to :js
   end
 
   def create
     resource = @post.resources.new(resource_params)
     if resource.save
-      redirect_to post_path(params[:post_id])
     else
       flash[:error] = 'Invalid input: must include both title and url.'
-      redirect_to new_post_resource_path
     end
+    redirect_to post_path(params[:post_id])
   end
 
   def destroy
     @resource.destroy
-    redirect_to post_path(params[:post_id])
+    respond_to :js
   end
 
   def update
     if @resource.update_attributes(resource_params)
-      redirect_to post_path(params[:post_id])
     else
       flash[:error] = 'Invalid input: must include both title and content.'
-      redirect_to post_path(params[:post_id])
     end
+    redirect_to post_path(params[:post_id])
   end
 
   def edit
-    respond_to do |format|
-      format.js
-    end
+    respond_to :js
   end
 
   private

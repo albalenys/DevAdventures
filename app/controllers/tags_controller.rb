@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'pry'
 
 class TagsController < ApplicationController
   before_action :find_tag, except: %i[new create]
@@ -12,9 +11,7 @@ class TagsController < ApplicationController
 
   def new
     @tag = Tag.new
-    respond_to do |format|
-      format.js
-    end
+    respond_to :js
   end
 
   def create
@@ -27,7 +24,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy
-    redirect_to post_path(params[:post_id])
+    respond_to :js
   end
 
   private
