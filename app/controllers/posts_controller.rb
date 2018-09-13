@@ -54,6 +54,8 @@ class PostsController < ApplicationController
 
   def private
     @posts_by_month = Post.private_posts.order(created_at: :desc).sort_by_month
+    @private = true;
+    render '_index'
   end
 
   def feed
