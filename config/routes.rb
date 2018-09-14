@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/search', to: 'shared#search'
   get '/feed', to: 'posts#feed'
 
-  get '/posts/private', to: 'posts#private'
+  get '/posts/private', to: 'posts#private_index'
   resources :posts do
     resources :resources, except: %i[index show]
     resources :tags, except: %i[index edit update]

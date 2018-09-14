@@ -1,35 +1,10 @@
-<div id="blogs-container" class="large-container">
-  <% if @post.private %>
-    <div class="center private">
-      <p>PRIVATE POST</p>
-    </div>
-  <% end %>
-
-  <div id="top" class="center">
-    <h1 id="post-title">
-      <%= @post.title %>
-    </h1>
-  </div>
-
-  <div class="center sub">
-    published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
-    by Abby De Los Santos<br>
-
-    <p>
-      <% if logged_in? %>
-        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
-        <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), class: "remove-border", method: "DELETE" %>
-      <% end %>
-    </p>
-  </div>
+<div id="post-show" class="large-container">
+  <%= render "post" %>
 
   <hr>
-  <p><%= @post.content.html_safe %></p>
-  <hr>
-
   <%= render "tags/list" %>
 
-  <%= render "resources/list" %>
+  <%= render "resources/index" %>
 
   <%= render "footer" %>
 </div>
