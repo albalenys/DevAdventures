@@ -1,6 +1,6 @@
 <div id="tags-container">
   <% if logged_in? %>
-    <%= link_to image_tag("plus-icon.png", alt: "Add Tag", class: "icon"), taggable.is_a?(Project) ? new_project_tag_path(taggable) : new_post_tag_path(taggable), class: "remove-border", remote: true %>
+    <%= link_to fa_icon("plus-circle", alt: "Add Tag"), taggable.is_a?(Project) ? new_project_tag_path(taggable) : new_post_tag_path(taggable), class: "remove-border", remote: true %>
   <% end %>
 
   <% unless taggable.tags.empty? && !logged_in? %>
