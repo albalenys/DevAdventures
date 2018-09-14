@@ -1,0 +1,29 @@
+#blog-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid #999 1px;
+  padding: 2em 0;
+}
+
+#blog-content {
+  border-top: solid #999 1px;
+  border-bottom: solid #999 1px;
+  padding: 1em;
+}
+
+/* Used in blog post content */
+.blog-list td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.bordered_table {
+  margin: auto;
+  font-size: 0.9em;
+
+  td {
+    padding: 1em;
+    text-align: center;
+    border: solid #000 1px;
+  }
+}
