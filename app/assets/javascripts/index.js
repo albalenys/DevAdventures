@@ -1,3 +1,4 @@
+
 $('#welcome').ready(function() {
   renderRandomBg();
   renderRandomColors();
@@ -56,4 +57,5 @@ let renderRandomColors = function() {
   $(".sub-button").addClass(`${randPrimaryColor} background`);
   $("header a").addClass(randPrimaryColor);
   $("a, a:visited").addClass(randSubColor);
+  $(".tag").addClass(`${randPrimaryColor} border-dash`);
 }

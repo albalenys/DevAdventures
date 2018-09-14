@@ -1,18 +1,28 @@
 #blog-nav {
   display: flex;
   justify-content: space-between;
-  border-top: solid #999 1px;
+  border-top: solid #ddd 1px;
   padding: 2em 0;
 }
 
 #blog-content {
   border-top: solid #999 1px;
-  border-bottom: solid #999 1px;
+  border-bottom: solid #ddd 1px;
   padding: 1em;
 }
 
 #tag-list {
   display: inline;
+}
+
+.tag {
+  background: #404040;
+  padding: 0.1em 0.7em;
+  border-radius: 5px;
+
+  a {
+    border: none !important /* override added border in js script */;
+  }
 }
 
 /* Used in blog post content */
