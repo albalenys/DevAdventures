@@ -1,2 +1,3 @@
 $("#resource-form").remove();
 $("#resource-<%=@resource.id %>").html("<%= escape_javascript render partial: 'resource', object: @resource %>");
+renderRandomColors();
