@@ -11,6 +11,11 @@
   padding: 1em;
 }
 
+#tags-container, #resource-heading-container {
+  display: flex;
+  align-items: center;
+}
+
 #tag-list {
   display: inline;
 }
@@ -19,10 +24,15 @@
   background: #404040;
   padding: 0.1em 0.7em;
   border-radius: 5px;
+  margin: 0.2em;
 
   a {
     border: none !important /* override added border in js script */;
   }
+}
+
+#resource-list {
+  margin-top: 0;
 }
 
 /* Used in blog post content */

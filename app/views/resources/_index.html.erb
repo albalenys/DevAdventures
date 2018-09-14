@@ -1,17 +1,15 @@
-<p>
-  <div class="center">
-    <% if logged_in? %>
-      <%= link_to "Add Resource", new_post_resource_path(@post.id), class: "sub-button", remote: true %>
-    <% end %>
-  </div>
-
-  <% unless @post.resources.empty? %>
-    <h4 class="center">Further Resources</h4>
+<div id="resource-heading-container">
+  <% if logged_in? %>
+    <%= link_to image_tag("plus-icon.png", alt: "Add Resource", class: "icon"), new_post_resource_path(@post.id), class: "remove-border", remote: true %>
   <% end %>
 
-  <ul id="resource-list">
-    <% @post.resources.each do |resource| %>
-      <%= render partial: "resources/resource", object: resource %>
-    <% end %>
-  </ul>
-</p>
+  <% unless @post.resources.empty? %>
+    <h3>Further Resources</h3>
+  <% end %>
+</div>
+
+<ul id="resource-list">
+  <% @post.resources.each do |resource| %>
+    <%= render partial: "resources/resource", object: resource %>
+  <% end %>
+</ul>
