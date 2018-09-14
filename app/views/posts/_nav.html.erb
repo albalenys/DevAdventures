@@ -1,8 +1,0 @@
-<div id="blog-nav">
-  <% if @next_post %>
-    <%= link_to "Next", post_path(@next_post), class: "sub-button" %>
-  <% end %>
-  <% if @previous_post %>
-    <%= link_to "Previous", post_path(@previous_post), class: "sub-button" %>
-  <% end %>
-</div>

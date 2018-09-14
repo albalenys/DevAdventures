@@ -1,36 +1,30 @@
-<div class="large-container">
-  <h1 class="center">Projects</h1>
+<h1 class="center">Projects</h1>
 
-  <% if logged_in? %>
-    <div class="center">
-      <%= link_to "Add Project", new_project_path, class: "sub-button", remote: true %>
-    </div>
-  <% end %>
-
-  <div id="project-list">
-    <% @projects.each do |project| %>
-      <hr>
-      <% if project.url == "" %>
-        <%= project.title %>
-      <% else %>
-        <%= link_to "#{project.title}", project.url, target: "_blank" %>
-      <% end %>
-      (<%= link_to "Github Source", project.github, target: "_blank" %>)
-      <% if logged_in? %>
-        <div class="right">
-          <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
-          <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
-        </div>
-      <% end %>
-      <br>
-
-      <%= render "tags/project_tags", :taggable => project %>
-
-      <p>
-        <%= project.description %>
-      </p>
-    <% end %>
+<% if logged_in? %>
+  <div class="center">
+    <%= link_to "Add Project", new_project_path, class: "sub-button", remote: true %>
   </div>
+<% end %>
 
-  <%= will_paginate @projects %>
+<div id="project-list">
+  <% @projects.each do |project| %>
+    <hr>
+    <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
+    (<%= link_to "Github Source", project.github, target: "_blank" %>)
+    <% if logged_in? %>
+      <div class="right">
+        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
+        <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
+      </div>
+    <% end %>
+    <br>
+
+    <%= render "tags/project_tags", :taggable => project %>
+
+    <p>
+      <%= project.description %>
+    </p>
+  <% end %>
 </div>
+
+<%= will_paginate @projects %>
