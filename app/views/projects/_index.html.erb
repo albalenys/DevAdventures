@@ -12,8 +12,8 @@
       (<%= link_to "Github Source", project.github, target: "_blank" %>)
       <% if logged_in? %>
         <div class="edit-links right hidden">
-          <%= link_to fa_icon("edit", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
-          <%= link_to fa_icon("trash", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
+          <%= link_to fa_icon("edit"), edit_project_path(project), class: "remove-border", remote: true %>
+          <%= link_to fa_icon("trash"), project_path(project), class: "remove-border", method: "DELETE" %>
         </div>
       <% end %>
       <br>

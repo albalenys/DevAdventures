@@ -120,7 +120,7 @@ th {
   color: white;
 }
 
-.icon, i.fa {
+.icon, .fa {
   margin: 0.3em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -144,13 +144,16 @@ th {
   height: 2.1em;
 }
 
-i.fa.sub-icon {
-  font-size: 1.3em;
-  color: #999;
+.fa {
+  font-size: 2.1em;
 }
 
-i.fa {
-  font-size: 2.1em;
+
+/* Sub Icons */
+
+.fa.fa-edit, .fa.fa-trash {
+  font-size: 1.3em;
+  color: #999;
 }
 
 @-webkit-keyframes wobble {

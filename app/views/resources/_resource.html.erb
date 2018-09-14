@@ -3,8 +3,8 @@
 
   <% if logged_in? %>
     <span class="edit-links hidden">
-      <%= link_to fa_icon("edit", class: "sub-icon"), edit_post_resource_path(@post, resource), class: "remove-border", format: :js, remote: true %>
-      <%= link_to fa_icon("trash", class: "sub-icon"), post_resource_path(@post, resource), class: "remove-border", method: "DELETE", format: :js, remote: true %>
+      <%= link_to fa_icon("edit"), edit_post_resource_path(@post, resource), class: "remove-border", format: :js, remote: true %>
+      <%= link_to fa_icon("trash"), post_resource_path(@post, resource), class: "remove-border", method: "DELETE", format: :js, remote: true %>
     </span>
   <% end %>
 </li>
