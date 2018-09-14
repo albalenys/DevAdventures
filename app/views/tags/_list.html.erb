@@ -1,15 +1,15 @@
 <div id="tags-container">
   <% if logged_in? %>
-    <%= link_to image_tag("plus-icon.png", alt: "Add Tag", class: "icon"), new_post_tag_path(@post.id), class: "remove-border", remote: true %>
+    <%= link_to image_tag("plus-icon.png", alt: "Add Tag", class: "icon"), taggable.is_a?(Project) ? new_project_tag_path(taggable) : new_post_tag_path(taggable), class: "remove-border", remote: true %>
   <% end %>
 
-  <% unless @post.tags.empty? %>
+  <% unless taggable.tags.empty? && !logged_in? %>
     <h3>Tags</h3>
   <% end %>
 
   <div id="tag-list">
-    <% @post.tags.each do |tag| %>
-      <%= render partial: "tags/tag", object: tag %>
+    <% taggable.tags.each do |tag| %>
+      <%= render "tags/tag", tag: tag, taggable: taggable %>
     <% end %>
   </div>
 </div>

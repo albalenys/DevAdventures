@@ -1,6 +1,6 @@
 <span id=<%= "tag-#{tag.id}" %>>
   <span class="tag"><%= link_to tag.name, tag_path(tag) %></span>
   <% if logged_in? %>
-  	<%= link_to image_tag("delete-icon.png", class: "sub-icon hidden"), @post ? post_tag_path(@post, tag) : project_tag_path(taggable, tag), class: "remove-border", method: "DELETE", format: :js, remote: true %>
+  	<%= link_to image_tag("delete-icon.png", class: "sub-icon hidden"), taggable.is_a?(Project) ? project_tag_path(taggable, tag) : post_tag_path(taggable, tag), class: "remove-border", method: "DELETE", format: :js, remote: true %>
   <% end %>
 </span>

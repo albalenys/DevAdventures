@@ -1,7 +1,7 @@
 <div id="post-show" class="large-container">
   <%= render "post" %>
 
-  <%= render "tags/list" %>
+  <%= render "tags/list", :taggable => @post %>
 
   <%= render "resources/index" %>
 
