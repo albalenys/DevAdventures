@@ -3,7 +3,7 @@
 class ResourcesController < ApplicationController
   before_action :authorize_user
   before_action :find_resource, except: %i[new create]
-  before_action :find_resource_post, except: %i[destroy update]
+  before_action :find_resource_post, except: %i[destroy]
 
   def new
     @resource = Resource.new
@@ -25,14 +25,14 @@ class ResourcesController < ApplicationController
     respond_to :js
   end
 
+  def edit
+    respond_to :js
+  end
+
   def update
     unless @resource.update_attributes(resource_params)
       flash[:error] = 'Invalid input: must include both title and content.'
     end
-    redirect_to post_path(params[:post_id])
-  end
-
-  def edit
     respond_to :js
   end
 
