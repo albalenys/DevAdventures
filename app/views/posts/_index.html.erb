@@ -17,16 +17,14 @@
     <h4 class="center">
       <%= month_year.strftime("%B %Y") %>
     </h4>
-    <ul>
+    <ul id="post-list">
       <% posts.each do |post| %>
-        <li>
+        <li id=<%= "post-#{post.id}" %>>
           <%= month_year.strftime("%B") %> <%= post.created_at.day %>:
           <%= link_to "#{post.title}", post_path(post) %>
 
           <% if logged_in? %>
-            <div class="right">
-              <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(post), class: "remove-border", remote: true %>
-            </div>
+            <%= link_to image_tag("edit-icon.png", class: "sub-icon hidden"), edit_post_path(post), class: "remove-border", remote: true %>
           <% end %>
         </li>
       <% end %>
