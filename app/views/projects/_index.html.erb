@@ -1,10 +1,9 @@
-<h1 class="center">Projects</h1>
-
-<% if logged_in? %>
-  <div class="center">
-    <%= link_to "Add Project", new_project_path, class: "sub-button", remote: true %>
-  </div>
-<% end %>
+<div id="posts-heading-container">
+  <% if logged_in? %>
+    <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
+  <% end %>
+  <h1>Projects</h1>
+</div>
 
 <div id="projects-list">
   <% @projects.each do |project| %>
@@ -13,8 +12,8 @@
       (<%= link_to "Github Source", project.github, target: "_blank" %>)
       <% if logged_in? %>
         <div class="edit-links right hidden">
-          <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
-          <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
+          <%= link_to fa_icon("edit"), edit_project_path(project), class: "remove-border", remote: true %>
+          <%= link_to fa_icon("trash"), project_path(project), class: "remove-border", method: "DELETE" %>
         </div>
       <% end %>
       <br>

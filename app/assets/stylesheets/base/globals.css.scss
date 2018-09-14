@@ -100,13 +100,8 @@ th {
   float: right;
 }
 
-.sub-icon {
-  width: 1em;
-  height: 1em;
-}
-
 .sub-button {
-  color: #000 !important;
+  color: black !important;
   padding: 0.1em 0.5em;
   border-radius: 0.1em;
 }
@@ -121,14 +116,16 @@ th {
 }
 
 .private {
-  background: #000;
-  color: #FFF;
+  background: black;
+  color: white;
 }
 
-.icon {
-  width: 2.1em;
-  height: 2.1em;
-  margin: 0.3em;
+.fa {
+  margin: 0.2em;
+}
+
+#sociallinks .fa, .fa-plus-circle, .fa-chevron-up {
+  font-size: 2.3em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -144,6 +141,22 @@ th {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+}
+
+#sociallinks .fa {
+  color: black;
+}
+
+/* Sub Icons */
+
+.fa-edit, .fa-trash {
+  font-size: 1.3em;
+  color: #999;
+}
+
+.fa-search {
+  font-size: 1.3em;
+  color: black;
 }
 
 @-webkit-keyframes wobble {

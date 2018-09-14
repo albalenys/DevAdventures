@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'sinatra-flash' # used to generate error messages
 gem 'sqlite3'
 gem 'will_paginate', '~> 3.0.6'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'capybara'
