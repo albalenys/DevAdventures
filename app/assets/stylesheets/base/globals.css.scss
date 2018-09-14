@@ -100,11 +100,6 @@ th {
   float: right;
 }
 
-.sub-icon {
-  width: 1em;
-  height: 1em;
-}
-
 .sub-button {
   color: black !important;
   padding: 0.1em 0.5em;
@@ -147,6 +142,11 @@ th {
 .icon {
   width: 2.1em;
   height: 2.1em;
+}
+
+i.fa.sub-icon {
+  font-size: 1.3em;
+  color: #999;
 }
 
 i.fa {

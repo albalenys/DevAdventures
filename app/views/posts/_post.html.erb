@@ -1,24 +1,26 @@
-<div id="posts-container" class="center">
+<div id="posts-container">
   <% if @post.private %>
-    <div class="private">
+    <div class="private" class="center">
       PRIVATE
     </div>
   <% end %>
 
-  <h1 id="post-title">
+  <h1 id="main-heading" class="center">
     <%= @post.title %>
   </h1>
 
-  <div class="sub">
+  <div class="sub" class="center">
     <%= @post.created_at.strftime("%B, %d, %Y") %><br>
 
     <% if logged_in? %>
-      <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
-      <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), class: "remove-border", method: "DELETE" %>
+      <%= link_to fa_icon("edit", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
+      <%= link_to fa_icon("trash", class: "sub-icon"), post_path(@post), class: "remove-border", method: "DELETE" %>
     <% end %>
   </div>
 
-  <div id="blog-content">
-    <p><%= @post.content.html_safe %></p>
+  <div id="post-content">
+    <p>
+      <%= @post.content.html_safe %>
+    </p>
   </div>
 </div>
