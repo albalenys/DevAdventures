@@ -1,33 +1,38 @@
 <% if @private %>
-  <div class="center private">
-    PRIVATE
-  </div>
+  <div class="large-container">
+    <div class="center private">
+      PRIVATE
+    </div>
 <% end %>
 
-<div id="blogs-container">
-  <div id="blogs-heading-container">
-    <% if logged_in? %>
-      <%= link_to image_tag("plus-icon.png", alt: "Add Blog Post", class: "icon"), new_post_path, class: "remove-border", remote: true %>
+  <div id="blogs-container">
+    <div id="posts-heading-container">
+      <% if logged_in? %>
+        <%= link_to image_tag("plus-icon.png", alt: "Add Blog Post", class: "icon"), new_post_path, class: "remove-border", remote: true %>
+      <% end %>
+      <h1>Blog Posts</h1>
+    </div>
+
+    <% @posts_by_month.each do |month_year, posts| %>
+      <hr>
+      <h4 class="center">
+        <%= month_year.strftime("%B %Y") %>
+      </h4>
+      <ul id="post-list">
+        <% posts.each do |post| %>
+          <li id=<%= "post-#{post.id}" %>>
+            <%= month_year.strftime("%B") %> <%= post.created_at.day %>:
+            <%= link_to "#{post.title}", post_path(post) %>
+
+            <% if logged_in? %>
+              <%= link_to image_tag("edit-icon.png", class: "sub-icon hidden"), edit_post_path(post), class: "remove-border", remote: true %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-    <h1>Blog Posts</h1>
   </div>
 
-  <% @posts_by_month.each do |month_year, posts| %>
-    <hr>
-    <h4 class="center">
-      <%= month_year.strftime("%B %Y") %>
-    </h4>
-    <ul id="post-list">
-      <% posts.each do |post| %>
-        <li id=<%= "post-#{post.id}" %>>
-          <%= month_year.strftime("%B") %> <%= post.created_at.day %>:
-          <%= link_to "#{post.title}", post_path(post) %>
-
-          <% if logged_in? %>
-            <%= link_to image_tag("edit-icon.png", class: "sub-icon hidden"), edit_post_path(post), class: "remove-border", remote: true %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
+<% if @private %>
+  </div>
+<% end %>

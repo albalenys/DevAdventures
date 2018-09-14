@@ -11,9 +11,13 @@
   padding: 1em;
 }
 
-#tags-container, #resource-heading-container {
+#tags-container, #resource-heading-container, #posts-heading-container {
   display: flex;
   align-items: center;
+}
+
+#posts-heading-container {
+  justify-content: center;
 }
 
 #tag-list {
