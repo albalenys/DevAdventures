@@ -6,24 +6,25 @@
   </div>
 <% end %>
 
-<div id="project-list">
+<div id="projects-list">
   <% @projects.each do |project| %>
-    <hr>
-    <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
-    (<%= link_to "Github Source", project.github, target: "_blank" %>)
-    <% if logged_in? %>
-      <div class="right">
-        <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
-        <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
-      </div>
-    <% end %>
-    <br>
+    <div id=<%= "project-#{project.id}" %>>
+      <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
+      (<%= link_to "Github Source", project.github, target: "_blank" %>)
+      <% if logged_in? %>
+        <div class="edit-links right hidden">
+          <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_project_path(project), class: "remove-border", remote: true %>
+          <%= link_to image_tag("delete-icon.png", class: "sub-icon"), project_path(project), class: "remove-border", method: "DELETE" %>
+        </div>
+      <% end %>
+      <br>
 
-    <%= render "tags/list", :taggable => project %>
+      <%= render "tags/list", :taggable => project %>
 
-    <p>
-      <%= project.description %>
-    </p>
+      <p>
+        <%= project.description %>
+      </p>
+    </div>
   <% end %>
 </div>
 
