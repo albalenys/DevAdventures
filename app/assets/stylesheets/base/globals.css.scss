@@ -120,10 +120,13 @@ th {
   color: white;
 }
 
-.icon {
-  margin: 0.3em;
-  width: 2.1em;
-  height: 2.1em;
+.fa {
+  margin: 0.2em;
+}
+
+#sociallinks .fa {
+  color: black;
+  font-size: 2.3em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -140,11 +143,6 @@ th {
     animation-iteration-count: 1;
   }
 }
-
-.fa {
-  margin: 0.3em;
-}
-
 
 /* Sub Icons */
 
