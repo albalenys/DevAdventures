@@ -45,11 +45,7 @@ header {
 
     #project_search {
       display: flex;
-
-      .search-icon {
-        width: 1.1em;
-        height: 1.1em;
-      }
+      align-items: center;
 
       #search-bar {
         width: 15em;
@@ -59,7 +55,7 @@ header {
       }
 
       #search-bar:focus {
-        background: #FFF;
+        background: white;
       }
     }
   }

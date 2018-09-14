@@ -120,8 +120,10 @@ th {
   color: white;
 }
 
-.icon, .fa {
+.icon {
   margin: 0.3em;
+  width: 2.1em;
+  height: 2.1em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -139,13 +141,8 @@ th {
   }
 }
 
-.icon {
-  width: 2.1em;
-  height: 2.1em;
-}
-
 .fa {
-  font-size: 2.1em;
+  margin: 0.3em;
 }
 
 
@@ -154,6 +151,11 @@ th {
 .fa.fa-edit, .fa.fa-trash {
   font-size: 1.3em;
   color: #999;
+}
+
+.fa.fa-search {
+  font-size: 1.3em;
+  color: black;
 }
 
 @-webkit-keyframes wobble {
