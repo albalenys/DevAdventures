@@ -1,13 +1,13 @@
-<div id="post-form">
-  <h1 class="center">
+<div id="post-form" class="center">
+  <h1>
     <%= @post.id ? "Edit" : "New" %> Post
   </h1>
 
-  <span class="center">
+  <span>
     <%= flash[:error] %>
   </span>
 
-  <%= form_for @post, remote:true, html: {class: "center"} do |post_form|%>
+  <%= form_for @post, remote:true do |post_form|%>
     Title: <%= post_form.text_field :title %><br>
     Private: <%= post_form.check_box :private %><br>
     <%= post_form.text_area :content %><br>

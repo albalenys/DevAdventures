@@ -1,4 +1,13 @@
 /*
- *= require_tree .
- *= require_self
- */
+*= require_self
+*/
+
+@import "base/globals.css.scss";
+@import "base/_backgrounds.css.scss";
+@import "base/_colors.css.scss";
+@import "base/responsive.css.scss";
+
+@import "styles/index.css.scss";
+@import "styles/header.css.scss";
+@import "styles/footer.css.scss";
+@import "styles/post.css.scss";

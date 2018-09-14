@@ -1,25 +1,24 @@
-<div id="blogs-container">
+<div id="blogs-container" class="center">
   <% if @post.private %>
-    <div class="center private">
+    <div class="private">
       PRIVATE
     </div>
   <% end %>
 
-  <h1 id="post-title" class="center">
+  <h1 id="post-title">
     <%= @post.title %>
   </h1>
 
-  <div class="center sub">
-    published <%= @post.created_at.strftime("%B, %d, %Y") %><br>
-    by Abby De Los Santos<br>
+  <div class="sub">
+    <%= @post.created_at.strftime("%B, %d, %Y") %><br>
+
     <% if logged_in? %>
       <%= link_to image_tag("edit-icon.png", class: "sub-icon"), edit_post_path(@post), class: "remove-border", remote: true %>
       <%= link_to image_tag("delete-icon.png", class: "sub-icon"), post_path(@post), class: "remove-border", method: "DELETE" %>
     <% end %>
   </div>
 
-  <hr>
-  <p class="center">
+  <p id="blog-content">
     <%= @post.content.html_safe %>
   </p>
 </div>

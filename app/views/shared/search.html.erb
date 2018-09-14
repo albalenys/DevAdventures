@@ -1,37 +1,18 @@
 <div class="large-container">
-  <h2 class="center">Searching for "<%= @query %>"...</h2>
+  <h1 class="center">Searching for "<%= @query %>"...</h1>
 
-  <hr>
-  <% if @posts.empty? && @projects.empty? %>
+  <% if @posts_by_month.empty? && @projects.empty? %>
     <p class="center">
-      No posts match your search.<br>
+      No results match your search.<br>
       Your query might be too specific.
     </p>
   <% end %>
 
-  <% unless @posts.empty? %>
-    <h3>Blog Posts</h3>
-    <% @posts.each do |post| %>
-      <ul>
-        <li><%= timestamp(post) %>: <%= link_to post.title, post_path(post) %></li>
-      </ul>
-    <% end %>
-  <hr>
+  <% unless @posts_by_month.empty? %>
+    <%= render "posts/index" %>
   <% end %>
 
   <% unless @projects.empty? %>
-    <h3>Projects</h3>
-    <% @projects.each do |project| %>
-      <ul>
-        <li>
-          <% if project.url == "" %>
-            <%= project.title %>
-          <% else %>
-            <%= link_to "#{project.title}", project.url, target: "_blank" %>
-          <% end %>
-          (<%= link_to "Github Source", project.github, target: "_blank" %>)
-        </li>
-      </ul>
-    <% end %>
+    <%= render 'projects/index' %>
   <% end %>
 </div>

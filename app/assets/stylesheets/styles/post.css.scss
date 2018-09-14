@@ -1,0 +1,53 @@
+#blog-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid #ddd 1px;
+  padding: 2em 0;
+}
+
+#blog-content {
+  border-top: solid #ddd 1px;
+  border-bottom: solid #ddd 1px;
+  padding: 1em;
+}
+
+#tags-container, #resource-heading-container {
+  display: flex;
+  align-items: center;
+}
+
+#tag-list {
+  display: inline;
+}
+
+.tag {
+  background: #404040;
+  padding: 0.1em 0.7em;
+  border-radius: 5px;
+  margin: 0.2em;
+
+  a {
+    border: none !important /* override added border in js script */;
+  }
+}
+
+#resource-list {
+  margin-top: 0;
+}
+
+/* Used in blog post content */
+.blog-list td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.bordered_table {
+  margin: auto;
+  font-size: 0.9em;
+
+  td {
+    padding: 1em;
+    text-align: center;
+    border: solid #000 1px;
+  }
+}

@@ -12,6 +12,10 @@ $light-blue: #66C2E0;
     border-left: solid $light-blue 0.6em;
   }
 
+  &.border-dash {
+    border: solid $light-blue 1px;
+  }
+
   &.background {
     background: $light-blue;
   }
@@ -44,6 +48,10 @@ $red-orange: #ff6666;
 
   &.border {
     border-left: solid $red-orange 0.6em;
+  }
+
+  &.border-dash {
+    border: solid $red-orange 1px;
   }
 
   &.background {
@@ -80,6 +88,10 @@ $teal-green: #00cc99;
     border-left: solid $teal-green 0.6em;
   }
 
+  &.border-dash {
+    border: solid $teal-green 1px;
+  }
+
   &.background {
     background: $teal-green;
   }
@@ -114,6 +126,10 @@ $purple: #bb99ff;
     border-left: solid $purple 0.6em;
   }
 
+  &.border-dash {
+    border: solid $purple 1px;
+  }
+
   &.background {
     background: $purple;
   }
@@ -146,6 +162,10 @@ $yellow: #FFE593;
 
   &.border {
     border-left: solid $yellow 0.6em;
+  }
+
+  &.border-dash {
+    border: solid $yellow 1px;
   }
 
   &.background {

@@ -1,10 +1,16 @@
 <div id="post-show" class="large-container">
   <%= render "post" %>
 
-  <hr>
-  <%= render "tags/list" %>
+  <%= render "tags/list", :taggable => @post %>
 
   <%= render "resources/index" %>
 
-  <%= render "footer" %>
+  <div id="blog-nav">
+    <% if @next_post %>
+      <%= link_to "Next", post_path(@next_post), class: "sub-button" %>
+    <% end %>
+    <% if @previous_post %>
+      <%= link_to "Previous", post_path(@previous_post), class: "sub-button" %>
+    <% end %>
+  </div>
 </div>

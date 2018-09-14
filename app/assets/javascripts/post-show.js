@@ -1,6 +1,6 @@
 $('#tag-list').ready(function() {
   $("span[id^='tag-']").hover(function(event) {
-    let parentElement = event.target.closest('span');
+    let parentElement = event.target.closest("span[id^='tag-']");
     deleteButton = $(parentElement).find('.sub-icon');
     deleteButton.show();
   },

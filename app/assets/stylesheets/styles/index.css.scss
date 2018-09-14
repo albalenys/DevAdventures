@@ -1,0 +1,42 @@
+#welcome, #blogs, #projects, #about {
+  width: 100%;
+  min-height: 100%;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3.4em;
+    margin-bottom: 3em;
+    cursor: pointer;
+  }
+}
+
+#blogs {
+  #blogs-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#projects {
+  background: #000;
+  color: #FFF;
+}
+
+#about {
+  .profile {
+    border-radius: 13em;
+    height: 13em;
+    width: 13em;
+  }
+}
+
+.blurScroll {
+  transition: all 0.25s ease-out;
+}
