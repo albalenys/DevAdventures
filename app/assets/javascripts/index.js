@@ -51,7 +51,7 @@ let renderRandomColors = function() {
   let randPrimaryColor = `primary-color-${randInt()}`;
   let randSubColor = `sub-color-${randInt()}`;
 
-  $(".subtitle, #post-title").addClass(`${randPrimaryColor} font`);
+  $("#post-title").addClass(`${randPrimaryColor} font`);
   $("a, a:visited").addClass(`${randPrimaryColor} line`);
   $("pre").addClass(`${randPrimaryColor} border`);
   $(".sub-button").addClass(`${randPrimaryColor} background`);

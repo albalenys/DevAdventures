@@ -14,9 +14,13 @@
     margin-bottom: 3em;
     cursor: pointer;
   }
+}
 
-  .subtitle {
-    font-size: 2em;
+#blogs {
+  #blogs-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
