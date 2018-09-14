@@ -125,9 +125,7 @@ th {
   color: #FFF;
 }
 
-.icon {
-  width: 2.1em;
-  height: 2.1em;
+.icon, i.fa {
   margin: 0.3em;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -144,6 +142,15 @@ th {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+}
+
+.icon {
+  width: 2.1em;
+  height: 2.1em;
+}
+
+i.fa {
+  font-size: 2.1em;
 }
 
 @-webkit-keyframes wobble {
