@@ -1,0 +1,665 @@
+/*
+
+*/
+/* line 1, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* line 6, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+html {
+  font-family: 'Raleway', Verdana, sans-serif;
+  font-size: 1.1em;
+}
+
+/* line 11, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+a, a:visited {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 16, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+hr {
+  border-bottom: solid #ddd 1px;
+}
+
+/* line 20, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 2.9em;
+}
+
+/* line 26, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5em;
+  margin: 0.1;
+}
+
+/* line 32, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.small-container, .large-container {
+  width: 60%;
+  margin: auto;
+  min-height: 100%;
+}
+
+/* line 38, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.large-container {
+  position: relative;
+  top: 5em;
+  padding: 2em 0 6em;
+}
+
+/* line 44, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+input[type=text], #search-bar, textarea {
+  border: #999 solid 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 40%;
+  font-family: 'Raleway', Verdana, sans-serif;
+  font-size: 0.8em;
+}
+/* line 52, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+input[type=text]:focus, #search-bar:focus, textarea:focus {
+  outline: none;
+}
+
+/* line 57, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+textarea {
+  width: 100%;
+  height: 25em;
+}
+
+/* line 62, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+code {
+  font-family: monospace;
+  background: #eee;
+  padding: 1px;
+}
+
+/* line 68, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+pre {
+  background: #222;
+  padding: 1em;
+  border-radius: 0.6em;
+  overflow: auto;
+}
+
+/* line 75, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+table {
+  font-family: "Raleway", Verdana, sans-serif;
+  font-size: 1em;
+  padding: 2em 0;
+}
+
+/* line 81, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+tfoot {
+  text-align: right;
+}
+
+/* line 85, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+th {
+  color: #999 1em;
+}
+
+/* line 89, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+/* line 94, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.sub {
+  color: #999;
+  font-size: 0.9em;
+}
+
+/* line 99, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.right {
+  float: right;
+}
+
+/* line 103, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.sub-icon {
+  width: 1em;
+  height: 1em;
+}
+
+/* line 108, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.sub-button {
+  color: #000 !important;
+  padding: 0.1em 0.5em;
+  border-radius: 0.1em;
+}
+
+/* line 114, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.remove-border {
+  border: none !important;
+}
+
+/* line 119, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.hidden {
+  display: none;
+}
+
+/* line 123, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.private {
+  background: #000;
+  color: #FFF;
+}
+
+/* line 128, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.icon {
+  width: 2.1em;
+  height: 2.1em;
+  margin: 0.3em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 137, /var/www/albalenys/code/app/assets/stylesheets/base/globals.css.scss */
+.icon:hover {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* line 1, /var/www/albalenys/code/app/assets/stylesheets/base/_backgrounds.css.scss */
+.bg-img-1 {
+  background: url("/assets/backgrounds/New-York-2f9f0971e72ad073e5e178e34aa4e6bda801e9d28a4b1df9029c12f370887757.jpg") #000 no-repeat;
+}
+
+/* line 5, /var/www/albalenys/code/app/assets/stylesheets/base/_backgrounds.css.scss */
+.bg-img-2 {
+  background: url("/assets/backgrounds/Starcano-895792f7be1217a776e8afeecd5d5b39081836f2692fa38ec892f75e92248564.jpg") #000 no-repeat;
+}
+
+/* line 9, /var/www/albalenys/code/app/assets/stylesheets/base/_backgrounds.css.scss */
+.bg-img-3 {
+  background: url("/assets/backgrounds/Colors-of-Bled-68e8092a12e6123994b283758292b450a3f3c5f15be45263b091905dde73e20c.jpg") #000 no-repeat;
+}
+
+/* line 3, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-1.line {
+  border-bottom: 0.1em dashed #66C2E0;
+}
+/* line 7, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-1.font {
+  color: #66C2E0;
+}
+/* line 11, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-1.border {
+  border-left: solid #66C2E0 0.6em;
+}
+/* line 15, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-1.border-dash {
+  border: solid #66C2E0 1px;
+}
+/* line 19, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-1.background {
+  background: #66C2E0;
+}
+
+/* line 24, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-1, nav a.primary-color-1:visited {
+  box-shadow: 0 0 0 0 #66C2E0 inset;
+  color: #FFF;
+}
+
+/* line 29, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-1:hover {
+  box-shadow: 0 -100px 0 0px #66C2E0 inset;
+  color: #000;
+}
+
+/* line 34, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.sub-color-1 {
+  color: #66C2E0;
+}
+
+/* line 41, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-2.line {
+  border-bottom: 0.1em dashed #ff6666;
+}
+/* line 45, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-2.font {
+  color: #ff6666;
+}
+/* line 49, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-2.border {
+  border-left: solid #ff6666 0.6em;
+}
+/* line 53, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-2.border-dash {
+  border: solid #ff6666 1px;
+}
+/* line 57, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-2.background {
+  background: #ff6666;
+}
+
+/* line 62, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-2, nav a.primary-color-2:visited {
+  box-shadow: 0 0 0 0 #ff6666 inset;
+  color: #FFF;
+}
+
+/* line 67, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-2:hover {
+  box-shadow: 0 -100px 0 0px #ff6666 inset;
+  color: #000;
+}
+
+/* line 72, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.sub-color-2 {
+  color: #ff6666;
+}
+
+/* line 79, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-3.line {
+  border-bottom: 0.1em dashed #00cc99;
+}
+/* line 83, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-3.font {
+  color: #00cc99;
+}
+/* line 87, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-3.border {
+  border-left: solid #00cc99 0.6em;
+}
+/* line 91, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-3.border-dash {
+  border: solid #00cc99 1px;
+}
+/* line 95, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-3.background {
+  background: #00cc99;
+}
+
+/* line 100, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-3, nav a.primary-color-3:visited {
+  box-shadow: 0 0 0 0 #00cc99 inset;
+  color: #FFF;
+}
+
+/* line 105, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-3:hover {
+  box-shadow: 0 -100px 0 0px #00cc99 inset;
+  color: #000;
+}
+
+/* line 110, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.sub-color-3 {
+  color: #00cc99;
+}
+
+/* line 117, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-4.line {
+  border-bottom: 0.1em dashed #bb99ff;
+}
+/* line 121, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-4.font {
+  color: #bb99ff;
+}
+/* line 125, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-4.border {
+  border-left: solid #bb99ff 0.6em;
+}
+/* line 129, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-4.border-dash {
+  border: solid #bb99ff 1px;
+}
+/* line 133, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-4.background {
+  background: #bb99ff;
+}
+
+/* line 138, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-4, nav a.primary-color-4:visited {
+  box-shadow: 0 0 0 0 #bb99ff inset;
+  color: #FFF;
+}
+
+/* line 143, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-4:hover {
+  box-shadow: 0 -100px 0 0px #bb99ff inset;
+  color: #000;
+}
+
+/* line 148, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.sub-color-4 {
+  color: #bb99ff;
+}
+
+/* line 155, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-5.line {
+  border-bottom: 0.1em dashed #FFE593;
+}
+/* line 159, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-5.font {
+  color: #FFE593;
+}
+/* line 163, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-5.border {
+  border-left: solid #FFE593 0.6em;
+}
+/* line 167, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-5.border-dash {
+  border: solid #FFE593 1px;
+}
+/* line 171, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.primary-color-5.background {
+  background: #FFE593;
+}
+
+/* line 176, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-5, nav a.primary-color-5:visited {
+  box-shadow: 0 0 0 0 #FFE593 inset;
+  color: #FFF;
+}
+
+/* line 181, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+nav a.primary-color-5:hover {
+  box-shadow: 0 -100px 0 0px #FFE593 inset;
+  color: #000;
+}
+
+/* line 186, /var/www/albalenys/code/app/assets/stylesheets/base/_colors.css.scss */
+.sub-color-5 {
+  color: #FFE593;
+}
+
+/* ----------- Cell Phones ----------- */
+@media screen and (max-device-width: 800px) {
+  /* line 5, /var/www/albalenys/code/app/assets/stylesheets/base/responsive.css.scss */
+  html {
+    font-size: 3em;
+  }
+}
+/* ----------- Tablets ----------- */
+@media screen and (min-width: 801px) {
+  /* line 16, /var/www/albalenys/code/app/assets/stylesheets/base/responsive.css.scss */
+  .index_text {
+    width: 22em;
+    background: #FFF;
+    border-radius: 0.4em;
+    padding: 1em;
+    margin: auto;
+    opacity: 0.9;
+  }
+
+  /* line 25, /var/www/albalenys/code/app/assets/stylesheets/base/responsive.css.scss */
+  .small-container {
+    width: 60%;
+    padding-top: 6em;
+  }
+
+  /* line 30, /var/www/albalenys/code/app/assets/stylesheets/base/responsive.css.scss */
+  .profile {
+    float: right;
+    text-align: none;
+  }
+}
+/* ----------- Laptops ----------- */
+@media screen and (min-width: 1000px) {
+  /* line 42, /var/www/albalenys/code/app/assets/stylesheets/base/responsive.css.scss */
+  #welcome {
+    background-size: cover;
+  }
+}
+/* line 1, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#welcome, #blogs, #projects, #about {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 6, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 12, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#welcome h1 {
+  font-size: 3.4em;
+  margin-bottom: 3em;
+  cursor: pointer;
+}
+
+/* line 20, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#blogs #blogs-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 27, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#projects {
+  background: #000;
+  color: #FFF;
+}
+
+/* line 33, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+#about .profile {
+  border-radius: 13em;
+  height: 13em;
+  width: 13em;
+}
+
+/* line 40, /var/www/albalenys/code/app/assets/stylesheets/styles/index.css.scss */
+.blurScroll {
+  transition: all 0.25s ease-out;
+}
+
+/* ----------- All Small Screens (except cell phones) ----------- */
+/* line 3, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 1em;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.6+33,0+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 33%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 33%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 33%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
+/* line 19, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header a {
+  border: none !important;
+}
+/* line 23, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header nav {
+  font-size: 1.8em;
+}
+/* line 26, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header nav a, header nav a:visited {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background: #000;
+  padding: 0 0.2em;
+  border-radius: 0.1em;
+  text-align: center;
+}
+/* line 34, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header nav a:hover {
+  transition: all ease 1s;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+}
+/* line 41, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header #socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 46, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header #socialmedia #project_search {
+  display: flex;
+}
+/* line 49, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header #socialmedia #project_search .search-icon {
+  width: 1.1em;
+  height: 1.1em;
+}
+/* line 54, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header #socialmedia #project_search #search-bar {
+  width: 15em;
+  height: 1.7em;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  /* For IE8 and earlier */
+}
+/* line 61, /var/www/albalenys/code/app/assets/stylesheets/styles/header.css.scss */
+header #socialmedia #project_search #search-bar:focus {
+  background: #FFF;
+}
+
+/* line 1, /var/www/albalenys/code/app/assets/stylesheets/styles/footer.css.scss */
+footer {
+  background: #000;
+  padding: 0.4em;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  font-size: 0.8em;
+  box-sizing: border-box;
+}
+/* line 10, /var/www/albalenys/code/app/assets/stylesheets/styles/footer.css.scss */
+footer a {
+  font-weight: normal;
+  border: none !important;
+}
+
+/* line 1, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+#blog-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid #ddd 1px;
+  padding: 2em 0;
+}
+
+/* line 8, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+#blog-content {
+  border-top: solid #ddd 1px;
+  border-bottom: solid #ddd 1px;
+  padding: 1em;
+}
+
+/* line 14, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+#tags-container, #resource-heading-container {
+  display: flex;
+  align-items: center;
+}
+
+/* line 19, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+#tag-list {
+  display: inline;
+}
+
+/* line 23, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+.tag {
+  background: #404040;
+  padding: 0.1em 0.7em;
+  border-radius: 5px;
+  margin: 0.2em;
+}
+/* line 29, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+.tag a {
+  border: none !important;
+}
+
+/* line 34, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+#resource-list {
+  margin-top: 0;
+}
+
+/* Used in blog post content */
+/* line 39, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+.blog-list td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/* line 44, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+.bordered_table {
+  margin: auto;
+  font-size: 0.9em;
+}
+/* line 48, /var/www/albalenys/code/app/assets/stylesheets/styles/post.css.scss */
+.bordered_table td {
+  padding: 1em;
+  text-align: center;
+  border: solid #000 1px;
+}
