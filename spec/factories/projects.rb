@@ -2,8 +2,9 @@
 
 FactoryBot.define do
   factory :project do
-    title { Faker::Commerce.product_name }
+    title { Faker::Book.title }
     url { Faker::Internet.url }
+    description { Faker::Lorem.paragraph_by_chars(200) }
     admin
   end
 end
