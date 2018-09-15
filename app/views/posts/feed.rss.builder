@@ -16,7 +16,7 @@ xml.rss version: '2.0' do
         xml.title post.title
         xml.author 'Abby De Los Santos'
         xml.pubDate post.created_at.to_s(:rfc822)
-        xml.link "http://www.albalenys.com/posts/#{post.id}"
+        xml.link "https://www.albalenys.com/posts/#{post.id}"
         xml.guid post.id
 
         text = post.content
