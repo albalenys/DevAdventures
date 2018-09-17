@@ -1,4 +1,6 @@
 $('#welcome').ready(function() {
+  renderRandomBg();
+  
   $("a[href*='#']").click(function() {
     // Parallex reference: http://www.1stwebdesigner.com/create-scrolling-parallax-website/
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -31,3 +33,11 @@ $('#welcome').ready(function() {
     renderRandomBg();
   });
 });
+
+let renderRandomBg = function() {
+  let randInt = Math.floor((Math.random() * 3) + 1);
+  $("#welcome").attr("class", function(i, c) {
+    return c.replace(/(^|\s)bg-img-\S+/g, '');
+  });
+  $("#welcome").addClass(`bg-img-${randInt}`);
+}

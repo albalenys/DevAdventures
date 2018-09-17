@@ -25,16 +25,18 @@ header {
 
     a, a:visited {
       font-family: 'Open Sans Condensed', sans-serif;
-      background: #000;
+      background: black;
       padding: 0 0.2em;
       border-radius: 0.1em;
       text-align: center;
+      color: white !important;
     }
 
     a:hover {
       transition: all ease 1s;
       -webkit-transition: all ease 1s;
       -moz-transition: all ease 1s;
+      color: black !important;
     }
   }
 
