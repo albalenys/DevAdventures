@@ -130,9 +130,10 @@ th {
   text-align: center;
   width: 30em;
   padding: 0 5em 5em;
+  color: black;
 }
 
-#modal-overlay, #form-overlay {
+#modal-overlay {
   position: fixed;
   top: 0;
   left: 0;

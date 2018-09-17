@@ -1,6 +1,12 @@
-<p><%= flash[:error] %></p>
+<h1>
+  <%= @project.id ? "Edit" : "New" %> Project
+</h1>
 
-<%= form_for @project, html: {class: "center"} do |f|%>
+<div>
+  <%= flash[:error] %>
+</div>
+
+<%= form_for @project do |f| %>
   Title: <%= f.text_field :title %><br>
   URL: <%= f.text_field :url %><br>
   Github Link: <%= f.text_field :github %><br>
