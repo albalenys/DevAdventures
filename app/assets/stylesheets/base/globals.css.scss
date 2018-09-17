@@ -115,10 +115,27 @@ th {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .private {
   background: black;
   color: white;
   text-align: center;
+}
+
+#form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fa {

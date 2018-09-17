@@ -15,6 +15,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
+    
     respond_to do |format|
       format.js { render 'form.js.erb' }
     end

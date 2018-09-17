@@ -20,14 +20,14 @@ $('#welcome').ready(function() {
     let height = $(window).scrollTop();
     let blurEffect = `blur(${height/50}px)`;
 
-    $(".blurScroll").css("-webkit-filter", blurEffect);
-    $(".blurScroll").css("-moz-filter", blurEffect);
-    $(".blurScroll").css("-o-filter", blurEffect);
-    $(".blurScroll").css("-ms-filter", blurEffect);
-    $(".blurScroll").css("filter", blurEffect);
+    $('.blurScroll').css('-webkit-filter', blurEffect);
+    $('.blurScroll').css('-moz-filter', blurEffect);
+    $('.blurScroll').css('-o-filter', blurEffect);
+    $('.blurScroll').css('-ms-filter', blurEffect);
+    $('.blurScroll').css('filter', blurEffect);
   });
 
-  $("#welcome h1").click(function() {
+  $('#welcome h1').click(function() {
     renderRandomBg();
   });
 });

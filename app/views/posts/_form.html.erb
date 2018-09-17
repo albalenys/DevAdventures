@@ -1,16 +1,18 @@
-<div id="post-form" class="center">
-  <h1>
-    <%= @post.id ? "Edit" : "New" %> Post
-  </h1>
+<div id="form-overlay">
+  <div id="form">
+    <h1>
+      <%= @post.id ? "Edit" : "New" %> Post
+    </h1>
 
-  <span>
-    <%= flash[:error] %>
-  </span>
+    <span>
+      <%= flash[:error] %>
+    </span>
 
-  <%= form_for @post, remote:true do |post_form|%>
-    Title: <%= post_form.text_field :title %><br>
-    Private: <%= post_form.check_box :private %><br>
-    <%= post_form.text_area :content %><br>
-    <%= post_form.submit "Submit", class: "sub-button" %>
-  <% end %>
+    <%= form_for @post, remote:true do |post_form|%>
+      Title: <%= post_form.text_field :title %><br>
+      Private: <%= post_form.check_box :private %><br>
+      <%= post_form.text_area :content %><br>
+      <%= post_form.submit "Submit", class: "sub-button" %>
+    <% end %>
+  </div>
 </div>

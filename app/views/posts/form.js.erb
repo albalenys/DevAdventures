@@ -1,1 +1,11 @@
-$("#posts-container").html("<%= escape_javascript render 'posts/form' %>");
+$('#posts-container').html("<%= escape_javascript render 'posts/form' %>");
+$('body').addClass('no-scroll');
+
+$('#posts-container').on('click', '#form-overlay', function(event) {
+  if (event.target === event.currentTarget) {
+    $('#posts-container').html("<%= escape_javascript render 'index' %>");
+    renderRandomColors();
+  }
+});
+
+
