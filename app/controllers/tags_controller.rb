@@ -4,7 +4,6 @@ class TagsController < ApplicationController
   before_action :find_tag, except: %i[new create]
   before_action :find_tag_post_or_project, except: %i[show destroy]
 
-
   def show
     @posts_by_month = @tag.posts.public_posts.order(created_at: :desc).sort_by_month
     ordered_projects = @tag.projects.all.order(created_at: :desc)

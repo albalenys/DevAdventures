@@ -16,9 +16,12 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
-    
+    @parent_element = '#posts-container';
+    @modal_content_file = 'posts/form';
+    @modal_close_file = 'posts/index';
+
     respond_to do |format|
-      format.js { render 'form.js.erb' }
+      format.js { render 'shared/modal.js.erb' }
     end
   end
 

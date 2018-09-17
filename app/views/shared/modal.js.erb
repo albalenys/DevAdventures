@@ -1,0 +1,9 @@
+$('<%= escape_javascript @parent_element %>').html("<%= escape_javascript render 'shared/modal' %>");
+$('body').addClass('no-scroll');
+
+$('<%= escape_javascript @parent_element %>').on('click', '#modal-overlay', function(event) {
+  if (event.target === event.currentTarget) {
+    $('<%= escape_javascript @parent_element %>').html("<%= escape_javascript render @modal_close_file %>");
+    renderRandomColors();
+  }
+});

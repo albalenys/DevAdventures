@@ -125,7 +125,14 @@ th {
   text-align: center;
 }
 
-#form-overlay {
+#modal {
+  background: white;
+  text-align: center;
+  width: 30em;
+  padding: 0 5em 5em;
+}
+
+#modal-overlay, #form-overlay {
   position: fixed;
   top: 0;
   left: 0;
