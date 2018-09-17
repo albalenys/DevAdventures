@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     @parent_element = '#posts-container';
     @modal_content_file = 'posts/form';
     @modal_close_file = 'posts/index';
+    @modal_heading = 'New Post';
 
     respond_to do |format|
       format.js { render 'shared/modal.js.erb' }
@@ -59,7 +60,8 @@ class PostsController < ApplicationController
     # Necessary for modal functionality
     @parent_element = '#posts-container';
     @modal_content_file = 'posts/form';
-    @modal_close_file = 'posts/index';
+    @modal_close_file = 'posts/post';
+    @modal_heading = 'Edit Post';
 
     respond_to do |format|
       format.js { render 'shared/modal.js.erb' }
