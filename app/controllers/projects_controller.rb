@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
     @parent_element = '#projects-container';
     @modal_content_file = 'projects/form';
     @modal_close_file = 'projects/index';
+    @modal_heading = 'New Project';
 
     respond_to do |format|
       format.js { render 'shared/modal.js.erb' }
@@ -30,7 +31,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to '/#projects'
+    respond_to :js
   end
 
   def update
@@ -50,6 +51,7 @@ class ProjectsController < ApplicationController
     @parent_element = '#projects-container';
     @modal_content_file = 'projects/form';
     @modal_close_file = 'projects/index';
+    @modal_heading = 'Edit Project';
 
     respond_to do |format|
       format.js { render 'shared/modal.js.erb' }
