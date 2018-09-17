@@ -7,6 +7,8 @@ class ProjectsController < ApplicationController
     @project = Project.new
     ordered_projects = Project.all.order(created_at: :desc)
     @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+
+    # Necessary for modal functionality
     @parent_element = '#projects-container';
     @modal_content_file = 'projects/form';
     @modal_close_file = 'projects/index';
@@ -41,8 +43,16 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    ordered_projects = Project.all.order(created_at: :desc)
+    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+
+    # Necessary for modal functionality
+    @parent_element = '#projects-container';
+    @modal_content_file = 'projects/form';
+    @modal_close_file = 'projects/index';
+
     respond_to do |format|
-      format.js { render 'form.js.erb' }
+      format.js { render 'shared/modal.js.erb' }
     end
   end
 
