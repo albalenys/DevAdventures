@@ -2,10 +2,10 @@
   <%= flash[:error] %>
 </div>
 
-<%= form_for @project do |f| %>
-  Title: <%= f.text_field :title %><br>
-  URL: <%= f.text_field :url %><br>
-  Github Link: <%= f.text_field :github %><br>
-  <p><%= f.text_area :description %></p>
-  <%= f.submit "Submit", class: "sub-button" %>
+<%= form_for @project, remote: true do |project_form| %>
+  Title: <%= project_form.text_field :title %><br>
+  URL: <%= project_form.text_field :url %><br>
+  Github Link: <%= project_form.text_field :github %><br>
+  <p><%= project_form.text_area :description %></p>
+  <%= project_form.submit "Submit", class: "sub-button" %>
 <% end %>

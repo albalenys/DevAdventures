@@ -8,23 +8,7 @@
 
   <div id="projects-list">
     <% @projects.each do |project| %>
-      <div id=<%= "project-#{project.id}" %>>
-        <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
-        (<%= link_to "Github Source", project.github, target: "_blank" %>)
-        <% if logged_in? %>
-          <div class="edit-links right hidden">
-            <%= link_to fa_icon("edit"), edit_project_path(project), class: "remove-border", remote: true %>
-            <%= link_to fa_icon("trash"), project_path(project), class: "remove-border", remote: true, method: "DELETE" %>
-          </div>
-        <% end %>
-        <br>
-
-        <%= render "tags/index", :taggable => project %>
-
-        <p>
-          <%= project.description %>
-        </p>
-      </div>
+      <%= render partial: 'projects/project', object: project %>
     <% end %>
   </div>
 
