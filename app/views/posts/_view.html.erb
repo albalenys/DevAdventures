@@ -1,0 +1,26 @@
+<div id="posts-container">
+  <% if @post.private %>
+    <div class="private">
+      PRIVATE
+    </div>
+  <% end %>
+
+  <h1 id="main-heading" class="center">
+    <%= @post.title %>
+  </h1>
+
+  <div class="sub center">
+    <%= @post.created_at.strftime("%B, %d, %Y") %><br>
+
+    <% if logged_in? %>
+      <%= link_to fa_icon("edit"), edit_post_path(@post), class: "remove-border", remote: true %>
+      <%= link_to fa_icon("trash"), post_path(@post), class: "remove-border", method: "DELETE" %>
+    <% end %>
+  </div>
+
+  <div id="post-content">
+    <p>
+      <%= @post.content.html_safe %>
+    </p>
+  </div>
+</div>

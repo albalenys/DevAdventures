@@ -5,34 +5,28 @@ class PostsController < ApplicationController
   before_action :find_post, except: %i[new create private_index feed]
 
   def show
+    @next_post = @post.next_post('up')
+    @previous_post = @post.next_post('down')
     if @post.private
       authorize_user
-    else
-      @next_post = @post.next_post('up')
-      @previous_post = @post.next_post('down')
     end
   end
 
   def new
     @post = Post.new
-    @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
-
-    # Necessary for modal functionality
-    @parent_element = '#posts-container';
-    @modal_content_file = 'posts/form';
-    @modal_close_file = 'posts/index';
-    @modal_heading = 'New Post';
 
     respond_to do |format|
+      @modal_content_partial = 'posts/form';
+      @modal_heading = 'New Post';
+
       format.js { render 'shared/modal.js.erb' }
     end
   end
 
   def create
-    post = Post.new(post_params.merge(admin_id: session[:admin_id]))
+    @post = Post.new(post_params.merge(admin_id: session[:admin_id]))
 
-    if post.save
-      @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
+    if @post.save
       respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and content.'
@@ -55,15 +49,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
-    
-    # Necessary for modal functionality
-    @parent_element = '#posts-container';
-    @modal_content_file = 'posts/form';
-    @modal_close_file = 'posts/post';
-    @modal_heading = 'Edit Post';
-
     respond_to do |format|
+      @modal_content_partial = 'posts/form';
+      @modal_heading = 'Edit Post';
+
       format.js { render 'shared/modal.js.erb' }
     end
   end

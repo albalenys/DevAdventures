@@ -3,6 +3,9 @@
 class AdminController < ApplicationController
   def auth
     @admin = Admin.new
+    @modal_content_partial = 'admin/form';
+    @modal_heading = 'Log In';
+    render 'shared/_modal'
   end
 
   def login

@@ -1,2 +1,4 @@
-$("#posts-container").html("<%= escape_javascript render partial: 'index' %>");
+$('#modal-overlay').remove();
+$('body').removeClass('no-scroll');
+$("#<%= @post.created_at.strftime('%B%Y') %>-post-list").prepend("<%= escape_javascript render 'post', post: @post %>");
 renderRandomColors();

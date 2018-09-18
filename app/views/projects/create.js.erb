@@ -1,2 +1,4 @@
-$("#projects-container").html("<%= escape_javascript render 'index' %>");
+$('#modal-overlay').remove();
+$('body').removeClass('no-scroll');
+$("#projects-list").prepend("<%= escape_javascript render 'project', project: @project %>");
 renderRandomColors();

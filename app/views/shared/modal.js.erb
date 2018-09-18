@@ -1,11 +1,11 @@
-$('<%= escape_javascript @parent_element %>').html("<%= escape_javascript render 'shared/modal' %>");
+$('body').append("<%= escape_javascript render 'shared/modal' %>");
 $('body').addClass('no-scroll');
 renderRandomColors();
 
-$('<%= escape_javascript @parent_element %>').on('click', '#modal-overlay, .fa-times-circle', function(event) {
+$('body').on('click', '#modal-overlay, .fa-times-circle', function(event) {
   if (event.target === event.currentTarget) {
-    $('<%= escape_javascript @parent_element %>').html("<%= escape_javascript render @modal_close_file %>");
-    renderRandomColors();
+    $('#modal-overlay').remove();
     $('body').removeClass('no-scroll');
+    renderRandomColors();
   }
 });
