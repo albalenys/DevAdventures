@@ -1,8 +1,4 @@
 <li id=<%= "post-#{post.id}" %>>
   <%= post.created_at.strftime("%B") %> <%= post.created_at.day %>:
   <%= link_to "#{post.title}", post_path(post) %>
-
-  <% if logged_in? %>
-    <%= link_to fa_icon("edit", class: "hidden"), edit_post_path(post), class: "remove-border", remote: true %>
-  <% end %>
 </li>

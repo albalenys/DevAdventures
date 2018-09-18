@@ -2,7 +2,6 @@
 
 
 # MAKE SURE CREATE AND UPDATE WORKS FOR POSTS AND PROJECTS
-# (INPUT SPECIFIC OBJECT INSTEAD OF RERENDERING ENTIRE INDEX)
 # HAVE LOGIN PAGE ALSO USE MODAL
 
 class PostsController < ApplicationController
@@ -10,11 +9,10 @@ class PostsController < ApplicationController
   before_action :find_post, except: %i[new create private_index feed]
 
   def show
+    @next_post = @post.next_post('up')
+    @previous_post = @post.next_post('down')
     if @post.private
       authorize_user
-    else
-      @next_post = @post.next_post('up')
-      @previous_post = @post.next_post('down')
     end
   end
 

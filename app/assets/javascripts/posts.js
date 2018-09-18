@@ -1,16 +1,3 @@
-$('#posts-container').ready(function() {
-  $('#posts-container').on({
-    mouseenter: function(event) {
-      let parentElement = event.target.closest("li[id^='post-']");
-      editButton = $(parentElement).find('.fa');
-      editButton.show();
-    },
-    mouseleave: function() {
-      editButton.hide();
-    } 
-  }, "li[id^='post-']");
-});
-
 $('#tag-list').ready(function() {
   $('#tag-list').on({
     mouseenter: function(event) {

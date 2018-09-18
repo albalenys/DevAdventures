@@ -1,4 +1,4 @@
 $('#modal-overlay').remove();
 $('body').removeClass('no-scroll');
-$("#post-<%= @post.id %>").replaceWith("<%= escape_javascript render 'post', post: @post %>");
+$('#posts-container').replaceWith("<%= escape_javascript render 'view' %>");
 renderRandomColors();
