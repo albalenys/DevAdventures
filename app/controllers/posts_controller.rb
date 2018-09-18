@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-
-# MAKE SURE CREATE AND UPDATE WORKS FOR POSTS AND PROJECTS
-# HAVE LOGIN PAGE ALSO USE MODAL
-
 class PostsController < ApplicationController
   before_action :authorize_user, except: %i[show feed]
   before_action :find_post, except: %i[new create private_index feed]

@@ -1,0 +1,7 @@
+<%= flash[:error] %>
+
+<%= form_for @admin, url: {action: "login"} do |f| %>
+  Username: <%= f.text_field :username %><br>
+  Password: <%= f.password_field :password %><br>
+  <%= f.submit "Submit", class: "sub-button" %>
+<% end %>

@@ -41,7 +41,7 @@ h2 {
   padding: 2em 0 6em;
 }
 
-input[type=text], #search-bar, textarea {
+input[type=text], input[type=password], #search-bar, textarea {
   border: #999 solid 1px;
   border-radius: 5px;
   padding: 0.5em;
@@ -52,6 +52,10 @@ input[type=text], #search-bar, textarea {
   &:focus {
     outline: none;
   }
+}
+
+input[type=submit] {
+  margin-top: 5em;
 }
 
 textarea {
