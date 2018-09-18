@@ -19,8 +19,7 @@ class PostsController < ApplicationController
 
     # Necessary for modal functionality
     @parent_element = '#posts-container';
-    @modal_content_file = 'posts/form';
-    @modal_close_file = 'posts/index';
+    @modal_content_partial = 'posts/form';
     @modal_heading = 'New Post';
 
     respond_to do |format|
@@ -59,8 +58,7 @@ class PostsController < ApplicationController
     
     # Necessary for modal functionality
     @parent_element = '#posts-container';
-    @modal_content_file = 'posts/form';
-    @modal_close_file = 'posts/post';
+    @modal_content_partial = 'posts/form';
     @modal_heading = 'Edit Post';
 
     respond_to do |format|

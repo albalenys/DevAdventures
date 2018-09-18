@@ -10,8 +10,7 @@ class ProjectsController < ApplicationController
 
     # Necessary for modal functionality
     @parent_element = '#projects-container';
-    @modal_content_file = 'projects/form';
-    @modal_close_file = 'projects/index';
+    @modal_content_partial = 'projects/form';
     @modal_heading = 'New Project';
 
     respond_to do |format|
@@ -54,8 +53,7 @@ class ProjectsController < ApplicationController
 
     # Necessary for modal functionality
     @parent_element = '#projects-container';
-    @modal_content_file = 'projects/form';
-    @modal_close_file = 'projects/index';
+    @modal_content_partial = 'projects/form';
     @modal_heading = 'Edit Project';
 
     respond_to do |format|
