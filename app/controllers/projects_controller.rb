@@ -5,15 +5,26 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    ordered_projects = Project.all.order(created_at: :desc)
+    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+
+    # Necessary for modal functionality
+    @parent_element = '#projects-container';
+    @modal_content_file = 'projects/form';
+    @modal_close_file = 'projects/index';
+    @modal_heading = 'New Project';
+
     respond_to do |format|
-      format.js { render 'form.js.erb' }
+      format.js { render 'shared/modal.js.erb' }
     end
   end
 
   def create
     project = Project.new(project_params.merge(admin_id: session[:admin_id]))
     if project.save
-      redirect_to '/#projects'
+      ordered_projects = Project.all.order(created_at: :desc)
+      @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+      respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and url.'
       redirect_to new_project_path
@@ -22,12 +33,15 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to '/#projects'
+    respond_to :js
   end
 
   def update
+    ordered_projects = Project.all.order(created_at: :desc)
+    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+    
     if @project.update_attributes(project_params)
-      redirect_to '/#projects'
+      respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and url.'
       redirect_to edit_project_path
@@ -35,8 +49,17 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    ordered_projects = Project.all.order(created_at: :desc)
+    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
+
+    # Necessary for modal functionality
+    @parent_element = '#projects-container';
+    @modal_content_file = 'projects/form';
+    @modal_close_file = 'projects/index';
+    @modal_heading = 'Edit Project';
+
     respond_to do |format|
-      format.js { render 'form.js.erb' }
+      format.js { render 'shared/modal.js.erb' }
     end
   end
 

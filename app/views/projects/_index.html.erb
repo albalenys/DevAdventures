@@ -1,30 +1,16 @@
-<div id="posts-heading-container">
-  <% if logged_in? %>
-    <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
-  <% end %>
-  <h1>Projects</h1>
+<div id="projects-container">
+  <div id="posts-heading-container">
+    <% if logged_in? %>
+      <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
+    <% end %>
+    <h1>Projects</h1>
+  </div>
+
+  <div id="projects-list">
+    <% @projects.each do |project| %>
+      <%= render partial: 'projects/project', object: project %>
+    <% end %>
+  </div>
+
+  <%= will_paginate @projects %>
 </div>
-
-<div id="projects-list">
-  <% @projects.each do |project| %>
-    <div id=<%= "project-#{project.id}" %>>
-      <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
-      (<%= link_to "Github Source", project.github, target: "_blank" %>)
-      <% if logged_in? %>
-        <div class="edit-links right hidden">
-          <%= link_to fa_icon("edit"), edit_project_path(project), class: "remove-border", remote: true %>
-          <%= link_to fa_icon("trash"), project_path(project), class: "remove-border", method: "DELETE" %>
-        </div>
-      <% end %>
-      <br>
-
-      <%= render "tags/index", :taggable => project %>
-
-      <p>
-        <%= project.description %>
-      </p>
-    </div>
-  <% end %>
-</div>
-
-<%= will_paginate @projects %>

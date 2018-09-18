@@ -1,0 +1,12 @@
+<div id="modal-overlay">
+  <div id="modal">
+    <span id="modal-heading">
+      <h1>
+        <%= @modal_heading %>
+      </h1>
+      <%= fa_icon "times-circle", alt: "Close" %>
+    </span>
+    
+    <%= render @modal_content_file %>
+  </div>
+</div>

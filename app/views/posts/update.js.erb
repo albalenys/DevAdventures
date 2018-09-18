@@ -1,3 +1,3 @@
-$("#post-form").remove();
-$("#posts-container").append("<%= escape_javascript render partial: 'post', object: @post %>");
+$("#form").remove();
+$("#posts-container").append("<%= escape_javascript render partial: 'index' %>");
 renderRandomColors();

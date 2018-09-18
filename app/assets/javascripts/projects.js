@@ -1,10 +1,12 @@
-$('#projects-list').ready(function() {
-  $("div[id^='project-']").hover(function(event) {
-    let parentElement = event.target.closest("div[id^='project-']");
-    editLinks = $(parentElement).find('.edit-links');
-    editLinks.show();
-  },
-  function() {
-    editLinks.hide();
-  });
+$('#projects-container').ready(function() {
+  $('#projects-container').on({
+    mouseenter: function(event) {
+      let parentElement = event.target.closest("div[id^='project-']");
+      editLinks = $(parentElement).find('.edit-links');
+      editLinks.show();
+    },
+    mouseleave: function() {
+      editLinks.hide();
+    } 
+  }, "div[id^='project-']");
 });

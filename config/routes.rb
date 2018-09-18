@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/feed', to: 'posts#feed'
 
   get '/posts/private', to: 'posts#private_index'
-  resources :posts do
+  resources :posts, except: %i[index] do
     resources :resources, except: %i[index show]
     resources :tags, except: %i[index edit update]
   end
