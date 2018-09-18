@@ -100,6 +100,12 @@ th {
   float: right;
 }
 
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sub-button {
   color: black !important;
   padding: 0.2em 2em;
@@ -109,11 +115,6 @@ th {
   font-weight: bold;
   border: none;
 }
-
-.remove-border {
-  border: none !important;
-}
-
 
 .hidden {
   display: none;
@@ -159,8 +160,15 @@ th {
   border-bottom: solid #ddd 1px;
 }
 
+.remove-border {
+  border: none !important;
+}
+
 .fa {
   margin: 0.2em;
+  a {
+    border: none !important;
+  }
 }
 
 #sociallinks .fa, .fa-plus-circle, .fa-times-circle, .fa-chevron-up {

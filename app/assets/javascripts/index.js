@@ -9,9 +9,8 @@ $('#welcome').ready(function() {
       $target = $target.length && $target
       || $('[name=' + this.hash.slice(1) +']');
       if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body')
-        .animate({scrollTop: targetOffset}, 1000);
+        let targetOffset = $target.offset().top;
+        $('html,body').animate({scrollTop: targetOffset}, 1000);
        return false;
       }
     }
@@ -38,9 +37,9 @@ let renderRandomBg = function() {
   let randInt = Math.floor((Math.random() * 3) + 1);
 
   //Remove any already existing bg classes
-  $("#welcome").attr("class", function(i, c) {
+  $('#welcome').attr('class', function(i, c) {
     return c.replace(/(^|\s)bg-img-\S+/g, '');
   });
 
-  $("#welcome").addClass(`bg-img-${randInt}`);
+  $('#welcome').addClass(`bg-img-${randInt}`);
 }
