@@ -5,15 +5,11 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    ordered_projects = Project.all.order(created_at: :desc)
-    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
-
-    # Necessary for modal functionality
-    @parent_element = '#projects-container';
-    @modal_content_partial = 'projects/form';
-    @modal_heading = 'New Project';
 
     respond_to do |format|
+      @modal_content_partial = 'projects/form';
+      @modal_heading = 'New Project';
+
       format.js { render 'shared/modal.js.erb' }
     end
   end
@@ -48,16 +44,13 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    ordered_projects = Project.all.order(created_at: :desc)
-    @projects = ordered_projects.paginate(page: params[:page], per_page: 4)
-
-    # Necessary for modal functionality
-    @parent_element = '#projects-container';
-    @modal_content_partial = 'projects/form';
-    @modal_heading = 'Edit Project';
-
     respond_to do |format|
-      format.js { render 'shared/modal.js.erb' }
+      @modal_content_partial = 'projects/form';
+      @modal_heading = 'Edit Project';
+
+      format.js { 
+        render 'shared/modal.js.erb' 
+      }
     end
   end
 
