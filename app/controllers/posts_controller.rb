@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+
+# MAKE SURE CREATE AND UPDATE WORKS FOR POSTS AND PROJECTS
+# (INPUT SPECIFIC OBJECT INSTEAD OF RERENDERING ENTIRE INDEX)
+# HAVE LOGIN PAGE ALSO USE MODAL
+
 class PostsController < ApplicationController
   before_action :authorize_user, except: %i[show feed]
   before_action :find_post, except: %i[new create private_index feed]
@@ -25,10 +30,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params.merge(admin_id: session[:admin_id]))
+    @post = Post.new(post_params.merge(admin_id: session[:admin_id]))
 
-    if post.save
-      @posts_by_month = Post.public_posts.order(created_at: :desc).sort_by_month
+    if @post.save
       respond_to :js
     else
       flash[:error] = 'Invalid input: must include both title and content.'
