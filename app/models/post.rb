@@ -33,4 +33,8 @@ class Post < ActiveRecord::Base
   def self.public_posts
     Post.where(private: false)
   end
+
+  def self.search(query)
+    where('title like ?', "%#{query}%").public_posts
+  end
 end

@@ -10,11 +10,10 @@ class SharedController < ApplicationController
   def search
     @query = params[:query]
 
-    project_result = Project.where("title like ?", "%#{params[:query]}%")
+    project_result = Project.search(params[:query])
     @projects = project_result.paginate(page: params[:page], per_page: 4)
 
-    post_result = Post.where("title like ?", "%#{params[:query]}%")
-    public_result = post_result.where(private: false)
-    @posts_by_month = public_result.order(created_at: :desc).sort_by_month
+    post_result = Post.search(params[:query])
+    @posts_by_month = post_result.order(created_at: :desc).sort_by_month
   end
 end
