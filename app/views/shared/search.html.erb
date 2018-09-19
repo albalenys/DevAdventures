@@ -1,5 +1,7 @@
-<div class="large-container">
-  <h1 class="center">Searching for "<%= @query %>"...</h1>
+<section>
+  <h1>
+    Searching for "<%= @query %>"...
+  </h1>
 
   <% if @posts_by_month.empty? && @projects.empty? %>
     <p class="center">
@@ -15,4 +17,4 @@
   <% unless @projects.empty? %>
     <%= render 'projects/index' %>
   <% end %>
-</div>
+</section>

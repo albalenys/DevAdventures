@@ -1,16 +1,14 @@
-<div id="projects-container">
-  <div id="posts-heading-container">
-    <% if logged_in? %>
-      <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
-    <% end %>
-    <h1>Projects</h1>
-  </div>
+<h1>
+  <% if logged_in? %>
+    <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
+  <% end %>
+  Projects
+</h1>
 
-  <div id="projects-list">
-    <% @projects.each do |project| %>
-      <%= render partial: 'projects/project', object: project %>
-    <% end %>
-  </div>
-
-  <%= will_paginate @projects %>
+<div id="projects-list">
+  <% @projects.each do |project| %>
+    <%= render partial: 'projects/project', object: project %>
+  <% end %>
 </div>
+
+<%= will_paginate @projects %>

@@ -1,17 +1,5 @@
-#welcome, #blogs, #projects, #about {
-  width: 100%;
-  min-height: 100vh;
-}
-
 #welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   h1 {
-    font-size: 3.4em;
-    margin-bottom: 3em;
     cursor: pointer;
   }
 }

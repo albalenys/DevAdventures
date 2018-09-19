@@ -1,10 +1,11 @@
 <div id="resource-heading-container">
-  <% if logged_in? %>
-    <%= link_to fa_icon("plus-circle", alt: "Add Resource"), new_post_resource_path(@post.id), class: "remove-border", remote: true %>
-  <% end %>
-
-  <% unless @post.resources.empty? && !logged_in? %>
-    <h3>Further Resources</h3>
+  <% if !@post.resources.empty? || logged_in? %>
+    <h3>
+      <% if logged_in? %>
+        <%= link_to fa_icon("plus-circle", alt: "Add Resource"), new_post_resource_path(@post.id), class: "remove-border", remote: true %>
+      <% end %>
+      Further Resources
+    </h3>
   <% end %>
 </div>
 

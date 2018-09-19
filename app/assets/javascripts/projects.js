@@ -1,5 +1,5 @@
-$('#projects-container').ready(function() {
-  $('#projects-container').on({
+$('#projects-list').ready(function() {
+  $('#projects-list').on({
     mouseenter: function(event) {
       let parentElement = event.target.closest("div[id^='project-']");
       editLinks = $(parentElement).find('.edit-links');

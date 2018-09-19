@@ -1,16 +1,19 @@
-<div id="posts-container">
+<div id="post-container">
   <% if @post.private %>
     <div class="private">
       PRIVATE
     </div>
   <% end %>
 
-  <h1 id="main-heading" class="center">
+  <h1 id="main-heading">
     <%= @post.title %>
   </h1>
 
-  <div class="sub center">
-    <%= @post.created_at.strftime("%B, %d, %Y") %><br>
+  <div class="center">
+    <sub>
+      <%= @post.created_at.strftime("%B, %d, %Y") %>
+    </sub>
+    <br>
 
     <% if logged_in? %>
       <%= link_to fa_icon("edit"), edit_post_path(@post), class: "remove-border", remote: true %>

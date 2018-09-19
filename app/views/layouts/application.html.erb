@@ -3,15 +3,18 @@
   <head>
     <title>DevAdventures</title>
 
-    <!-- External Links -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans+Condensed:300|Amatic+SC:400,700|Fjalla+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/monokai-sublime.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+    <!-- Font Packages -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans+Condensed:300|Amatic+SC' rel='stylesheet' type='text/css'>
 
     <!-- Internal Links -->
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+
+    <!-- Highlight Syntaxing -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- Rss Feed -->
     <%= auto_discovery_link_tag :rss, feed_path(:format => :rss), title: "DevAdventures" %>

@@ -1,14 +1,13 @@
 footer {
-  background: #000;
-  padding: 0.4em;
+  background: black;
+  padding: 1em;
   width: 100%;
-  color: #FFF;
+  color: white;
   text-align: center;
   font-size: 0.8em;
   box-sizing: border-box;
 
   a {
     font-weight: normal;
-    border: none !important /* override added border in js script */;
   }
 }

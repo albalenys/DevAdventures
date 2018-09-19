@@ -24,7 +24,9 @@ hr {
 h1 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
-  font-size: 2.9em;
+  font-size: 3.5em;
+  margin: auto;
+  text-align: center;
 }
 
 h2 {
@@ -33,19 +35,15 @@ h2 {
   margin: 0.1;
 }
 
-.small-container, .large-container {
-  width: 60%;
-  margin: auto;
-  min-height: 100%;
+section {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10em 15em;
 }
 
-.large-container {
-  position: relative;
-  top: 5em;
-  padding: 2em 0 6em;
-}
-
-input[type=text], input[type=password], #search-bar, textarea {
+input[type=text], input[type=password], textarea {
   border: #999 solid 1px;
   border-radius: 5px;
   padding: 0.5em;
@@ -132,12 +130,6 @@ th {
   overflow: hidden;
 }
 
-.private {
-  background: black;
-  color: white;
-  text-align: center;
-}
-
 #modal {
   background: white;
   text-align: center;
@@ -174,14 +166,10 @@ th {
 
 .fa {
   margin: 0.2em;
-  a {
-    border: none !important;
-  }
+  cursor: pointer;
 }
 
 #sociallinks .fa, .fa-plus-circle, .fa-times-circle, .fa-chevron-up {
-  font-size: 2.3em;
-  cursor: pointer;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -197,6 +185,10 @@ th {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+}
+
+#sociallinks .fa, .fa-times-circle, .fa-chevron-up {
+  font-size: 2.3em;
 }
 
 #sociallinks .fa {

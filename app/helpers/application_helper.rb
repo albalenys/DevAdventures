@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  include Ransack::Helpers::FormHelper
   def logged_in?
     session[:admin_id]
   end

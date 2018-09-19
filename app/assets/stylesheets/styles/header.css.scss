@@ -16,10 +16,6 @@ header {
   background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 33%,rgba(255,255,255,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#00ffffff',GradientType=0 );
 
-  a {
-    border: none !important /* override added border in js script */;
-  }
-
   nav {
     font-size: 1.8em;
 
@@ -45,19 +41,13 @@ header {
     flex-direction: column;
     align-items: center;
 
-    #project_search {
-      display: flex;
-      align-items: center;
+    input[type=text] {
+      width: 15em;
+      opacity: 0.4;
+      filter: alpha(opacity=40); /* For IE8 and earlier */
 
-      #search-bar {
-        width: 15em;
-        height: 1.7em;
-        opacity: 0.4;
-        filter: alpha(opacity=40); /* For IE8 and earlier */
-      }
-
-      #search-bar:focus {
-        background: white;
+      &:focus {
+        opacity: inherit;
       }
     }
   }
