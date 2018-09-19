@@ -5,10 +5,11 @@ class PostsController < ApplicationController
   before_action :find_post, except: %i[new create private_index feed]
 
   def show
-    @next_post = @post.next_post('up')
-    @previous_post = @post.next_post('down')
     if @post.private
       authorize_user
+    else 
+      @next_post = @post.next_post('up')
+      @previous_post = @post.next_post('down')
     end
   end
 
