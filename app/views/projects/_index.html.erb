@@ -1,9 +1,9 @@
-<div id="posts-heading-container">
+<h1>
   <% if logged_in? %>
     <%= link_to fa_icon("plus-circle", alt: "Add Project"), new_project_path, class: "remove-border", remote: true %>
   <% end %>
-  <h1>Projects</h1>
-</div>
+  Projects
+</h1>
 
 <div id="projects-list">
   <% @projects.each do |project| %>

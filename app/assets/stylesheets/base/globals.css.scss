@@ -130,12 +130,6 @@ th {
   overflow: hidden;
 }
 
-.private {
-  background: black;
-  color: white;
-  text-align: center;
-}
-
 #modal {
   background: white;
   text-align: center;
@@ -172,14 +166,10 @@ th {
 
 .fa {
   margin: 0.2em;
-  a {
-    border: none !important;
-  }
+  cursor: pointer;
 }
 
 #sociallinks .fa, .fa-plus-circle, .fa-times-circle, .fa-chevron-up {
-  font-size: 2.3em;
-  cursor: pointer;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -195,6 +185,10 @@ th {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+}
+
+#sociallinks .fa, .fa-times-circle, .fa-chevron-up {
+  font-size: 2.3em;
 }
 
 #sociallinks .fa {

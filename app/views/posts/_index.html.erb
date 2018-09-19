@@ -5,12 +5,12 @@
     </div>
 <% end %>
 
-<div id="posts-heading-container">
+<h1>
   <% if logged_in? %>
     <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, class: "remove-border", remote: true %>
   <% end %>
-  <h1>Blog Posts</h1>
-</div>
+  Blog Posts
+</h1>
 
 <% @posts_by_month.each do |month_year, posts| %>
   <hr>
