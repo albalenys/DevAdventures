@@ -13,7 +13,7 @@ let renderRandomColors = function() {
   let linksColor = colors[randInt(4)];
 
   $('#main-heading').css('color', mainColor);
-  $('a').css('border-bottom', `0.1em dashed ${mainColor}`);
+  $('#page-content a').css('border-bottom', `0.1em dashed ${mainColor}`);
   $('a').css('color', linksColor);
   $('pre').css('border-left', `solid ${mainColor} 0.6em`);
   $('.sub-button').css('background', mainColor);
