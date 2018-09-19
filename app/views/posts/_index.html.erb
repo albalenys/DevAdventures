@@ -1,31 +1,29 @@
 <% if @private %>
-  <div class="large-container">
+  <section>
     <div class="private">
       PRIVATE
     </div>
 <% end %>
 
-<div id="posts-container">
-  <div id="posts-heading-container">
-    <% if logged_in? %>
-      <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, class: "remove-border", remote: true %>
-    <% end %>
-    <h1>Blog Posts</h1>
-  </div>
-
-  <% @posts_by_month.each do |month_year, posts| %>
-    <hr>
-    <h4 class="center">
-      <%= month_year.strftime("%B %Y") %>
-    </h4>
-    <ul id=<%= "#{month_year.strftime('%B%Y')}-post-list" %>>
-      <% posts.each do |post| %>
-        <%= render 'posts/post', post: post %>
-      <% end %>
-    </ul>
+<div id="posts-heading-container">
+  <% if logged_in? %>
+    <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, class: "remove-border", remote: true %>
   <% end %>
+  <h1>Blog Posts</h1>
 </div>
 
+<% @posts_by_month.each do |month_year, posts| %>
+  <hr>
+  <h4 class="center">
+    <%= month_year.strftime("%B %Y") %>
+  </h4>
+  <ul>
+    <% posts.each do |post| %>
+      <%= render 'posts/post', post: post %>
+    <% end %>
+  </ul>
+<% end %>
+
 <% if @private %>
-  </div>
+  </section>
 <% end %>

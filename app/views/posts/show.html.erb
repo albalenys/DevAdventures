@@ -1,4 +1,4 @@
-<div class="large-container">
+<section>
   <%= render "view" %>
 
   <%= render "tags/index", :taggable => @post %>
@@ -13,4 +13,4 @@
       <%= link_to "Previous", post_path(@previous_post), class: "sub-button" %>
     <% end %>
   </div>
-</div>
+</section>

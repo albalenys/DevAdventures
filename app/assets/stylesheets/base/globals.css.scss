@@ -26,6 +26,7 @@ h1 {
   font-weight: bold;
   font-size: 3.5em;
   margin: auto;
+  text-align: center;
 }
 
 h2 {
@@ -34,7 +35,7 @@ h2 {
   margin: 0.1;
 }
 
-.large-container {
+section {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
