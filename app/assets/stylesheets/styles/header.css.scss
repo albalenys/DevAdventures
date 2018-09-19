@@ -41,20 +41,15 @@ header {
     flex-direction: column;
     align-items: center;
 
-    #project_search {
-      display: flex;
-      align-items: center;
+    input[type=text] {
+      width: 15em;
+      height: 1.7em;
+      opacity: 0.4;
+      filter: alpha(opacity=40); /* For IE8 and earlier */
+    }
 
-      #search-bar {
-        width: 15em;
-        height: 1.7em;
-        opacity: 0.4;
-        filter: alpha(opacity=40); /* For IE8 and earlier */
-      }
-
-      #search-bar:focus {
-        background: white;
-      }
+    input[type=text]:focus {
+      background: white;
     }
   }
 }

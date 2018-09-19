@@ -14,10 +14,6 @@ class Post < ActiveRecord::Base
     all.group_by { |post| post.created_at.beginning_of_month }
   end
 
-  def self.search(query)
-    where('title like ?', "%#{query}%")
-  end
-
   def next_post(direction)
     post_index = Post.public_posts.index(self)
     if direction == 'up'
