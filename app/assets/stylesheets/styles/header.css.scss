@@ -43,13 +43,12 @@ header {
 
     input[type=text] {
       width: 15em;
-      height: 1.7em;
       opacity: 0.4;
       filter: alpha(opacity=40); /* For IE8 and earlier */
-    }
 
-    input[type=text]:focus {
-      background: white;
+      &:focus {
+        opacity: inherit;
+      }
     }
   }
 }
