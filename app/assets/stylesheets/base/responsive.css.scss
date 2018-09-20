@@ -3,7 +3,15 @@
 @media screen
   and (max-device-width: 800px) {
     html {
-      font-size: 3em;
+      font-size: 2.8em;
+    }
+
+    header {
+      display: block;
+    }
+
+    #page-content {
+      margin-top: 5em;
     }
   }
 
@@ -12,16 +20,6 @@
 
 @media screen
   and (min-width: 801px) {
-
-  .index_text {
-    width: 22em;
-    background: white;
-    border-radius: 0.4em;
-    padding: 1em;
-    margin: auto;
-    opacity: 0.9;
-  }
-
   .profile {
     float: right;
     text-align: none;

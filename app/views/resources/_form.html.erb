@@ -3,10 +3,10 @@
     <%= flash[:error] %>
   </span>
 
-  <%= form_for [@post, @resource], remote: true do |f|%>
-    <% f.hidden_field :post_id, value: @post.id %>
-      <%= f.text_field :title, placeholder: "Title" %>
-      <%= f.text_field :url, placeholder: "URL" %>
-    <%= f.submit "+" %>
+  <%= form_for [@post, @resource], remote: true do |resource_form|%>
+    <% resource_form.hidden_field :post_id, value: @post.id %>
+      <%= resource_form.text_field :title, placeholder: "Title" %>
+      <%= resource_form.text_field :url, placeholder: "URL" %>
+    <%= resource_form.submit "+" %>
   <% end %>
 </div>
