@@ -1,9 +1,4 @@
-#blog-nav {
-  display: flex;
-  justify-content: space-between;
-  border-top: solid #ddd 1px;
-  padding: 2em 0;
-}
+/* Blog post */
 
 #post-content {
   border-top: solid #ddd 1px;
@@ -17,13 +12,28 @@
   text-align: center;
 }
 
+/* Inside post content */
+
+.bordered_table {
+  margin: auto;
+
+  td {
+    padding: 1em;
+    border: solid black 1px;
+  }
+}
+
+/* Resources Section */
+
+#resource-list {
+  margin-top: 0;
+}
+
+/* Tags Section */
+
 #tags {
   display: flex;
   align-items: center;
-}
-
-#tag-list {
-  display: inline;
 }
 
 .tag {
@@ -37,17 +47,23 @@
   }
 }
 
-#resource-list {
-  margin-top: 0;
-}
+/* Blog Post Nav */
 
-/* Used in blog post content */
+#blog-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid #ddd 1px;
+  padding: 2em 0;
 
-.bordered_table {
-  margin: auto;
+  a {
+    display: flex;
+    align-items: center;
+    border: none !important /* override added border in js script */;
+    padding: 0.5em 1em;
+    color: black !important;
 
-  td {
-    padding: 1em;
-    border: solid black 1px;
+    .fa {
+      font-size: 2em;
+    }
   }
 }

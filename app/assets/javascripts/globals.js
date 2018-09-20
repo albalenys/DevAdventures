@@ -16,7 +16,7 @@ let renderRandomColors = function() {
   $('#page-content a').css('border-bottom', `0.1em dashed ${mainColor}`);
   $('a').css('color', linksColor);
   $('pre').css('border-left', `solid ${mainColor} 0.6em`);
-  $('.sub-button').css('background', mainColor);
+  $('.sub-button, #blog-nav a').css('background', mainColor);
   $('nav a').addClass(hoverColorClass);
   $('nav a').css('box-shadow', `0 0 0 0 ${mainColor} inset`);
   $('.tag').css('border', `solid ${mainColor} 1px`);

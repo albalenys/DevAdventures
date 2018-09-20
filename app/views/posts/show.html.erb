@@ -7,10 +7,22 @@
 
   <div id="blog-nav">
     <% if @next_post %>
-      <%= link_to "Next", post_path(@next_post), class: "sub-button" %>
+      <a href="<%= post_path(@next_post) %>">
+        <%= fa_icon("chevron-left") %>
+        <span>
+          <sub>Next Post</sub><br>
+          <%= @next_post.title %>
+        </span>
+      </a>
     <% end %>
     <% if @previous_post %>
-      <%= link_to "Previous", post_path(@previous_post), class: "sub-button" %>
+      <a href="<%= post_path(@previous_post) %>">
+        <%= fa_icon("chevron-right") %>
+        <span>
+          <sub>Previous Post</sub><br>
+          <%= @previous_post.title %>
+        </span>
+      </a>
     <% end %>
   </div>
 </section>
