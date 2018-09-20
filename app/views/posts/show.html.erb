@@ -17,11 +17,11 @@
     <% end %>
     <% if @previous_post %>
       <a href="<%= post_path(@previous_post) %>">
-        <%= fa_icon("chevron-right") %>
         <span>
           <sub>Previous Post</sub><br>
           <%= @previous_post.title %>
         </span>
+        <%= fa_icon("chevron-right") %>
       </a>
     <% end %>
   </div>
