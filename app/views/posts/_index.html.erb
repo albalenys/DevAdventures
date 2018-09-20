@@ -5,18 +5,18 @@
     </div>
 <% end %>
 
-<h1>
+<h2 class="center">
   <% if logged_in? %>
     <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, class: "remove-border", remote: true %>
   <% end %>
   Blog Posts
-</h1>
+</h2>
 
 <% @posts_by_month.each do |month_year, posts| %>
   <hr>
-  <h4 class="center">
+  <h3 class="center">
     <%= month_year.strftime("%B %Y") %>
-  </h4>
+  </h3>
   <ul>
     <% posts.each do |post| %>
       <%= render 'posts/post', post: post %>
