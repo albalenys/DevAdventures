@@ -42,18 +42,12 @@
 }
 
 /* Used in blog post content */
-.blog-list td {
-  border: 1px solid #000;
-  text-align: center;
-}
 
 .bordered_table {
   margin: auto;
-  font-size: 0.9em;
 
   td {
     padding: 1em;
-    text-align: center;
-    border: solid #000 1px;
+    border: solid black 1px;
   }
 }

@@ -1,8 +1,9 @@
 html, body {
+  margin: 0;
   height: 100%;
 }
 
-html {
+body {
   font-family: 'Raleway', Verdana, sans-serif;
   font-size: 1.1em;
 }
@@ -78,8 +79,6 @@ pre {
 }
 
 table {
-  font-family: 'Raleway', Verdana, sans-serif;
-  font-size: 1em;
   padding: 2em 0;
 }
 
@@ -94,11 +93,6 @@ th {
 .center {
   text-align: center;
   margin: auto;
-}
-
-.sub {
-  color: #999;
-  font-size: 0.9em;
 }
 
 .right {
