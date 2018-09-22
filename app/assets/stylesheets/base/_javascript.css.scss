@@ -1,0 +1,57 @@
+/* These styles are only used in JS scripts, never directly applied in the HTML */
+
+
+/* -- Backgrounds -- */
+/* ('image-path' cannot be used in pure JS) */
+
+.bg-img-1 {
+	background: url(image-path("backgrounds/New-York.jpg")) black no-repeat;
+}
+
+.bg-img-2 {
+	background: url(image-path("backgrounds/Starcano.jpg")) black no-repeat;
+}
+
+.bg-img-3 {
+	background: url(image-path("backgrounds/Colors-of-Bled.jpg")) black no-repeat;
+}
+
+
+/* -- Nav Hover Stylings -- */
+/* (Psuedo elements cannot be targetted with JS) */
+
+$light-blue: #66C2E0;
+nav a.hover-color-0:hover {
+  box-shadow: 0 -100px 0 0px $light-blue inset !important;
+}
+
+
+$red-orange: #ff6666;
+nav a.hover-color-1:hover {
+  box-shadow: 0 -100px 0 0px $red-orange inset !important;
+}
+
+
+$teal-green: #00cc99;
+nav a.hover-color-2:hover {
+  box-shadow: 0 -100px 0 0px $teal-green inset !important;
+}
+
+
+$purple: #bb99ff;
+nav a.hover-color-3:hover {
+  box-shadow: 0 -100px 0 0px $purple inset !important;
+}
+
+
+$yellow: #FFE593;
+nav a.hover-color-4:hover {
+  box-shadow: 0 -100px 0 0px $yellow inset !important;
+}
+
+
+/*-- Other -- */
+
+.no-scroll {
+  overflow: hidden;
+}

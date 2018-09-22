@@ -3,11 +3,24 @@
 @media screen
   and (max-device-width: 800px) {
     html {
-      font-size: 2.8em;
+      font-size: 2.7em;
     }
 
     header {
       display: block;
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    .profile {
+      float: none;
+    }
+
+    #sociallinks .fa {
+      font-size: 1.8em;
     }
   }
 
@@ -18,7 +31,6 @@
   and (min-width: 801px) {
   .profile {
     float: right;
-    text-align: none;
   }
 }
 

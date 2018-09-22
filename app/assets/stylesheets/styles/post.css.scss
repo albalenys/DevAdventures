@@ -58,8 +58,9 @@
   a {
     display: flex;
     align-items: center;
+    justify-content: center;
     border: none !important /* override added border in js script */;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     color: black !important;
     width: 30%;
 
