@@ -3,7 +3,7 @@ html, body {
   height: 100%;
 }
 
-html {
+body {
   font-family: 'Raleway', Verdana, sans-serif;
   font-size: 1.1em;
 }
@@ -31,8 +31,7 @@ h1 {
 
 h2 {
   font-family: 'Amatic SC', cursive;
-  font-size: 2.5em;
-  margin: 0.1;
+  font-size: 2.8em;
 }
 
 section {
@@ -79,8 +78,6 @@ pre {
 }
 
 table {
-  font-family: 'Raleway', Verdana, sans-serif;
-  font-size: 1em;
   padding: 2em 0;
 }
 
@@ -95,11 +92,6 @@ th {
 .center {
   text-align: center;
   margin: auto;
-}
-
-.sub {
-  color: #999;
-  font-size: 0.9em;
 }
 
 .right {

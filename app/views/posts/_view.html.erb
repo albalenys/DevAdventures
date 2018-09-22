@@ -10,9 +10,7 @@
   </h1>
 
   <div class="center">
-    <sub>
-      <%= @post.created_at.strftime("%B, %d, %Y") %>
-    </sub>
+    <%= @post.created_at.strftime("%B, %d, %Y") %>
     <br>
 
     <% if logged_in? %>
