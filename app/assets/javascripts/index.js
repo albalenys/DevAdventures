@@ -34,12 +34,12 @@ $('#welcome').ready(function() {
 });
 
 let renderRandomBg = function() {
-  let randInt = Math.floor((Math.random() * 3) + 1);
-
-  //Remove any already existing bg classes
+  // Remove any already existing bg classes
   $('#welcome').attr('class', function(i, c) {
     return c.replace(/(^|\s)bg-img-\S+/g, '');
   });
 
+  // Add random background image
+  let randInt = Math.floor((Math.random() * 3) + 1);
   $('#welcome').addClass(`bg-img-${randInt}`);
 }
