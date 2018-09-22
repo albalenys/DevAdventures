@@ -1,69 +1,57 @@
-/* ----------- Cell Phones ----------- */
+/* -------- Cell Phones -------- */
 
-@media screen
-  and (max-device-width: 800px) {
-    body {
-      font-size: 2.5em;
+@media screen and (max-device-width: 800px) {
+  body {
+    font-size: 2.5em;
 
-      header {
-        display: block;
+    header {
+      display: block;
 
-        nav {
-          display: flex;
-          justify-content: space-around;
-        }
-
-        #socialmedia {
-          flex-direction: row;
-          align-items: flex-start;
-
-          #sociallinks {
-            width: 60%;
-
-            .fa {
-              font-size: 1.8em;
-              margin: 5px;
-            }
-          }
-
-          form {
-            display: flex;
-            width: 40%;
-
-            input[type=text] {
-              width: 90%;
-            }
-          }
-        }
+      nav {
+        display: flex;
+        justify-content: space-around;
       }
 
-      section {
-        padding: 30% 10%;
+      #socialmedia {
+        flex-direction: row;
+        align-items: flex-start;
 
-        .profile {
-          float: none;
+        #sociallinks {
+          width: 60%;
+
+          .fa {
+            font-size: 1.8em;
+            margin: 5px;
+          }
+        }
+
+        form {
+          display: flex;
+          width: 40%;
+
+          input[type=text] {
+            width: 90%;
+          }
         }
       }
     }
-  }
 
+    section {
+      padding: 30% 10%;
 
-/* ----------- Tablets ----------- */
-
-@media screen
-  and (min-width: 801px) {
-  .profile {
-    float: right;
-  }
-}
-
-
-/* ----------- Laptops ----------- */
-
-@media screen
-  and (min-width: 1000px) {
-
-  #welcome {
-    background-size: cover;
+      .profile {
+        float: none;
+      }
+    }
   }
 }
+
+
+/*
+  -------- Tablets --------
+  @media screen and (min-width: 801px)
+
+
+  -------- Laptops --------
+  @media screen and (min-width: 1000px)
+*/
