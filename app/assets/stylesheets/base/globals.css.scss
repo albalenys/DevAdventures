@@ -17,10 +17,6 @@ a, a:visited {
   font-weight: bold;
 }
 
-hr {
-  border-bottom: solid #ddd 1px;
-}
-
 h1 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
@@ -32,6 +28,13 @@ h1 {
 h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 2.8em;
+}
+
+.bordered, hr {
+  border-bottom: solid #ddd 1px;
+  width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 section {
