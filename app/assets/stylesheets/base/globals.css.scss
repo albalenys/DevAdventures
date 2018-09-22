@@ -119,36 +119,6 @@ th {
   display: none;
 }
 
-#modal {
-  background: white;
-  text-align: center;
-  width: 30em;
-  padding: 0 5em 5em;
-  color: black;
-}
-
-#modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#modal-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2em;
-  margin-bottom: 2em;
-  border-bottom: solid #ddd 1px;
-}
-
 .remove-border {
   border: none !important;
 }
@@ -159,13 +129,13 @@ th {
   cursor: pointer;
 }
 
-/* Sub Icons */
+/* -- Sub Icons -- */
 .fa-edit, .fa-trash {
   font-size: 1.3em;
   color: #999;
 }
 
-/* Animated Icons */
+/* -- Animated Icons -- */
 #sociallinks .fa, .fa-plus-circle, .fa-chevron-up {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
