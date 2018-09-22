@@ -24,15 +24,14 @@ header {
       background: black;
       padding: 0 0.2em;
       border-radius: 0.1em;
-      text-align: center;
-      color: white !important;
+      color: white;
     }
 
     a:hover {
       transition: all ease 1s;
       -webkit-transition: all ease 1s;
       -moz-transition: all ease 1s;
-      color: black !important;
+      color: black;
     }
   }
 
@@ -40,6 +39,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    #sociallinks .fa {
+      color: black;
+    }
 
     input[type=text] {
       width: 15em;

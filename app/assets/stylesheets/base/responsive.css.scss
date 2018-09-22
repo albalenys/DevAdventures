@@ -8,6 +8,19 @@
 
     header {
       display: block;
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    .profile {
+      float: none;
+    }
+
+    #sociallinks .fa {
+      font-size: 1.8em;
     }
   }
 
