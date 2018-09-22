@@ -50,7 +50,6 @@ input[type=text], input[type=password], textarea {
   border-radius: 5px;
   padding: 0.5em;
   width: 70%;
-  font-family: 'Raleway', Verdana, sans-serif;
   font-size: 0.8em;
 
   &:focus {
@@ -111,7 +110,6 @@ th {
   color: black !important;
   padding: 0.2em 2em;
   border-radius: 0.1em;
-  font-family: 'Raleway', Verdana, sans-serif;
   font-size: 1em;
   font-weight: bold;
   border: none;
@@ -119,10 +117,6 @@ th {
 
 .hidden {
   display: none;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
 
 #modal {
@@ -161,10 +155,18 @@ th {
 
 .fa {
   margin: 0.2em;
+  font-size: 2.3em;
   cursor: pointer;
 }
 
-#sociallinks .fa, .fa-plus-circle, .fa-times-circle, .fa-chevron-up {
+/* Sub Icons */
+.fa-edit, .fa-trash {
+  font-size: 1.3em;
+  color: #999;
+}
+
+/* Animated Icons */
+#sociallinks .fa, .fa-plus-circle, .fa-chevron-up {
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -180,22 +182,6 @@ th {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
-}
-
-#sociallinks .fa, .fa-times-circle, .fa-chevron-up {
-  font-size: 2.3em;
-}
-
-/* Sub Icons */
-
-.fa-edit, .fa-trash {
-  font-size: 1.3em;
-  color: #999;
-}
-
-.fa-search {
-  font-size: 1.3em;
-  color: black;
 }
 
 @-webkit-keyframes wobble {

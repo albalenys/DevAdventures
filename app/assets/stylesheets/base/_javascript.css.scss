@@ -1,3 +1,21 @@
+/* These styles are only used in JS scripts, never directly applied in the HTML */
+
+
+/* -- Backgrounds -- */
+.bg-img-1 {
+	background: url(image-path("backgrounds/New-York.jpg")) black no-repeat;
+}
+
+.bg-img-2 {
+	background: url(image-path("backgrounds/Starcano.jpg")) black no-repeat;
+}
+
+.bg-img-3 {
+	background: url(image-path("backgrounds/Colors-of-Bled.jpg")) black no-repeat;
+}
+
+
+/* -- Nav Hover Stylings -- */
 $light-blue: #66C2E0;
 nav a.hover-color-0:hover {
   box-shadow: 0 -100px 0 0px $light-blue inset !important;
@@ -25,4 +43,10 @@ nav a.hover-color-3:hover {
 $yellow: #FFE593;
 nav a.hover-color-4:hover {
   box-shadow: 0 -100px 0 0px $yellow inset !important;
+}
+
+
+/*-- Other -- */
+.no-scroll {
+  overflow: hidden;
 }
