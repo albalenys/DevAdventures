@@ -3,24 +3,47 @@
 @media screen
   and (max-device-width: 800px) {
     html {
-      font-size: 2.7em;
-    }
+      font-size: 2.6em;
 
-    header {
-      display: block;
+      header {
+        display: block;
 
-      nav {
-        display: flex;
-        justify-content: space-around;
+        nav {
+          display: flex;
+          justify-content: space-around;
+        }
+
+        #socialmedia {
+          flex-direction: row;
+          align-items: flex-start;
+
+          #sociallinks {
+            width: 60%;
+
+            .fa {
+              font-size: 1.8em;
+              margin: 5px;
+            }
+          }
+
+          form {
+            display: flex;
+            width: 40%;
+
+            input[type=text] {
+              width: 90%;
+            }
+          }
+        }
       }
-    }
 
-    .profile {
-      float: none;
-    }
+      section {
+        padding: 30% 20%;
 
-    #sociallinks .fa {
-      font-size: 1.8em;
+        .profile {
+          float: none;
+        }
+      }
     }
   }
 
