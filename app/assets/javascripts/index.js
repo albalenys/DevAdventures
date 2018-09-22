@@ -18,14 +18,17 @@ $('#welcome').ready(function() {
 
   $(window).scroll(function() {
     // Dynamically change blur effect (on welcome section) according to scroll position.
-    let height = $(window).scrollTop();
-    let blurEffect = `blur(${height/50}px)`;
+    let blurValue = $(window).scrollTop() / 50;
 
-    $('.blurScroll').css('-webkit-filter', blurEffect);
-    $('.blurScroll').css('-moz-filter', blurEffect);
-    $('.blurScroll').css('-o-filter', blurEffect);
-    $('.blurScroll').css('-ms-filter', blurEffect);
-    $('.blurScroll').css('filter', blurEffect);
+    if (blurValue < 15) {
+      let blurEffect = `blur(${blurValue}px)`;
+
+      $('.blurScroll').css('-webkit-filter', blurEffect);
+      $('.blurScroll').css('-moz-filter', blurEffect);
+      $('.blurScroll').css('-o-filter', blurEffect);
+      $('.blurScroll').css('-ms-filter', blurEffect);
+      $('.blurScroll').css('filter', blurEffect);
+    }
   });
 
   $('#welcome h1').click(function() {
