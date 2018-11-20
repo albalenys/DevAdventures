@@ -50,12 +50,18 @@
 /* Blog Post Nav */
 
 #blog-nav {
-  display: flex;
-  justify-content: space-between;
   border-top: solid #ddd 1px;
   padding: 2em 0;
 
-  a {
+  #next-post {
+    float: left;
+  }
+
+  #prev-post {
+    float: right;
+  }
+
+  #next-post, #prev-post {
     display: flex;
     align-items: center;
     justify-content: center;
