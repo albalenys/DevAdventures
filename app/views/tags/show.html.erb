@@ -1,18 +1,18 @@
 <section>
-  <h1 id="main-heading">
-    <%= @tag.name %> Tag
-  </h1>
-  <hr>
+	<h1 id="main-heading">
+		<%= @tag.name %> Tag
+	</h1>
+	<hr>
 
-  <% unless @posts_by_month.empty? %>
-    <p>
-      <%= render "posts/index" %>
-    </p>
-  <% end %>
+	<% unless @posts_by_month.empty? %>
+		<p>
+			<%= render "posts/index" %>
+		</p>
+	<% end %>
 
-  <% unless @projects.empty? %>
-    <p>
-      <%= render "projects/index" %>
-    </p>
-  <% end %>
+	<% unless @projects.empty? %>
+		<p>
+			<%= render "projects/index" %>
+		</p>
+	<% end %>
 </section>
