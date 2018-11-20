@@ -7,7 +7,7 @@
 
 <h2 class="center">
   <% if logged_in? %>
-    <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, class: "remove-border", remote: true %>
+    <%= link_to fa_icon("plus-circle", alt: "Add Blog Post"), new_post_path, remote: true %>
   <% end %>
   Blog Posts
 </h2>
@@ -17,7 +17,7 @@
   <h3 class="center">
     <%= month_year.strftime("%B %Y") %>
   </h3>
-  <ul>
+  <ul class="underlineLinks">
     <% posts.each do |post| %>
       <%= render 'posts/post', post: post %>
     <% end %>

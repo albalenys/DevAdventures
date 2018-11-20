@@ -2,7 +2,7 @@
   <% if !taggable.tags.empty? || logged_in? %>
     <h3>
       <% if logged_in? %>
-        <%= link_to fa_icon("plus-circle", alt: "Add Tag"), taggable.is_a?(Project) ? new_project_tag_path(taggable) : new_post_tag_path(taggable), class: "remove-border", remote: true %>
+        <%= link_to fa_icon("plus-circle", alt: "Add Tag"), taggable.is_a?(Project) ? new_project_tag_path(taggable) : new_post_tag_path(taggable), remote: true %>
       <% end %>
       Tags
     </h3>

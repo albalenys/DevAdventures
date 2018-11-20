@@ -41,10 +41,6 @@
   padding: 0.1em 0.7em;
   border-radius: 5px;
   margin: 0.2em;
-
-  a {
-    border: none !important /* override added border in js script */;
-  }
 }
 
 /* Blog Post Nav */
@@ -65,9 +61,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none !important /* override added border in js script */;
     padding: 0.5em;
-    color: black !important;
+    color: black !important /* override added border in js script */;
     width: 30%;
 
     span {
