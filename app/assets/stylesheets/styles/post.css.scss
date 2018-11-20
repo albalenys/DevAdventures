@@ -41,27 +41,28 @@
   padding: 0.1em 0.7em;
   border-radius: 5px;
   margin: 0.2em;
-
-  a {
-    border: none !important /* override added border in js script */;
-  }
 }
 
 /* Blog Post Nav */
 
 #blog-nav {
-  display: flex;
-  justify-content: space-between;
   border-top: solid #ddd 1px;
   padding: 2em 0;
 
-  a {
+  #next-post {
+    float: left;
+  }
+
+  #prev-post {
+    float: right;
+  }
+
+  #next-post, #prev-post {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none !important /* override added border in js script */;
     padding: 0.5em;
-    color: black !important;
+    color: black !important /* override added border in js script */;
     width: 30%;
 
     span {

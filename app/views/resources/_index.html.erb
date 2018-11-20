@@ -1,14 +1,16 @@
-<% if !@post.resources.empty? || logged_in? %>
-  <h3>
-    <% if logged_in? %>
-      <%= link_to fa_icon("plus-circle", alt: "Add Resource"), new_post_resource_path(@post.id), class: "remove-border", remote: true %>
-    <% end %>
-    Further Resources
-  </h3>
-<% end %>
+<div>
+	<% if !@post.resources.empty? || logged_in? %>
+	  <h3>
+	    <% if logged_in? %>
+	      <%= link_to fa_icon("plus-circle", alt: "Add Resource"), new_post_resource_path(@post.id), remote: true %>
+	    <% end %>
+	    Further Resources
+	  </h3>
+	<% end %>
 
-<ul id="resource-list">
-  <% @post.resources.each do |resource| %>
-    <%= render partial: "resources/resource", object: resource %>
-  <% end %>
-</ul>
+	<ul id="resource-list">
+	  <% @post.resources.each do |resource| %>
+	    <%= render partial: "resources/resource", object: resource %>
+	  <% end %>
+	</ul>
+</div>

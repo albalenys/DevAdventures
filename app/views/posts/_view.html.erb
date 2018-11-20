@@ -14,12 +14,12 @@
     <br>
 
     <% if logged_in? %>
-      <%= link_to fa_icon("edit"), edit_post_path(@post), class: "remove-border", remote: true %>
-      <%= link_to fa_icon("trash"), post_path(@post), class: "remove-border", method: "DELETE" %>
+      <%= link_to fa_icon("edit"), edit_post_path(@post), remote: true %>
+      <%= link_to fa_icon("trash"), post_path(@post), method: "DELETE" %>
     <% end %>
   </div>
 
-  <div id="post-content">
+  <div id="post-content" class="underlineLinks">
     <p>
       <%= @post.content.html_safe %>
     </p>

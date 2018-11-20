@@ -1,27 +1,27 @@
 <header>
-  <nav>
-    <%= link_to "Home", "/#welcome" %>
-    <%= link_to "Blog", "/#blogs" %>
-    <%= link_to "Projects", "/#projects" %>
-    <%= link_to "About", "/#about" %>
-    <% if logged_in? %>
-      <%= link_to "Private", posts_private_path %>
-      <%= link_to "Log Out", admin_path, method: 'delete' %>
-    <% end %>
-  </nav>
+	<nav>
+		<%= link_to "Home", "/#welcome" %>
+		<%= link_to "Blog", "/#blogs" %>
+		<%= link_to "Projects", "/#projects" %>
+		<%= link_to "About", "/#about" %>
+		<% if logged_in? %>
+			<%= link_to "Private", posts_private_path %>
+			<%= link_to "Log Out", admin_path, method: 'delete' %>
+		<% end %>
+	</nav>
 
-  <div id="socialmedia">
-    <div id="sociallinks">
-      <%= link_to fa_icon("github-square", alt: "Github"), "https://github.com/albalenys", target: "_blank", title: "Follow me on GitHub!" %>
-      <%= link_to fa_icon("linkedin-square", alt: "Linkedin"), "https://www.linkedin.com/in/albalenys", target: "_blank", title: "Check me out on Linkedin!" %>
-      <%= link_to fa_icon("instagram", alt: "Instagram"), "https://www.instagram.com/alba_skies/", target: "_blank", title: "Follow me on Instagram!" %>
-      <%= link_to fa_icon("envelope-square", alt: "Email"), "mailto:www.albalenysD@gmail.com", title: "Send me an email!" %>
-      <%= link_to fa_icon("rss-square", alt: "RSS Feed"), feed_path(:format => :rss), target: "_blank", title: "Add a RSS Feed!" %>
-    </div>
+	<div id="socialmedia">
+		<div id="sociallinks">
+			<%= link_to fa_icon("github-square", alt: "Github"), "https://github.com/albalenys", target: "_blank", title: "Follow me on GitHub!" %>
+			<%= link_to fa_icon("linkedin-square", alt: "Linkedin"), "https://www.linkedin.com/in/albalenys", target: "_blank", title: "Check me out on Linkedin!" %>
+			<%= link_to fa_icon("instagram", alt: "Instagram"), "https://www.instagram.com/alba_skies/", target: "_blank", title: "Follow me on Instagram!" %>
+			<%= link_to fa_icon("envelope-square", alt: "Email"), "mailto:www.albalenysD@gmail.com", title: "Send me an email!" %>
+			<%= link_to fa_icon("rss-square", alt: "RSS Feed"), feed_path(:format => :rss), target: "_blank", title: "Add a RSS Feed!" %>
+		</div>
 
-    <%= form_tag search_path, method: "get" do %>
-      <%= text_field_tag 'query', nil, placeholder: "search" %>
-      <%= fa_icon "search" %>
-    <% end %>
-  </div>
+		<%= form_tag search_path, method: "get" do %>
+			<%= text_field_tag 'query', nil, placeholder: "search" %>
+			<%= fa_icon "search" %>
+		<% end %>
+	</div>
 </header>

@@ -1,13 +1,13 @@
 <div id=<%= "project-#{project.id}" %>>
   <div class="heading-container">
-    <div>
+    <div class="underlineLinks">
       <%= project.url == "" ? project.title : link_to("#{project.title}", project.url, target: "_blank") %>
       (<%= link_to "Source Code", project.github, target: "_blank" %>)
     </div>
     <% if logged_in? %>
       <div class="edit-links hidden">
-        <%= link_to fa_icon("edit"), edit_project_path(project), class: "remove-border", remote: true %>
-        <%= link_to fa_icon("trash"), project_path(project), class: "remove-border", remote: true, method: "DELETE" %>
+        <%= link_to fa_icon("edit"), edit_project_path(project), remote: true %>
+        <%= link_to fa_icon("trash"), project_path(project), remote: true, method: "DELETE" %>
       </div>
     <% end %>
   </div>

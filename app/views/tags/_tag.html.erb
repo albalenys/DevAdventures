@@ -3,6 +3,6 @@
   	<%= link_to tag.name, tag_path(tag) %>
   </span>
   <% if logged_in? %>
-  	<%= link_to fa_icon("trash", class: "hidden"), taggable.is_a?(Project) ? project_tag_path(taggable, tag) : post_tag_path(taggable, tag), class: "remove-border", method: "DELETE", format: :js, remote: true %>
+  	<%= link_to fa_icon("trash", class: "hidden"), taggable.is_a?(Project) ? project_tag_path(taggable, tag) : post_tag_path(taggable, tag), method: "DELETE", format: :js, remote: true %>
   <% end %>
 </span>

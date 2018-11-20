@@ -1,20 +1,20 @@
 <section>
-  <h1>
-    Searching for "<%= @query %>"...
-  </h1>
+	<h1>
+		Searching for "<%= @query %>"...
+	</h1>
 
-  <% if @posts_by_month.empty? && @projects.empty? %>
-    <p class="center">
-      No results match your search.<br>
-      Your query might be too specific.
-    </p>
-  <% end %>
+	<% if @posts_by_month.empty? && @projects.empty? %>
+		<p class="center">
+			No results match your search.<br>
+			Your query might be too specific.
+		</p>
+	<% end %>
 
-  <% unless @posts_by_month.empty? %>
-    <%= render "posts/index" %>
-  <% end %>
+	<% unless @posts_by_month.empty? %>
+		<%= render "posts/index" %>
+	<% end %>
 
-  <% unless @projects.empty? %>
-    <%= render 'projects/index' %>
-  <% end %>
+	<% unless @projects.empty? %>
+		<%= render 'projects/index' %>
+	<% end %>
 </section>

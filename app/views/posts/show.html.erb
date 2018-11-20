@@ -7,7 +7,7 @@
 
   <div id="blog-nav">
     <% if @next_post %>
-      <%= link_to post_path(@next_post), title: @next_post.title do %>
+      <%= link_to post_path(@next_post), title: @next_post.title, id: "next-post" do %>
         <%= fa_icon("chevron-left") %>
         <span>
           <sub>Next Post</sub><br>
@@ -15,8 +15,9 @@
         </span>
       <% end %>
     <% end %>
+
     <% if @previous_post %>
-      <%= link_to post_path(@previous_post), title: @previous_post.title do %>
+      <%= link_to post_path(@previous_post), title: @previous_post.title, id: "prev-post" do %>
         <span>
           <sub>Previous Post</sub><br>
           <%= @previous_post.title %>
