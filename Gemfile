@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.5.1'
+ruby '2.7.1'
 
 gem 'rails', '5.2.0'
 gem 'bcrypt', '~> 3.1.7'
@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'rubocop', '~> 0.59.0', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'sinatra-flash' # used to generate error messages
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 gem 'will_paginate', '~> 3.0.6'
 gem 'font-awesome-rails'
 
